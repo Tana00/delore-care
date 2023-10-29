@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,12 +25,12 @@ const gilmer = localFont({
       path: "../public/assets/fonts/Gilmer Heavy.otf",
       weight: "700",
     },
-    {
-      path: "../public/assets/fonts/Gilmer Outline.otf",
-      weight: "400",
-    },
+    // {
+    //   path: "../public/assets/fonts/Gilmer Outline.otf",
+    //   weight: "400",
+    // },
   ],
-  variable: "--font-gilmer",
+  // variable: "--font-gilmer",
 });
 
 export const metadata = {
@@ -41,7 +42,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${gilmer.variable}`}>
+    <html lang="en" className={`${gilmer.className}`}>
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

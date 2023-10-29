@@ -4,67 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ArrowDown from "../public/assets/icons/arrow-down.svg";
-
-const menuList = [
-  {
-    title: "Services",
-    hasSubmenu: true,
-    submenu: [
-      { title: "Dementia Care", href: "#dementia-care" },
-      {
-        title: "Varied Learning Abilities",
-        href: "#varied-learning-abilities",
-      },
-      { title: "Mobility Needs", href: "#mobility-needs" },
-      { title: "Live-In-Care", href: "#live-in-care" },
-      { title: "Tracheostomy", href: "#tracheostomy" },
-      { title: "Bowel care", href: "#bowel-care" },
-      { title: "Spinal injury", href: "#spinal-injury" },
-      { title: "Acquired brain injury", href: "#acquired-brain-injury" },
-      { title: "Elderly care", href: "#elderly-care" },
-      { title: "Peg feeding", href: "#peg-feeding" },
-      {
-        title: "Learning Disability & Autism",
-        href: "#learning-disability-autism",
-      },
-      { title: "Home care", href: "#home-care" },
-      { title: "Cancer care", href: "#cancer-care" },
-      { title: "End of life care", href: "#end-of-life-care" },
-      { title: "Complex care", href: "#complex-care" },
-    ],
-  },
-  {
-    title: "Company",
-    hasSubmenu: true,
-    submenu: [
-      { title: "About Us", href: "#about-us" },
-      { title: "Our Vision", href: "#our-vision" },
-      { title: "Our Mission", href: "#our-mission" },
-      { title: "Our Values", href: "#our-values" },
-      { title: "Meet the Team", href: "#meet-the-team" },
-      { title: "Location", href: "#location" },
-    ],
-  },
-  {
-    title: "Why Us",
-    hasSubmenu: false,
-    href: "/why-us",
-  },
-  {
-    title: "Career",
-    hasSubmenu: false,
-    href: "/career",
-  },
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  //   {title:'', href:''},
-  // ],
-];
+import { menuList } from "@/utils";
 
 const Nav = () => {
   const router = useRouter;
@@ -81,7 +21,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="bg-white py-4 px-5 lg:px-20 xl:px-40 mx-auto w-full font-medium">
+    <section className="bg-white py-4 px-5 sm:px-10 lg:px-20 xl:px-40 mx-auto w-full font-gilmer font-medium">
       <div className="flex items-center justify-between">
         <div>
           <Image
@@ -218,7 +158,7 @@ const Nav = () => {
           </ul>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
