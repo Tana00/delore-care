@@ -5,6 +5,7 @@ import hero1 from "../../public/assets/images/hero1.svg";
 import hero2 from "../../public/assets/images/hero2.svg";
 import hero4 from "../../public/assets/images/hero4.svg";
 import hero5 from "../../public/assets/images/hero5.svg";
+import BookAppointment from "../book-appointment/page";
 
 const Hero = () => {
   const images = [hero1, hero2, hero4, hero5];
@@ -28,7 +29,7 @@ const Hero = () => {
   }, [imageIndices]);
 
   return (
-    <section className="py-6 bg-[url('/assets/images/hero-bg.svg')] bg-left bg-cover bg-no-repeat z-10 relative">
+    <section className="py-6 bg-[url('/assets/images/hero-bg.svg')] bg-left bg-cover bg-no-repeat z-0 relative">
       <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
         <div className="text-center lg:text-left col-span-7 2xl:mr-36">
           <h2 className="text-blue font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
@@ -113,6 +114,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <BookAppointment />
     </section>
   );
 };
