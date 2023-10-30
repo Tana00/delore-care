@@ -20,6 +20,7 @@ module.exports = {
       black: "#000",
       "blue-light": "#F2F7FC",
       "blue-black": "#03070D",
+      "gray-light": "#F7F7F7",
     },
   },
   plugins: [],
