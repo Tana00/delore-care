@@ -21,8 +21,8 @@ const Nav = () => {
   };
 
   return (
-    <section className="bg-white py-4 px-5 sm:px-10 lg:px-20 xl:px-40 mx-auto w-full font-gilmer font-medium">
-      <div className="flex items-center justify-between">
+    <section className="bg-white font-gilmer font-medium z-20 relative">
+      <div className=" max-w-[1920px] mx-auto flex items-center justify-between py-4 px-5 sm:px-10 lg:px-20 xl:px-40 w-full">
         <div>
           <Image
             src="/assets/images/logo.svg"
@@ -31,7 +31,7 @@ const Nav = () => {
             height={200}
           />
         </div>
-        <div className="w-full mx-4 hidden lg:block">
+        <div className="w-full mx-4 hidden lg:block max-w-5xl">
           <ul className="flex items-center justify-evenly">
             {menuList?.map((menu, i) => (
               <li key={i} className="relative">
