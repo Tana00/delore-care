@@ -25,3 +25,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.services {
+  scrollbar-width: none;
+}
+.services::-webkit-scrollbar {
+  display: none;
+}
+.service_image_container {
+  width: 100%;
+}
+.service_image_container div {
+  position: unset !important;
+}
+.service_image_container .image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}

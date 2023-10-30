@@ -49,3 +49,96 @@ export const menuList = [
     href: "/career",
   },
 ];
+
+export const servicesList = [
+  {
+    id: 0,
+    src: "/assets/images/services/service1.svg",
+    title: "Dementia Care",
+    desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
+  },
+  {
+    id: 1,
+    src: "/assets/images/services/service2.svg",
+    title: "Varied Learning Abilities",
+    desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
+  },
+  {
+    id: 2,
+    src: "/assets/images/services/service3.svg",
+    title: "Mobility Needs",
+    desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
+  },
+  {
+    id: 3,
+    src: "/assets/images/services/service4.svg",
+    title: "Live-in-Care",
+    desc: "We provide round-the -clock care for your loved one as and when it is needed.",
+  },
+  {
+    id: 4,
+    src: "/assets/images/services/service1.svg",
+    title: "Tracheostomy",
+    desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
+  },
+  {
+    id: 5,
+    src: "/assets/images/services/service2.svg",
+    title: "Bowel care",
+    desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
+  },
+  {
+    id: 6,
+    src: "/assets/images/services/service3.svg",
+    title: "Spinal injury",
+    desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
+  },
+  {
+    id: 7,
+    src: "/assets/images/services/service4.svg",
+    title: "Acquired brain injury",
+    desc: "We provide round-the -clock care for your loved one as and when it is needed.",
+  },
+  {
+    id: 8,
+    src: "/assets/images/services/service1.svg",
+    title: "Elderly care",
+    desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
+  },
+  {
+    id: 9,
+    src: "/assets/images/services/service2.svg",
+    title: "Peg feeding",
+    desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
+  },
+  {
+    id: 10,
+    src: "/assets/images/services/service3.svg",
+    title: "Learning Disability & Autism",
+    desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
+  },
+  {
+    id: 11,
+    src: "/assets/images/services/service4.svg",
+    title: "Home care",
+    desc: "We provide round-the -clock care for your loved one as and when it is needed.",
+  },
+  {
+    id: 12,
+    src: "/assets/images/services/service1.svg",
+    title: "Cancer care",
+    desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
+  },
+  {
+    id: 13,
+    src: "/assets/images/services/service2.svg",
+    title: "End of life care",
+    desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
+  },
+  {
+    id: 14,
+    src: "/assets/images/services/service3.svg",
+    title: "Complex care",
+    desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
+  },
+];
