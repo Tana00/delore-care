@@ -1,13 +1,17 @@
-import Hero from "./hero/page";
-import AboutUs from "./about-us/page";
-import Services from "./services/page";
+import Hero from "../components/home/hero";
+import AboutUsComponent from "../components/home/about-us";
+import ServicesComponent from "../components/home/services";
+import Testimonials from "../components/home/testimonial";
+import CTA from "../components/home/cta";
 
 export default function Home() {
   return (
     <main className="bg-white font-gilmer">
       <Hero />
-      <AboutUs />
-      <Services />
+      <AboutUsComponent />
+      <ServicesComponent />
+      <Testimonials />
+      <CTA />
     </main>
   );
 }

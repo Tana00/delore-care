@@ -26,12 +26,14 @@ const Footer = () => {
       <div className="max-w-[1920px] px-5 sm:px-10 lg:px-20 xl:px-40 mx-auto w-full">
         <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr] lg:grid-cols-[200px_minmax(400px,_700px)_200px_200px] gap-y-8 items-start justify-between">
           <div className="">
-            <Image
-              src="/assets/images/logo.svg"
-              alt="logo"
-              width={150}
-              height={150}
-            />
+            <a href="/">
+              <Image
+                src="/assets/images/logo.svg"
+                alt="logo"
+                width={150}
+                height={150}
+              />
+            </a>
           </div>
           {footerLinks.map((link, i) => (
             <div
@@ -52,14 +54,20 @@ const Footer = () => {
               >
                 <ul className="">
                   {link.submenu.slice(0, 8).map((submenu, i) => (
-                    <li key={i} className="py-2.5">
+                    <li
+                      key={i}
+                      className="py-2.5 hover:text-red cursor-pointer transition-all"
+                    >
                       {submenu.title}
                     </li>
                   ))}
                 </ul>
                 <ul className="">
                   {link.submenu.slice(8).map((submenu, i) => (
-                    <li key={i} className="py-2.5">
+                    <li
+                      key={i}
+                      className="py-2.5 hover:text-red cursor-pointer transition-all"
+                    >
                       {submenu.title}
                     </li>
                   ))}
@@ -105,8 +113,18 @@ const Footer = () => {
         <div className="w-full flex flex-col-reverse sm:flex-row items-center lg:justify-center justify-start gap-x-10 md:gap-20 text-blue font-medium py-4 md:pt-10 md:pb-0 lg:pt-16">
           <p>© 2023 Delorecare</p>
           <div className="flex items-center justify-between mb-2 sm:mb-0 gap-x-10 md:gap-20">
-            <a href="/terms-conditions">Terms & conditions</a>
-            <a href="/privacy-policy">Privacy policy</a>
+            <a
+              href="/terms-conditions"
+              className="hover:text-red cursor-pointer transition-all"
+            >
+              Terms & conditions
+            </a>
+            <a
+              href="/privacy-policy"
+              className="hover:text-red cursor-pointer transition-all"
+            >
+              Privacy policy
+            </a>
           </div>
         </div>
       </div>

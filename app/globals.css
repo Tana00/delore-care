@@ -44,3 +44,7 @@ body {
   position: relative !important;
   height: unset !important;
 }
+
+#our-values {
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
