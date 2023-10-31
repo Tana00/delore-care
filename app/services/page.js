@@ -35,17 +35,7 @@ const Services = () => {
             key={service.id}
             className="md:ml-32 w-full md:w-[900px] flex-none"
           >
-            <div className="flex items-center justify-evenly gap-16 relative h-full w-full">
-              <div className="service_image_container block md:hidden">
-                <Image
-                  src={service.src}
-                  alt={service.title}
-                  // fill
-                  width={900}
-                  height={600}
-                  className={"image"}
-                />
-              </div>
+            <div className="flex items-center justify-evenly gap-8 md:gap-16 relative h-full w-full">
               <Image
                 src={service.src}
                 alt={service.title}
@@ -53,7 +43,12 @@ const Services = () => {
                 height={600}
                 className="hidden md:block"
               />
-              <div className="hidden md:block">
+              <img
+                src={service.src}
+                alt=""
+                className="relative hidden sm:block md:hidden"
+              />
+              <div className="hidden sm:block">
                 <p className="text-white font-bold text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px]">
                   {service.title}
                 </p>
@@ -70,27 +65,36 @@ const Services = () => {
                   />
                 </button>
               </div>
-              <div
-                className="md:hidden block absolute -bottom-[9.2rem] left-0 p-4 text-white w-full h-1/2"
-                style={{
-                  background: `linear-gradient(to top, rgba(13, 37, 64, 0.9) 0%, rgba(13, 37, 64, 0.7) 50%, rgba(13, 37, 64, 0) 100%)`,
-                }}
-              >
-                <p className="text-white font-bold text-3xl md:text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px] pt-4">
-                  {service.title}
-                </p>
-                <p className="text-white font-normal md:font-light text-base xl:text-lg leading-6 xl:leading-9">
-                  {service.desc}
-                </p>
-                <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue">
-                  <span>Learn more</span>
-                  <Image
-                    src="/assets/icons/up-arrow-red.svg"
-                    alt="up-arrow"
-                    width={20}
-                    height={20}
-                  />
-                </button>
+              <div className="sm:hidden block relative">
+                <img
+                  src={service.src}
+                  alt=""
+                  className="h-[600px] w-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 text-white w-full">
+                  <div
+                    className="w-full mx-auto px-8 py-4"
+                    style={{
+                      background: `linear-gradient(to top, rgba(13, 37, 64, 0.9) 0%, rgba(13, 37, 64, 0.7) 50%, rgba(13, 37, 64, 0) 100%)`,
+                    }}
+                  >
+                    <p className="text-white font-bold text-3xl md:text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px] pt-4">
+                      {service.title}
+                    </p>
+                    <p className="text-white font-normal md:font-light text-base xl:text-lg leading-6 xl:leading-9">
+                      {service.desc}
+                    </p>
+                    <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue">
+                      <span>Learn more</span>
+                      <Image
+                        src="/assets/icons/up-arrow-red.svg"
+                        alt="up-arrow"
+                        width={20}
+                        height={20}
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
