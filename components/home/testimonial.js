@@ -32,7 +32,7 @@ const testimonialList = [
 const Testimonials = () => {
   const containerRef = useRef(null);
 
-  const deviceWidth = window.innerWidth;
+  const deviceWidth = typeof window !== "undefined" && window.innerWidth;
   const isMobile = deviceWidth < 640;
   const isTablet = deviceWidth >= 640 && deviceWidth < 768;
 
