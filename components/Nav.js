@@ -3,11 +3,11 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ArrowDown from "../public/assets/icons/arrow-down.svg";
 import ArrowDownRed from "../public/assets/icons/arrow-down-red.svg";
 import { menuList } from "@/utils";
-import Link from "next/link";
 
 const Nav = () => {
   const router = useRouter;
