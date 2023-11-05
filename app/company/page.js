@@ -101,10 +101,10 @@ const Company = () => {
         <div className="bg-[url('/assets/images/about-hero-bg.svg')] bg-cover bg-no-repeat">
           <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
             <div className="text-center lg:text-left col-span-6 2xl:mr-36 my-20 lg:my-0">
-              <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
+              <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl !leading-[40px] md:!leading-[50px] lg:!leading-[65px] xl:!leading-[80px]">
                 About Us
               </h2>
-              <p className="text-white font-light text-base md:text-lg 2xl:text-3xl 2xl:leading-[50px] leading-7 md:leading-8 my-4 2xl:my-8 sm:mx-4 md:mx-20 lg:mx-0">
+              <p className="text-white font-light text-base md:text-lg 2xl:text-3xl 2xl:!leading-[50px] !leading-7 md:!leading-8 my-4 2xl:my-8 sm:mx-4 md:mx-20 lg:mx-0">
                 At Delore Care, every team member is valued and appreciated. Our
                 operational strategy places an inestimable value on every
                 contribution. We do not have many lines of hierarchy.
@@ -154,7 +154,7 @@ const Company = () => {
             <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:my-2 lg:my-4 2xl:my-8">
               Our Mission
             </p>
-            <p className="text-gray leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:leading-[40px] 2xl:text-3xl 2xl:leading-[50px] font-normal">
+            <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
               Our mission is to always deliver exceptional care for our clients
               by maintaining consistency of purpose and continually adopting
               best practices.
@@ -176,7 +176,7 @@ const Company = () => {
             <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:my-2 lg:my-4 2xl:my-8">
               Our Vision
             </p>
-            <p className="text-gray leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:leading-[40px] 2xl:text-3xl 2xl:leading-[50px] font-normal">
+            <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
               We recognise that commonly accepted levels of service satisfaction
               are no longer enough, hence we set out to continuously improve our
               service delivery and approach to care.

@@ -17,7 +17,6 @@ const Nav = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (title) => {
-    console.log(title);
     if (openDropdown === title) {
       setOpenDropdown(null);
     } else {
@@ -42,8 +41,6 @@ const Nav = () => {
     };
   }, [openDropdown]);
 
-  console.log("openDropdown", openDropdown);
-
   return (
     <section
       className={`bg-white font-gilmer font-medium z-10 ${
@@ -66,8 +63,8 @@ const Nav = () => {
             {menuList?.map((menu, i) => {
               if (!menu.hasSubmenu) {
                 return (
-                  <Link href={menu.href}>
-                    <li key={i} className="relative">
+                  <Link key={i} href={menu.href}>
+                    <li className="relative">
                       <p className="flex items-center cursor-pointer">
                         <span
                           className={`text-lg ${
@@ -196,12 +193,8 @@ const Nav = () => {
             {menuList?.map((menu, i) => {
               if (!menu.hasSubmenu) {
                 return (
-                  <Link href={menu.href}>
-                    <li
-                      key={i}
-                      className="w-full"
-                      onClick={() => setIsOpen(false)}
-                    >
+                  <Link key={i} href={menu.href}>
+                    <li className="w-full" onClick={() => setIsOpen(false)}>
                       <p className="flex items-center justify-between">
                         <span className="text-gray text-lg">{menu.title}</span>
                         {menu?.hasSubmenu && (

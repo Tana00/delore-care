@@ -38,8 +38,6 @@ const Testimonials = () => {
 
   let scrollDistance = 0;
 
-  console.log(deviceWidth);
-
   if (isMobile) {
     scrollDistance = deviceWidth;
   } else if (isTablet) {
