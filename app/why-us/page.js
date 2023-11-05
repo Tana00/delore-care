@@ -71,7 +71,7 @@ const WhyUs = () => {
             </h2>
           </div>
           <div className="col-span-6 w-full h-full text-center lg:text-left">
-            <p className="text-gray font-normal text-base md:text-lg 2xl:text-3xl 2xl:leading-[50px] leading-6 md:leading-8 my-4 2xl:my-8 mx-4 md:mx-20 lg:mx-0">
+            <p className="text-gray font-normal text-base md:text-lg 2xl:text-3xl 2xl:leading-[50px] leading-8 my-2 md:my-4 2xl:my-8">
               At Delore Care, every team member is valued and appreciated. Our
               operational strategy places an inestimable value on every
               contribution. We do not have many lines of hierarchy.
@@ -84,58 +84,58 @@ const WhyUs = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-light z-0 relative my-28">
+      <section className="bg-blue-light z-0 relative mb-10 lg:my-28">
         <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-          <h2 className="text-blue font-bold text-3xl lg:text-[36px] leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px] py-8 md:py-10">
+          <h2 className="text-blue font-bold text-[28px] md:text-3xl lg:text-[36px] leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px] py-8 md:py-10">
             Customer-Centric Approach
           </h2>
-          <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 gap-10 pt-10 pb-20">
-            <div className="col-span-4 text-left">
+          <div className="grid items-start lg:items-center justify-between grid-cols-1 sm:grid-cols-12 gap-10 pb-10 lg:pt-10 lg:pb-20">
+            <div className="order-1 sm:col-span-6 lg:col-span-4 text-left">
               {customerCentricList?.slice(0, 3)?.map((item) => (
                 <div
                   key={item.id}
-                  className="text-center flex items-start justify-center flex-col h-[300px]"
+                  className="text-center flex items-start justify-start flex-col mt-6 md:mt-0 h-auto sm:h-[230px] md:h-[250px] lg:h-[300px]"
                 >
-                  <div className="bg-white p-3 rounded-full w-14 h-14">
+                  <div className="bg-white p-3 rounded-full w-12 h-12 md:w-14 md:h-14">
                     <img
                       src={`/assets/icons/${item.img}`}
                       alt={item.title}
                       className="h-full w-full"
                     />
                   </div>
-                  <p className="text-xl leading-[64px] font-semibold text-blue">
+                  <p className="text-xl leading-10 lg:leading-[64px] font-semibold text-blue">
                     {item.title}
                   </p>
-                  <p className="text-gray text-sm leading-8 text-left">
+                  <p className="text-gray text-sm leading-8 text-left md:mr-5">
                     {item.desc}
                   </p>
                 </div>
               ))}
             </div>
-            <div className="rounded-2xl relative col-span-4 w-full h-[600px]">
+            <div className="rounded-2xl relative sm:order-last order-2 lg:order-2 sm:col-span-12 lg:col-span-4 w-full h-[500px] sm:h-[600px]">
               <img
                 src="/assets/images/customer-centric.png"
                 alt="customer centric"
-                className="rounded-2xl w-full h-full object-cover"
+                className="rounded-2xl object-cover w-full h-full"
               />
             </div>
-            <div className="col-span-4 text-right">
+            <div className="order-3 md:order-2 lg:order-3 sm:col-span-6 lg:col-span-4 text-right">
               {customerCentricList?.slice(3, 6)?.map((item) => (
                 <div
                   key={item.id}
-                  className="text-center flex items-end justify-center flex-col h-[300px]"
+                  className="text-center flex items-start md:items-end justify-start flex-col mt-6 md:mt-0 h-auto sm:h-[230px] md:h-[250px] lg:h-[300px]"
                 >
-                  <div className="bg-white p-3 rounded-full w-14 h-14">
+                  <div className="bg-white p-3 rounded-full w-12 h-12 md:w-14 md:h-14">
                     <img
                       src={`/assets/icons/${item.img}`}
                       alt={item.title}
                       className="h-full w-full"
                     />
                   </div>
-                  <p className="text-xl leading-[64px] font-semibold text-blue">
+                  <p className="text-xl leading-10 lg:leading-[64px] font-semibold text-blue">
                     {item.title}
                   </p>
-                  <p className="text-gray text-sm leading-8 text-right">
+                  <p className="text-gray text-sm leading-8 text-left md:text-right md:ml-5">
                     {item.desc}
                   </p>
                 </div>
@@ -144,32 +144,32 @@ const WhyUs = () => {
           </div>
         </div>
       </section>
-      <section className="bg-red-light z-0 relative my-28 py-10">
+      <section className="bg-red-light z-0 relative my-10 lg:my-28 py-10">
         <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-          <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 gap-10 pt-10 pb-20">
-            <div className="col-span-5">
-              <h2 className="w-40 text-blue font-bold text-3xl lg:text-[36px] leading-[40px] md:leading-[50px] lg:leading-[60px]">
+          <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 gap-10 md:pt-10 lg:pb-20">
+            <div className="lg:col-span-5">
+              <h2 className="w-40 text-blue font-bold text-[28px] lg:text-[36px] leading-[40px] md:leading-[50px] lg:leading-[60px]">
                 Management Excellence
               </h2>
               <div className="rounded-2xl relative w-full h-[600px] mt-16">
                 <img
                   src="/assets/images/excellence.png"
                   alt="customer centric"
-                  className="rounded-2xl w-full h-full object-cover"
+                  className="rounded-2xl w-full h-full object-cover md:object-top lg:object-center"
                 />
               </div>
             </div>
-            <div className="col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
               {excellenceList?.map((item) => (
-                <div className="text-left flex items-start justify-start flex-col h-[390px]">
-                  <div className="bg-white p-3 rounded-full w-14 h-14">
+                <div className="text-left flex items-start justify-start flex-col lg:h-[390px]">
+                  <div className="bg-white p-3 rounded-full w-12 h-12 md:w-14 md:h-14">
                     <img
                       src={`/assets/icons/${item?.img}`}
                       alt={item.title}
                       className="h-full w-full"
                     />
                   </div>
-                  <p className="text-xl font-semibold text-blue my-4 w-[200px]">
+                  <p className="text-xl font-semibold text-blue my-2.5 md:my-4 md:w-[200px]">
                     {item.title}
                   </p>
                   <p className="text-gray text-sm leading-8 text-left">

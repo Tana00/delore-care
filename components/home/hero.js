@@ -18,7 +18,7 @@ const Hero = () => {
         imageIndices[imageIndices.length - 1],
         ...imageIndices.slice(0, imageIndices.length - 1),
       ];
-      console.log("rotatedIndices", rotatedIndices);
+
       setImageIndices(rotatedIndices);
     }, 5000); // Rotate every 5 seconds
 
