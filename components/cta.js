@@ -25,7 +25,7 @@ const CTAComponent = () => {
               </button>
             </div>
           </div>
-          <div className="relative w-full sm:h-[600px] lg:h-full sm:order-last order-2 lg:order-2">
+          <div className="relative w-full sm:h-[600px] lg:h-full sm:order-last order-2 lg:order-2 col-span-2 lg:col-auto">
             <img
               src="/assets/images/about-cta.svg"
               alt="carer"
