@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import CustomRadioButton from "@/components/form/customRadioButton";
+import CustomRadioButton from "@/components/form/CustomRadioButton";
 import CustomInput from "@/components/form/CustomInput";
 import CustomUploadButton from "@/components/form/CustomUploadButton";
 
