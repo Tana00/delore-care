@@ -129,7 +129,7 @@ const JobApplication = () => {
           <p className="text-blue font-bold leading-10 text-xl md:text-2xl">
             Personal Details
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 my-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-6 my-4">
             <CustomInput
               value={data.fName}
               onChange={(e) => handleDataChange(e.target.value, "fName")}
@@ -170,7 +170,7 @@ const JobApplication = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-6 mt-10">
             <div className="col-span-2">
               <CustomInput
                 value={data.address}
@@ -201,7 +201,7 @@ const JobApplication = () => {
           <p className="text-blue font-bold leading-10 text-xl md:text-2xl">
             Contact Details
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-4 md:mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-6 mt-4 md:mt-10">
             <div className="col-span-2">
               <CustomInput
                 value={data.email}
