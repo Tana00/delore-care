@@ -126,7 +126,10 @@ const Nav = () => {
                               className=""
                             >
                               <li
-                                onClick={() => setIsOpen(false)}
+                                onClick={() => {
+                                  setOpenDropdown(null);
+                                  console.log(isOpen, "here");
+                                }}
                                 className="text-gray text-lg py-2 px-4 hover:text-red"
                               >
                                 {submenu.title}
@@ -148,7 +151,7 @@ const Nav = () => {
                               className=""
                             >
                               <li
-                                onClick={() => setIsOpen(false)}
+                                onClick={() => setOpenDropdown(null)}
                                 className="text-gray text-lg py-2 px-4 hover:text-red"
                               >
                                 {submenu.title}

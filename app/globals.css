@@ -51,6 +51,14 @@ body {
   height: unset !important;
 }
 
+#services li {
+  list-style-type: square;
+}
+#services li::marker {
+  color: #f25764;
+  font-size: 1.5rem;
+}
+
 #our-values {
   clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -91,3 +99,8 @@ input[type="checkbox"]:checked + .checkmark::after {
   content: "✓"; /* Display a checkmark using pseudo-element ::after */
   font-size: 16px; /* Adjust the size of the checkmark */
 }
+
+/* svg {
+  width: inherit !important;
+  height: inherit !important;
+} */
