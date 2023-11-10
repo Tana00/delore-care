@@ -128,7 +128,6 @@ const Nav = () => {
                               <li
                                 onClick={() => {
                                   setOpenDropdown(null);
-                                  console.log(isOpen, "here");
                                 }}
                                 className="text-gray text-lg py-2 px-4 hover:text-red"
                               >

@@ -1,6 +1,6 @@
 export const menuList = [
   {
-    title: "Services",
+    title: "Service",
     hasSubmenu: true,
     submenu: [
       { title: "All Services", href: "" },
@@ -28,7 +28,7 @@ export const menuList = [
     ],
   },
   {
-    title: "Company-page",
+    title: "Company",
     hasSubmenu: true,
     submenu: [
       { title: "About Us", href: "#about-us" },
@@ -42,7 +42,7 @@ export const menuList = [
   {
     title: "Why Us",
     hasSubmenu: false,
-    href: "/why-us-page",
+    href: "/why-us",
   },
   {
     title: "Career",

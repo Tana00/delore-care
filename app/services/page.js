@@ -1,11 +1,43 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CTAComponent from "@/components/cta";
 import { servicesList } from "@/utils";
 
 const Services = () => {
   const [activeService, setActiveService] = useState(servicesList[0]);
+
+  const getHash = () => {
+    if (typeof window !== "undefined") {
+      const hash = decodeURIComponent(window.location.hash.replace("#", ""));
+      return servicesList.find(
+        (service) => service.title.toLowerCase().replace(/\s/g, "-") === hash
+      );
+    }
+    return undefined;
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hashObject = getHash();
+
+      console.log("activeService", activeService);
+      setActiveService(hashObject);
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [getHash]);
+
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
@@ -52,11 +84,14 @@ const Services = () => {
                 <p
                   key={service.id}
                   className={`px-3 py-2.5 ${
-                    activeService.title === service.title
+                    activeService?.title === service?.title
                       ? "bg-red text-white"
                       : "bg-transparent text-blue"
                   } text-[17px] w-fit rounded-lg font-semibold cursor-pointer hover:bg-red hover:text-white transition`}
-                  onClick={() => setActiveService(service)}
+                  onClick={() => {
+                    setActiveService(service);
+                    console.log("service", service, activeService);
+                  }}
                 >
                   {service.title}
                 </p>
@@ -65,16 +100,16 @@ const Services = () => {
           </div>
           <div className="col-span-12 md:col-span-7">
             <div
-              className={`rounded-lg h-[300px] 2xl:h-[600px] w-full 2xl:bg-cover relative bg-no-repeat`}
-              style={{ backgroundImage: `url(${activeService.src})` }}
+              className={`rounded-lg h-[300px] 2xl:h-[600px] w-full bg-cover relative bg-no-repeat`}
+              style={{ backgroundImage: `url(${activeService?.src})` }}
             ></div>
             <div className="text-gray text-[15px] leading-8">
               <h2 className="text-blue font-semibold text-2xl md:text-3xl lg:text-[35px] leading-10 md:leading-[50px] mt-4 md:my-3 lg:my-6">
-                {activeService.title}
+                {activeService?.title}
               </h2>
               <p className="">{activeService?.content?.text}</p>
               <ul className="mt-4 mx-5">
-                {activeService.content.lists?.map((item, i) => (
+                {activeService?.content.lists?.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
