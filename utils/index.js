@@ -31,7 +31,7 @@ export const menuList = [
     title: "Company",
     hasSubmenu: true,
     submenu: [
-      { title: "About Us", href: "#about-us" },
+      { title: "About Us", href: "/" },
       { title: "Our Vision", href: "#our-vision" },
       { title: "Our Mission", href: "#our-mission" },
       { title: "Our Values", href: "#our-values" },
