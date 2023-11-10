@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const AboutUsComponent = () => {
-  const router = useRouter();
   return (
     <section className="py-16 bg-gray-light">
       <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
@@ -19,18 +18,17 @@ const AboutUsComponent = () => {
               operational strategy places an inestimable value on every
               contribution. We do not have many lines of hierarchy.
             </p>
-            <button
-              onClick={() => router.push("/company")}
-              className="my-6 bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all"
-            >
-              <span>Read more</span>
-              <Image
-                src="/assets/icons/up-arrow.svg"
-                alt="up-arrow"
-                width={20}
-                height={20}
-              />
-            </button>
+            <Link href="/company">
+              <button className="my-6 bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+                <span>Read more</span>
+                <Image
+                  src="/assets/icons/up-arrow.svg"
+                  alt="up-arrow"
+                  width={20}
+                  height={20}
+                />
+              </button>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6 md:mt-14 mb-4">
