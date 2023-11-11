@@ -1,6 +1,10 @@
+"use client";
+import { useState } from "react";
+import localFont from "next/font/local";
+import { ToastContext } from "@/utils/ToastContext";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import localFont from "next/font/local";
+import { ErrorToast, Notification } from "@/components/modal";
 import "./globals.css";
 
 const gilmer = localFont({
@@ -33,7 +37,7 @@ const gilmer = localFont({
   // variable: "--font-gilmer",
 });
 
-export const metadata = {
+const metadata = {
   title: "Delorecare | Professional service, Personal touch.",
   description:
     "We provide care and support to people who live in their own homes in England. We care for a wide range of needs.",
@@ -41,18 +45,39 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [showToast, setShowToast] = useState(null);
+  const [toastMessage, setToastMessage] = useState("");
+
   return (
-    <html lang="en" className={`${gilmer.className}`}>
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-      </head>
-      <body className="">
-        <Nav />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ToastContext.Provider
+      value={{ showToast, setShowToast, toastMessage, setToastMessage }}
+    >
+      <html lang="en" className={`${gilmer.className}`}>
+        <head>
+          <title>{metadata.title}</title>
+          <meta name="description" content={metadata.description} />
+          <meta name="keywords" content={metadata.keywords} />
+        </head>
+        <body className="">
+          {showToast === "error" && (
+            <ErrorToast
+              closeToast={() => setShowToast(false)}
+              message={toastMessage}
+            />
+          )}
+          {showToast === "success" && (
+            <Notification
+              title={toastMessage.title}
+              message={toastMessage.message}
+              closeModal={() => setShowToast(null)}
+              //  isActive={isActive}
+            />
+          )}
+          <Nav />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ToastContext.Provider>
   );
 }

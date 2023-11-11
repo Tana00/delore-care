@@ -1,30 +1,33 @@
 export const menuList = [
   {
-    title: "Service",
+    title: "Services",
     hasSubmenu: true,
     submenu: [
       { title: "All Services", href: "" },
-      { title: "Dementia Care", href: "#dementia-care" },
+      { title: "Dementia Care", href: "?service=dementia-care#services" },
       {
         title: "Varied Learning Abilities",
-        href: "#varied-learning-abilities",
+        href: "?service=varied-learning-abilities#services",
       },
-      { title: "Mobility Needs", href: "#mobility-needs" },
-      { title: "Live-In-Care", href: "#live-in-care" },
-      { title: "Tracheostomy", href: "#tracheostomy" },
-      { title: "Bowel care", href: "#bowel-care" },
-      { title: "Spinal injury", href: "#spinal-injury" },
-      { title: "Acquired brain injury", href: "#acquired-brain-injury" },
-      { title: "Elderly care", href: "#elderly-care" },
-      { title: "Peg feeding", href: "#peg-feeding" },
+      { title: "Mobility Needs", href: "?service=mobility-needs#services" },
+      { title: "Live-In-Care", href: "?service=live-in-care#services" },
+      { title: "Tracheostomy", href: "?service=tracheostomy#services" },
+      { title: "Bowel care", href: "?service=bowel-care#services" },
+      { title: "Spinal injury", href: "?service=spinal-injury#services" },
+      {
+        title: "Acquired brain injury",
+        href: "?service=acquired-brain-injury#services",
+      },
+      { title: "Elderly care", href: "?service=elderly-care#services" },
+      { title: "Peg feeding", href: "?service=peg-feeding#services" },
       {
         title: "Learning Disability & Autism",
-        href: "#learning-disability-autism",
+        href: "?service=learning-disability-and-autism#services",
       },
-      { title: "Home care", href: "#home-care" },
-      { title: "Cancer care", href: "#cancer-care" },
-      { title: "End of life care", href: "#end-of-life-care" },
-      { title: "Complex care", href: "#complex-care" },
+      { title: "Home care", href: "?service=home-care#services" },
+      { title: "Cancer care", href: "?service=cancer-care#services" },
+      { title: "End of life care", href: "?service=end-of-life-care#services" },
+      { title: "Complex care", href: "?service=complex-care#services" },
     ],
   },
   {
@@ -35,7 +38,7 @@ export const menuList = [
       { title: "Our Vision", href: "#our-vision" },
       { title: "Our Mission", href: "#our-mission" },
       { title: "Our Values", href: "#our-values" },
-      { title: "Meet the Team", href: "#meet-the-team" },
+      { title: "Meet the Team", href: "#team" },
       { title: "Location", href: "#location" },
     ],
   },
@@ -47,7 +50,7 @@ export const menuList = [
   {
     title: "Career",
     hasSubmenu: false,
-    href: "/career-page",
+    href: "/career",
   },
 ];
 
@@ -55,6 +58,7 @@ export const servicesList = [
   {
     id: 0,
     src: "/assets/images/services/service1.svg",
+    png: "/assets/images/services/service1.png",
     title: "Dementia Care",
     desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
     content: {
@@ -71,6 +75,7 @@ export const servicesList = [
   {
     id: 1,
     src: "/assets/images/services/service2.svg",
+    png: "/assets/images/services/service2.png",
     title: "Varied Learning Abilities",
     desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
     content: {
@@ -86,6 +91,7 @@ export const servicesList = [
   {
     id: 2,
     src: "/assets/images/services/service3.svg",
+    png: "/assets/images/services/service3.png",
     title: "Mobility Needs",
     desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
     content: {
@@ -101,6 +107,7 @@ export const servicesList = [
   {
     id: 3,
     src: "/assets/images/services/service4.svg",
+    png: "/assets/images/services/service4.png",
     title: "Live-in-Care",
     desc: "We provide round-the -clock care for your loved one as and when it is needed.",
     content: {
@@ -117,6 +124,7 @@ export const servicesList = [
   {
     id: 4,
     src: "/assets/images/services/service1.svg",
+    png: "/assets/images/services/service1.png",
     title: "Tracheostomy",
     desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
     content: {
@@ -133,6 +141,7 @@ export const servicesList = [
   {
     id: 5,
     src: "/assets/images/services/service2.svg",
+    png: "/assets/images/services/service2.png",
     title: "Bowel care",
     desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
     content: {
@@ -149,6 +158,7 @@ export const servicesList = [
   {
     id: 6,
     src: "/assets/images/services/service3.svg",
+    png: "/assets/images/services/service3.png",
     title: "Spinal injury",
     desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
     content: {
@@ -165,6 +175,7 @@ export const servicesList = [
   {
     id: 7,
     src: "/assets/images/services/service4.svg",
+    png: "/assets/images/services/service4.png",
     title: "Acquired brain injury",
     desc: "We provide round-the -clock care for your loved one as and when it is needed.",
     content: {
@@ -181,6 +192,7 @@ export const servicesList = [
   {
     id: 8,
     src: "/assets/images/services/service1.svg",
+    png: "/assets/images/services/service1.png",
     title: "Elderly care",
     desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
     content: {
@@ -197,6 +209,7 @@ export const servicesList = [
   {
     id: 9,
     src: "/assets/images/services/service2.svg",
+    png: "/assets/images/services/service2.png",
     title: "Peg feeding",
     desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
     content: {
@@ -213,6 +226,7 @@ export const servicesList = [
   {
     id: 10,
     src: "/assets/images/services/service3.svg",
+    png: "/assets/images/services/service3.png",
     title: "Learning Disability & Autism",
     desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
     content: {
@@ -229,6 +243,7 @@ export const servicesList = [
   {
     id: 11,
     src: "/assets/images/services/service4.svg",
+    png: "/assets/images/services/service4.png",
     title: "Home care",
     desc: "We provide round-the -clock care for your loved one as and when it is needed.",
     content: {
@@ -245,6 +260,7 @@ export const servicesList = [
   {
     id: 12,
     src: "/assets/images/services/service1.svg",
+    png: "/assets/images/services/service1.png",
     title: "Cancer care",
     desc: "We ensure that your loved one maintains good nutrition, hydration and their general wellbeing by enabling them to enjoy each day.",
     content: {
@@ -261,6 +277,7 @@ export const servicesList = [
   {
     id: 13,
     src: "/assets/images/services/service2.svg",
+    png: "/assets/images/services/service2.png",
     title: "End of life care",
     desc: "We tailor our support to your needs and ensure that you take full part of your care and support process throughout our support with you.",
     content: {
@@ -277,6 +294,7 @@ export const servicesList = [
   {
     id: 14,
     src: "/assets/images/services/service3.svg",
+    png: "/assets/images/services/service3.png",
     title: "Complex care",
     desc: "We support with the use of various mobility equipment and technology, including accessing the community.",
     content: {
@@ -381,3 +399,17 @@ export const teamList = [
     desc: "With over 10years of experience, Dr. Tim Kate leads our medical team with a strong commitment to excellence and a passion for patient care. Their areas of expertise and they have received numerous accolades for their contributions to the field.",
   },
 ];
+
+export const toBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      let encoded = reader.result.toString().replace(/^data:(.*,)?/, "");
+      if (encoded.length % 4 > 0) {
+        encoded += "=".repeat(4 - (encoded.length % 4));
+      }
+      resolve(encoded);
+    };
+    reader.onerror = (error) => reject(error);
+  });

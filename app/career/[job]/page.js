@@ -1,9 +1,11 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect, useContext } from "react";
+import { usePathname } from "next/navigation";
 import CustomRadioButton from "@/components/form/CustomRadioButton";
 import CustomInput from "@/components/form/CustomInput";
 import CustomUploadButton from "@/components/form/CustomUploadButton";
+import { toBase64 } from "@/utils";
+import { ToastContext } from "@/utils/ToastContext";
 
 const shifts = [
   { id: 0, label: "Days", value: "days" },
@@ -17,6 +19,11 @@ const ownTransport = [
 ];
 
 const JobApplication = () => {
+  const pathname = usePathname();
+  const jobType = pathname?.split("/")[2]?.replace("%20", " ");
+
+  const { showToast, setShowToast, setToastMessage } = useContext(ToastContext);
+
   const [data, setData] = useState({
     shift: "",
     transport: "",
@@ -35,7 +42,13 @@ const JobApplication = () => {
     resume: "",
     driversLicence: "",
     confirm: false,
+    resumeFileName: "",
+    licenceFileName: "",
   });
+  const [attachment, setAttachment] = useState([]);
+  // const [driversLicenceAttachment, setDriversLicenceAttachment] = useState(null);
+  const [isActive, setIsActive] = useState(false);
+  const [buttonText, setButtonText] = useState("Submit Application");
 
   const handleDataChange = (value, name) => {
     setData({
@@ -44,22 +57,83 @@ const JobApplication = () => {
     });
   };
 
-  const handleFileChange = (event, name) => {
+  const handleFileChange = async (event, name) => {
     const selectedFile = event.target.files[0];
     if (selectedFile) {
-      return handleDataChange(selectedFile, name);
+      const res = await toBase64(selectedFile);
+
+      setAttachment([...attachment, res]);
+
+      return setData({
+        ...data,
+        [name]: selectedFile,
+        ...(name === "resume" && { resumeFileName: selectedFile.name }),
+        ...(name === "driversLicence" && {
+          licenceFileName: selectedFile.name,
+        }),
+      });
     }
   };
 
-  const handleOnSubmit = () => {
-    const payload = {
-      ...data,
-    };
+  // console.log("data", data, attachment);
+
+  const handleOnSubmit = async () => {
+    try {
+      setButtonText("Submitting...");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: data?.email,
+          // fullname: fullname,
+          subject: `Job Application: ${jobType?.toUpperCase()}`,
+          body: data,
+          files: attachment,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const result = await res.json();
+      console.log("res", result);
+      if (result.status === 202) {
+        setToastMessage({
+          title: "Application Submitted",
+          message: "Your application has been submitted successfully.",
+        });
+        setShowToast("success");
+        return setButtonText("Submit Application");
+        // return setIsActive(true);
+      } else {
+        setToastMessage("Application was not sent. Please try again");
+        setShowToast("error");
+        return setButtonText("Submit Application");
+      }
+    } catch (err) {
+      setToastMessage("Application not sent. Please try again");
+      setShowToast("error");
+      return setButtonText("Submit Application");
+    }
   };
-  console.log("data", data);
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.classList.add("active-modal");
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.classList.remove("active-modal");
+      document.documentElement.style.overflow = "auto";
+    }
+
+    return () => {
+      // Cleanup function to remove styles when component unmounts
+      document.body.classList.remove("active-modal");
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [isActive]);
 
   return (
-    <main className="bg-white font-gilmer">
+    <main className="bg-white font-gilmer backdrop-blur-xl bg-white/30">
       {/* Hero section */}
       <section className="bg-blue-light z-0 relative py-8 md:py-10 lg:py-28">
         <div className="relative flex flex-col md:flex-row items-start justify-start px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
@@ -78,8 +152,8 @@ const JobApplication = () => {
             </svg>
           </div>
           <div className="text-left md:text-center my-2 lg:my-0 md:ml-[20%] lg:ml-[30%]">
-            <h2 className="text-blue font-bold text-3xl md:text-4xl lg:text-5xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
-              Registered Nurse
+            <h2 className="capitalize text-blue font-bold text-3xl md:text-4xl lg:text-5xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
+              {jobType}
             </h2>
             <p className="text-gray font-normal text-base md:text-lg 2xl:text-2xl 2xl:leading-[50px] leading-8 my-2 md:my-4 2xl:my-8">
               Fill the form below to start application process
@@ -283,11 +357,13 @@ const JobApplication = () => {
               file={data.resume}
               handleFileChange={(e) => handleFileChange(e, "resume")}
             />
-            <CustomUploadButton
-              name="Driver’s Licence"
-              file={data.driversLicence}
-              handleFileChange={(e) => handleFileChange(e, "driversLicence")}
-            />
+            {data.hasDriversLicence === "yes" && (
+              <CustomUploadButton
+                name="Driver’s Licence"
+                file={data.driversLicence}
+                handleFileChange={(e) => handleFileChange(e, "driversLicence")}
+              />
+            )}
           </div>
         </div>
         <label className="inline-flex flex-row items-center cursor-pointer select-none mb-10 md:mb-16 flex-wrap">
@@ -306,17 +382,18 @@ const JobApplication = () => {
           </a>
           of the company
         </label>
-        <Link href="/career/job/success">
-          <div className="">
-            <button
-              onClick={handleOnSubmit}
-              className="bg-blue text-white border border-blue rounded-lg w-56 py-3 text-base hover:bg-white hover:text-blue transition-all"
-            >
-              Submit Application
-            </button>
-          </div>
-        </Link>
+        <div className="">
+          <button
+            onClick={handleOnSubmit}
+            className="bg-blue text-white border border-blue rounded-lg w-56 py-3 text-base hover:bg-white hover:text-blue transition-all"
+            disabled={buttonText === "Submitting..."}
+          >
+            {buttonText}
+          </button>
+        </div>
       </section>
+
+      {/* Display the Notification component */}
     </main>
   );
 };

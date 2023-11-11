@@ -1,47 +1,34 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import CTAComponent from "@/components/cta";
 import { servicesList } from "@/utils";
 
 const Services = () => {
+  const searchParams = useSearchParams();
   const [activeService, setActiveService] = useState(servicesList[0]);
-
-  const getHash = () => {
-    if (typeof window !== "undefined") {
-      const hash = decodeURIComponent(window.location.hash.replace("#", ""));
-      return servicesList.find(
-        (service) => service.title.toLowerCase().replace(/\s/g, "-") === hash
-      );
-    }
-    return undefined;
-  };
+  const service = searchParams.get("service");
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hashObject = getHash();
+    if (service) {
+      const selectedService = servicesList.find(
+        (serviceItem) =>
+          serviceItem.title
+            .toLowerCase()
+            .replace(/\s/g, "-")
+            .replace(/&/g, "and") === service
+      );
 
-      console.log("activeService", activeService);
-      setActiveService(hashObject);
-      const servicesSection = document.getElementById("services");
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    handleHashChange();
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [getHash]);
+      selectedService
+        ? setActiveService(selectedService)
+        : setActiveService(servicesList[0]);
+    }
+  }, [service]);
 
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
-      <section id="all" className="z-0 relative">
+      <section className="z-0 relative">
         <div
           className="bg-no-repeat bg-top lg:h-[730px]"
           style={{
@@ -81,7 +68,8 @@ const Services = () => {
             </p>
             <div className="grid grid-cols-1 gap-4 mt-6">
               {servicesList?.map((service) => (
-                <p
+                <a
+                  href={`#${service.title.toLowerCase().replace(/ /g, "-")}`}
                   key={service.id}
                   className={`px-3 py-2.5 ${
                     activeService?.title === service?.title
@@ -90,18 +78,20 @@ const Services = () => {
                   } text-[17px] w-fit rounded-lg font-semibold cursor-pointer hover:bg-red hover:text-white transition`}
                   onClick={() => {
                     setActiveService(service);
-                    console.log("service", service, activeService);
                   }}
                 >
                   {service.title}
-                </p>
+                </a>
               ))}
             </div>
           </div>
           <div className="col-span-12 md:col-span-7">
             <div
-              className={`rounded-lg h-[300px] 2xl:h-[600px] w-full bg-cover relative bg-no-repeat`}
-              style={{ backgroundImage: `url(${activeService?.src})` }}
+              className={`rounded-lg h-[300px] 2xl:h-[600px] w-full bg-contain relative bg-no-repeat`}
+              style={{
+                backgroundImage: `url(${activeService?.png})`,
+                backgroundSize: "100% 100%",
+              }}
             ></div>
             <div className="text-gray text-[15px] leading-8">
               <h2 className="text-blue font-semibold text-2xl md:text-3xl lg:text-[35px] leading-10 md:leading-[50px] mt-4 md:my-3 lg:my-6">
