@@ -400,6 +400,33 @@ export const teamList = [
   },
 ];
 
+export const locationList = [
+  {
+    id: 0,
+    type: "Head Office",
+    name: "Paramount House",
+    address: "1 Delta Way Egham TW20 8RX.",
+  },
+  {
+    id: 1,
+    type: "Working Branch",
+    name: "Knowle West Media Centre",
+    address: "Leinster Ave, Bristol BS4 1NL",
+  },
+  {
+    id: 2,
+    type: "Working Branch",
+    name: "Paramount House",
+    address: "1 Delta Way Egham TW20 8RX.",
+  },
+  {
+    id: 3,
+    type: "Working Branch",
+    name: "Paramount House",
+    address: "1 Delta Way Egham TW20 8RX.",
+  },
+];
+
 export const toBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();

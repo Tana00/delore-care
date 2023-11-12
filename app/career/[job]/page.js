@@ -399,4 +399,3 @@ const JobApplication = () => {
 };
 
 export default JobApplication;
-// sm:w-4/5 md:w-3/4 lg:w-1/3 xl:w-1/3
