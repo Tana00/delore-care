@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CustomUploadButton = ({ name, file, handleFileChange }) => {
+const CustomUploadButton = ({ name, file, handleFileChange, error }) => {
   return (
     <div className="flex md:flex-row flex-col items-start md:items-center w-full">
       <label className="bg-blue-light text-black border-none rounded-lg cursor-pointer flex items-center px-5 py-4 w-full justify-between sm:w-[350px]">
@@ -28,6 +28,9 @@ const CustomUploadButton = ({ name, file, handleFileChange }) => {
         <span className="md:ml-5 mt-2 md:mt-0 text-red text-xs sm:text-sm font-medium">
           {file.name}
         </span>
+      )}
+      {error && (
+        <span className="ml-2 mb-6 text-red text-lg font-medium">*</span>
       )}
     </div>
   );

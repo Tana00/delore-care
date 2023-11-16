@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 const testimonialList = [
@@ -43,7 +43,7 @@ const Testimonials = () => {
   } else if (isTablet) {
     scrollDistance = 460; // Adjust this value to your cardWidth
   } else {
-    scrollDistance = 300;
+    scrollDistance = 600;
   }
 
   const scrollLeft = () => {
@@ -106,7 +106,7 @@ const Testimonials = () => {
           {testimonialList?.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-6 rounded-2xl flex-none w-full sm:w-[460px]"
+              className={`bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] lg:w-[31%] 2xl:w-[32%]`}
             >
               <p className="leading-8">"{item.desc}"</p>
               <div className="flex items-center mt-3 gap-2">

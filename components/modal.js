@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export const Notification = ({ title, message, closeModal }) => {
   return (
     <div className={`z-50 box-modal modal-show`}>
@@ -37,6 +39,16 @@ export const Notification = ({ title, message, closeModal }) => {
 };
 
 export const ErrorToast = ({ closeToast, message }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      closeToast();
+    }, 5000); // 30000 milliseconds = 30 seconds
+
+    // This function will run when the component unmounts or when the dependencies of useEffect change
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [closeToast]);
   return (
     <div className="bg-[#fef2f2] border border-[#f87171] rounded text-[#991b1b] text-sm p-4 flex justify-between sm:w-[380px] lg:w-2/5 max-w-[430px] fixed right-1 top-4 z-50">
       <div>

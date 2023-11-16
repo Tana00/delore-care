@@ -14,9 +14,31 @@ const shifts = [
 ];
 
 const ownTransport = [
-  { id: 0, label: "Full Time", value: "full_time" },
-  { id: 1, label: "Part Time", value: "part_time" },
+  { id: 0, label: "Full Time", value: "full" },
+  { id: 1, label: "Part Time", value: "part" },
 ];
+
+const defaultState = {
+  shift: shifts[0].value,
+  transport: ownTransport[0].value,
+  fName: "",
+  lName: "",
+  oName: "",
+  location: "uk",
+  address: "",
+  city: "",
+  zip: "",
+  email: "",
+  mobile: "",
+  tel: "",
+  hasOwnTransport: "yes",
+  hasDriversLicence: "yes",
+  resume: "",
+  driversLicence: "",
+  confirm: false,
+  resumeFileName: "",
+  licenceFileName: "",
+};
 
 const JobApplication = () => {
   const pathname = usePathname();
@@ -24,33 +46,18 @@ const JobApplication = () => {
 
   const { showToast, setShowToast, setToastMessage } = useContext(ToastContext);
 
-  const [data, setData] = useState({
-    shift: "",
-    transport: "",
-    fName: "",
-    lName: "",
-    oName: "",
-    location: "",
-    address: "",
-    city: "",
-    zip: "",
-    email: "",
-    mobile: "",
-    tel: "",
-    hasOwnTransport: null,
-    hasDriversLicence: null,
-    resume: "",
-    driversLicence: "",
-    confirm: false,
-    resumeFileName: "",
-    licenceFileName: "",
-  });
+  const [data, setData] = useState(defaultState);
   const [attachment, setAttachment] = useState([]);
-  // const [driversLicenceAttachment, setDriversLicenceAttachment] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [buttonText, setButtonText] = useState("Submit Application");
+  const [missingFields, setMissingFields] = useState([]);
+
+  const resetMissingFields = () => {
+    setMissingFields([]);
+  };
 
   const handleDataChange = (value, name) => {
+    resetMissingFields();
     setData({
       ...data,
       [name]: value,
@@ -58,12 +65,13 @@ const JobApplication = () => {
   };
 
   const handleFileChange = async (event, name) => {
+    resetMissingFields();
     const selectedFile = event.target.files[0];
     if (selectedFile) {
       const res = await toBase64(selectedFile);
 
       setAttachment([...attachment, res]);
-
+      event.target.value = "";
       return setData({
         ...data,
         [name]: selectedFile,
@@ -75,39 +83,87 @@ const JobApplication = () => {
     }
   };
 
-  // console.log("data", data, attachment);
+  const validateFields = () => {
+    const requiredFields = [
+      "fName",
+      "lName",
+      "email",
+      "mobile",
+      "address",
+      "city",
+      "resume",
+      "confirm",
+      ...(data.hasDriversLicence === "yes" ? ["driversLicence"] : []),
+    ];
+
+    const filteredFields = requiredFields.filter(
+      (field) => data[field] === "" || data[field] === false
+    );
+    setMissingFields(filteredFields);
+
+    if (filteredFields.length > 0) {
+      setToastMessage(
+        "Validation Error, please fill all required missing fields"
+      );
+      setShowToast("error");
+      return false;
+    }
+    return true;
+  };
 
   const handleOnSubmit = async () => {
     try {
       setButtonText("Submitting...");
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: data?.email,
-          // fullname: fullname,
-          subject: `Job Application: ${jobType?.toUpperCase()}`,
-          body: data,
-          files: attachment,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-
-      const result = await res.json();
-      console.log("res", result);
-      if (result.status === 202) {
-        setToastMessage({
-          title: "Application Submitted",
-          message: "Your application has been submitted successfully.",
-        });
-        setShowToast("success");
+      if (!validateFields()) {
         return setButtonText("Submit Application");
-        // return setIsActive(true);
       } else {
-        setToastMessage("Application was not sent. Please try again");
-        setShowToast("error");
-        return setButtonText("Submit Application");
+        const bodyData = {
+          "First Name": data.fName,
+          "Other Name": data.oName,
+          "Last Name": data.lName,
+          Location: data.location?.toUpperCase(),
+          "Street Address": data.address,
+          City: data.city,
+          "Zip/Postal Code": data.zip,
+          "Email Address": data.email,
+          Mobile: data.mobile,
+          "Home Telephone Number": data.tel,
+          "Has Own Transport": data.hasOwnTransport,
+          "Has Driver's Licence": data.hasDriversLicence,
+          "Preferred Shifts": data.shift,
+          "Own Transport":
+            data.transport === "full" ? "Full Time" : "Part Time",
+        };
+        const res = await fetch("/api/sendgrid", {
+          body: JSON.stringify({
+            email: data?.email,
+            subject: `Job Application: ${jobType?.toUpperCase()}`,
+            body: bodyData,
+            files: attachment,
+            data,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        });
+
+        const result = await res.json();
+
+        if (result.status === 202) {
+          setToastMessage({
+            title: "Application Submitted",
+            message: "Your application has been submitted successfully.",
+          });
+          setShowToast("success");
+          setAttachment([]);
+          setData(defaultState);
+          return setButtonText("Submit Application");
+        } else {
+          setToastMessage("Application was not sent. Please try again");
+          setShowToast("error");
+          return setButtonText("Submit Application");
+        }
       }
     } catch (err) {
       setToastMessage("Application not sent. Please try again");
@@ -209,12 +265,14 @@ const JobApplication = () => {
               onChange={(e) => handleDataChange(e.target.value, "fName")}
               name="first_name"
               label="First Name"
+              error={missingFields?.includes("fName")}
             />
             <CustomInput
               value={data.lName}
               onChange={(e) => handleDataChange(e.target.value, "lName")}
               name="last_name"
               label="Last Name"
+              error={missingFields?.includes("lName")}
             />
             <CustomInput
               value={data.oName}
@@ -251,6 +309,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "address")}
                 name="address"
                 label="Street Address"
+                error={missingFields?.includes("address")}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -259,6 +318,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "city")}
                 name="city"
                 label="City"
+                error={missingFields?.includes("city")}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -282,6 +342,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "email")}
                 name="email"
                 label="Your Email Address"
+                error={missingFields?.includes("email")}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -290,6 +351,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "mobile")}
                 name="mobile"
                 label="Your Mobile Number"
+                error={missingFields?.includes("mobile")}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -337,9 +399,15 @@ const JobApplication = () => {
                     key={licence.id}
                     label={licence.label}
                     checked={data.hasDriversLicence === licence.value}
-                    onChange={() =>
-                      handleDataChange(licence.value, "hasDriversLicence")
-                    }
+                    onChange={() => {
+                      handleDataChange(licence.value, "hasDriversLicence");
+                      if (licence.value === "no") {
+                        const newArray = missingFields.filter(
+                          (item) => item !== "hasDriversLicence"
+                        );
+                        setMissingFields(newArray);
+                      }
+                    }}
                     value={licence.value}
                   />
                 ))}
@@ -356,12 +424,17 @@ const JobApplication = () => {
               name="Resume"
               file={data.resume}
               handleFileChange={(e) => handleFileChange(e, "resume")}
+              error={missingFields?.includes("resume")}
             />
             {data.hasDriversLicence === "yes" && (
               <CustomUploadButton
                 name="Driver’s Licence"
                 file={data.driversLicence}
                 handleFileChange={(e) => handleFileChange(e, "driversLicence")}
+                error={
+                  missingFields?.includes("driversLicence") &&
+                  data.hasDriversLicence === "yes"
+                }
               />
             )}
           </div>
@@ -381,6 +454,13 @@ const JobApplication = () => {
             conditions
           </a>
           of the company
+          <span
+            className={`text-red text-lg ${
+              missingFields?.includes("confirm") ? "visible" : "invisible"
+            }`}
+          >
+            *
+          </span>
         </label>
         <div className="">
           <button
