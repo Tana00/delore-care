@@ -39,15 +39,16 @@ const Testimonials = () => {
   let scrollDistance = 0;
 
   if (isMobile) {
-    scrollDistance = deviceWidth;
+    scrollDistance = 2 * (0.45 * deviceWidth) + 32;
   } else if (isTablet) {
-    scrollDistance = 460; // Adjust this value to your cardWidth
+    scrollDistance = 2 * (0.5 * deviceWidth) + 32;
   } else {
-    scrollDistance = 600;
+    scrollDistance = 2 * (0.31 * deviceWidth) + 32;
   }
 
   const scrollLeft = () => {
     if (containerRef.current) {
+      console.log("scrollDistance-left", scrollDistance);
       containerRef.current.scrollBy({
         left: -scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",
@@ -57,6 +58,7 @@ const Testimonials = () => {
 
   const scrollRight = () => {
     if (containerRef.current) {
+      console.log("scrollDistance-right", scrollDistance);
       containerRef.current.scrollBy({
         left: scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",
@@ -106,7 +108,7 @@ const Testimonials = () => {
           {testimonialList?.map((item) => (
             <div
               key={item.id}
-              className={`bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] lg:w-[31%] 2xl:w-[32%]`}
+              className={`bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] xl:w-[31%] 2xl:w-[32%]`}
             >
               <p className="leading-8">"{item.desc}"</p>
               <div className="flex items-center mt-3 gap-2">
