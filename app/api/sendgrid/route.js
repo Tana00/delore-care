@@ -2,10 +2,11 @@ import { NextResponse } from "next/server";
 import sendgrid from "@sendgrid/mail";
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-console.log("env", process.env.SENDGRID_API_KEY);
 
 export async function POST(request) {
   const { body, data, subject, files, email } = await request.json();
+
+  console.log("env", process.env.SENDGRID_API_KEY);
 
   let attachments = files.map((file, index) => {
     return {
