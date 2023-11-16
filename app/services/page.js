@@ -60,7 +60,7 @@ const Services = () => {
       {/* Services list */}
       <section id="services" className="relative my-20">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-12 gap-6 2xl:gap-16 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-          <div className="bg-blue-light p-8 col-span-12 md:col-span-5 rounded-2xl services md:h-[900px] 2xl:h-auto overflow-y-scroll">
+          <div className="bg-blue-light p-8 col-span-12 md:col-span-5 rounded-2xl services md:h-[800px] 2xl:h-auto overflow-y-scroll">
             <p className="text-[15px] font-normal leading-7">
               Our dedicated healthcare professionals, state-of-the-art
               technology, and patient-centric approach make us a trusted

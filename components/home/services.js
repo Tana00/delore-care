@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { servicesList } from "@/utils";
 
 const ServicesComponent = () => {
@@ -17,15 +18,17 @@ const ServicesComponent = () => {
               in England.We care for a wide range of needs. Some of these
               include:
             </p>
-            <button className="my-6 bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
-              <span>See all</span>
-              <Image
-                src="/assets/icons/up-arrow.svg"
-                alt="up-arrow"
-                width={20}
-                height={20}
-              />
-            </button>
+            <Link href="/services">
+              <button className="my-6 bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+                <span>See all</span>
+                <Image
+                  src="/assets/icons/up-arrow.svg"
+                  alt="up-arrow"
+                  width={20}
+                  height={20}
+                />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -55,15 +58,22 @@ const ServicesComponent = () => {
                 <p className="text-white font-light text-base xl:text-lg leading-7 xl:leading-9">
                   {service.desc}
                 </p>
-                <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
-                  <span>Learn more</span>
-                  <Image
-                    src="/assets/icons/up-arrow-red.svg"
-                    alt="up-arrow"
-                    width={20}
-                    height={20}
-                  />
-                </button>
+                <Link
+                  href={`/services?service=${service.title
+                    ?.toLowerCase()
+                    .replace(/&/g, "and")
+                    .replace(/ /g, "-")}#services`}
+                >
+                  <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+                    <span>Learn more</span>
+                    <Image
+                      src="/assets/icons/up-arrow-red.svg"
+                      alt="up-arrow"
+                      width={20}
+                      height={20}
+                    />
+                  </button>
+                </Link>
               </div>
               <div className="sm:hidden block relative">
                 <img

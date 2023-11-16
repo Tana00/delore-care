@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { menuList } from "@/utils";
 
 const footerLinks = [
@@ -54,22 +55,34 @@ const Footer = () => {
               >
                 <ul className="">
                   {link.submenu.slice(0, 8).map((submenu, i) => (
-                    <li
+                    <Link
                       key={i}
-                      className="py-2.5 hover:text-red cursor-pointer transition-all"
+                      href={`/${link.title?.toLowerCase()}/${submenu.href}`}
+                      className=""
                     >
-                      {submenu.title}
-                    </li>
+                      <li
+                        key={i}
+                        className="py-2.5 hover:text-red cursor-pointer transition-all"
+                      >
+                        {submenu.title}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
                 <ul className="">
                   {link.submenu.slice(8).map((submenu, i) => (
-                    <li
+                    <Link
                       key={i}
-                      className="py-2.5 hover:text-red cursor-pointer transition-all"
+                      href={`/${link.title?.toLowerCase()}/${submenu.href}`}
+                      className=""
                     >
-                      {submenu.title}
-                    </li>
+                      <li
+                        key={i}
+                        className="py-2.5 hover:text-red cursor-pointer transition-all"
+                      >
+                        {submenu.title}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
                 {link.title === "Quick Links" && (
