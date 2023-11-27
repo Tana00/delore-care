@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -15,9 +16,11 @@ const CTA = () => {
               help. Reach out through our contact form, call us, or visit us in
               person.
             </p>
-            <button className="bg-red text-white w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-              Contact Us
-            </button>
+            <Link href="/contact-us">
+              <button className="bg-red text-white w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
         <div className="relative w-full h-full col-span-12 md:col-span-5 2xl:col-span-6">

@@ -57,7 +57,13 @@ const Footer = () => {
                   {link.submenu.slice(0, 8).map((submenu, i) => (
                     <Link
                       key={i}
-                      href={`/${link.title?.toLowerCase()}/${submenu.href}`}
+                      href={
+                        link.title === "Quick Links"
+                          ? `${submenu.href}`
+                          : submenu?.title === "Location"
+                          ? `${submenu.href}`
+                          : `/${link.title?.toLowerCase()}/${submenu.href}`
+                      }
                       className=""
                     >
                       <li

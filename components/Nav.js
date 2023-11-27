@@ -120,9 +120,13 @@ const Nav = () => {
                           {menu.submenu.slice(0, 8).map((submenu, i) => (
                             <Link
                               key={i}
-                              href={`/${menu.title?.toLowerCase()}/${
-                                submenu.href
-                              }`}
+                              href={
+                                submenu?.title === "Location"
+                                  ? `${submenu.href}`
+                                  : `/${menu.title?.toLowerCase()}/${
+                                      submenu.href
+                                    }`
+                              }
                               className=""
                             >
                               <li

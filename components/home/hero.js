@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import hero1 from "../../public/assets/images/hero1.svg";
 import hero2 from "../../public/assets/images/hero2.svg";
@@ -41,27 +42,31 @@ const Hero = () => {
             priority.
           </p>
           <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4">
-            <button className="bg-blue text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-              Contact Us
-            </button>
-            <button className="bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
-              <div className="mr-4 flex items-center">
+            <Link href="/contact-us">
+              <button className="bg-blue text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                Contact Us
+              </button>
+            </Link>
+            <Link href="/locations">
+              <button className="bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+                <div className="mr-4 flex items-center">
+                  <Image
+                    src="/assets/icons/location.svg"
+                    alt="location"
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
+                  <span>View Location</span>
+                </div>
                 <Image
-                  src="/assets/icons/location.svg"
-                  alt="location"
+                  src="/assets/icons/up-arrow.svg"
+                  alt="up-arrow"
                   width={20}
                   height={20}
-                  className="mr-2"
                 />
-                <span>View Location</span>
-              </div>
-              <Image
-                src="/assets/icons/up-arrow.svg"
-                alt="up-arrow"
-                width={20}
-                height={20}
-              />
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
         <div className="col-span-5 2xl:col-span-5 w-full grid grid-cols-2 gap-2 md:gap-y-4 md:gap-x-10">

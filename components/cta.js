@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CTAComponent = () => {
   return (
@@ -20,9 +21,11 @@ const CTAComponent = () => {
                 help. Reach out through our contact form, call us, or visit us
                 in person.
               </p>
-              <button className="bg-red text-white w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-                Contact Us
-              </button>
+              <Link href="/contact-us">
+                <button className="bg-red text-white w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
           <div className="relative w-full sm:h-[600px] lg:h-full sm:order-last order-2 lg:order-2 col-span-2 lg:col-auto">
@@ -48,10 +51,11 @@ const CTAComponent = () => {
               </p>
               <br />
               <br />
-              {/* <br className="block w-[800px]:hidden" /> */}
-              <button className="bg-red text-white w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-64 h-14 text-base font-medium rounded-lg hover:scale-105 transition-all">
-                Book an Appointment
-              </button>
+              <Link href="/contact-us" className="lg:w-full w-auto">
+                <button className="w-full bg-red text-white sm:w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 md:w-64 h-14 text-base font-medium rounded-lg hover:scale-105 transition-all">
+                  Book an Appointment
+                </button>
+              </Link>
             </div>
           </div>
         </div>

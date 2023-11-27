@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BookAppointment = () => {
   return (
     <section className="py-6 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full my-10">
@@ -141,9 +143,11 @@ const BookAppointment = () => {
               </div>
             </div>
           </div>
-          <button className="bg-blue text-white w-full sm:w-64 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
-            Book an Appointment
-          </button>
+          <Link href="/contact-us">
+            <button className="bg-blue text-white w-full sm:w-64 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
+              Book an Appointment
+            </button>
+          </Link>
         </div>
       </div>
     </section>

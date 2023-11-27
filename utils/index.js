@@ -39,7 +39,7 @@ export const menuList = [
       { title: "Our Mission", href: "#our-mission" },
       { title: "Our Values", href: "#our-values" },
       { title: "Meet the Team", href: "#team" },
-      { title: "Location", href: "#location" },
+      { title: "Location", href: "/locations" },
     ],
   },
   {
@@ -48,9 +48,9 @@ export const menuList = [
     href: "/why-us",
   },
   {
-    title: "Career",
+    title: "Careers",
     hasSubmenu: false,
-    href: "/career",
+    href: "/careers",
   },
 ];
 
@@ -406,24 +406,28 @@ export const locationList = [
     type: "Head Office",
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
+    href: "paramount-house",
   },
   {
     id: 1,
     type: "Working Branch",
     name: "Knowle West Media Centre",
     address: "Leinster Ave, Bristol BS4 1NL",
+    href: "knowle-west-media-centre",
   },
   {
     id: 2,
     type: "Working Branch",
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
+    href: "paramount-house",
   },
   {
     id: 3,
     type: "Working Branch",
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
+    href: "paramount-house",
   },
 ];
 

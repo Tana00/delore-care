@@ -63,7 +63,7 @@ const WhyUs = () => {
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
-      <section className="z-0 relative py-8 md:py-10 lg:py-28">
+      <section className="z-0 relative md:py-10 lg:py-44 py-6 bg-[url('/assets/images/hero-bg.svg')] bg-left bg-cover bg-no-repeat">
         <div className="grid items-start justify-between grid-cols-1 lg:grid-cols-12 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="text-center lg:text-left col-span-6 2xl:mr-36 my-2 lg:my-0">
             <h2 className="text-blue font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
@@ -84,7 +84,7 @@ const WhyUs = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-light z-0 relative mb-10 lg:my-28">
+      <section className="bg-blue-light z-0 relative mb-10 lg:mb-28">
         <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <h2 className="text-blue font-bold text-[28px] md:text-3xl lg:text-[36px] leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px] py-8 md:py-10">
             Customer-Centric Approach

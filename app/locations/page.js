@@ -1,10 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { locationList } from "@/utils";
 import Map from "@/components/Map";
+import CTA from "@/components/home/cta";
 
 const Locations = () => {
+  const searchParams = useSearchParams();
+  const location = searchParams.get("location");
   const [activeLocation, setActiveLocation] = useState(locationList[0]);
+
+  console.log("location", location);
+
+  useEffect(() => {
+    if (location) {
+      const selectedLocation = locationList.find(
+        (locationItem) => locationItem.href === location
+      );
+
+      selectedLocation
+        ? setActiveLocation(selectedLocation)
+        : setActiveLocation(servicesList[0]);
+    }
+  }, [location]);
+
   return (
     <main className="bg-white font-gilmer backdrop-blur-xl bg-white/30">
       {/* Hero section */}
@@ -75,6 +94,7 @@ const Locations = () => {
           </div>
         </div>
       </section>
+      <CTA />
     </main>
   );
 };

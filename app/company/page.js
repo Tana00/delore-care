@@ -11,11 +11,11 @@ const Company = () => {
       <section id="about-us" className="z-0 relative">
         <div className="bg-[url('/assets/images/about-hero-bg.svg')] bg-cover bg-no-repeat">
           <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-            <div className="text-center lg:text-left col-span-6 2xl:mr-36 my-20 lg:my-0">
+            <div className="text-center lg:text-left col-span-6 2xl:mr-36 mt-20 lg:mt-0">
               <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl !leading-[40px] md:!leading-[50px] lg:!leading-[65px] xl:!leading-[80px]">
                 About Us
               </h2>
-              <p className="text-white font-light text-base md:text-lg 2xl:text-3xl 2xl:!leading-[50px] !leading-7 md:!leading-8 my-4 2xl:my-8 sm:mx-4 md:mx-20 lg:mx-0">
+              <p className="text-white font-light text-base md:text-lg 2xl:text-[28px] 2xl:!leading-[50px] !leading-7 md:!leading-8 my-4 2xl:my-8 sm:mx-4 md:mx-20 lg:mx-0">
                 At Delore Care, every team member is valued and appreciated. Our
                 operational strategy places an inestimable value on every
                 contribution. We do not have many lines of hierarchy.

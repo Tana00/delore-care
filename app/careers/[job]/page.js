@@ -134,7 +134,7 @@ const JobApplication = () => {
           "Own Transport":
             data.transport === "full" ? "Full Time" : "Part Time",
         };
-        const res = await fetch("/api/sendgrid", {
+        const res = await fetch("/api/job-application", {
           body: JSON.stringify({
             email: data?.email,
             subject: `Job Application: ${jobType?.toUpperCase()}`,
