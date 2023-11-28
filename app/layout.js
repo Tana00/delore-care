@@ -57,11 +57,6 @@ export default function RootLayout({ children }) {
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
           <meta name="keywords" content={metadata.keywords} />
-          {/* <script
-            src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`}
-            async
-            defer
-          ></script> */}
         </head>
         <body className="">
           {showToast === "error" && (

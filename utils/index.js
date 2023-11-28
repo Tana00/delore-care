@@ -407,6 +407,8 @@ export const locationList = [
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
     href: "paramount-house",
+    iframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
   },
   {
     id: 1,
@@ -414,6 +416,8 @@ export const locationList = [
     name: "Knowle West Media Centre",
     address: "Leinster Ave, Bristol BS4 1NL",
     href: "knowle-west-media-centre",
+    iframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.778247919891!2d-2.5953060235181837!3d51.42550001668338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e9fc48501a7%3A0xb4f45ea4150dd3d2!2sLeinster%20Ave%2C%20Bristol%20BS4%201NL%2C%20UK!5e0!3m2!1sen!2sng!4v1701191657561!5m2!1sen!2sng",
   },
   {
     id: 2,
@@ -421,6 +425,8 @@ export const locationList = [
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
     href: "paramount-house",
+    iframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
   },
   {
     id: 3,
@@ -428,6 +434,8 @@ export const locationList = [
     name: "Paramount House",
     address: "1 Delta Way Egham TW20 8RX.",
     href: "paramount-house",
+    iframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
   },
 ];
 

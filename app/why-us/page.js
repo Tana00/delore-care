@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CTAComponent from "@/components/cta";
 
 const WhyUs = () => {
@@ -77,9 +78,11 @@ const WhyUs = () => {
               contribution. We do not have many lines of hierarchy.
             </p>
             <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
-              <button className="bg-blue text-white w-4/5 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-                Book an Appointment
-              </button>
+              <Link href="/contact-us">
+                <button className="bg-blue text-white w-4/5 min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                  Book an Appointment
+                </button>
+              </Link>
             </div>
           </div>
         </div>

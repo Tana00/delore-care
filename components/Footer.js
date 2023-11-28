@@ -133,7 +133,7 @@ const Footer = () => {
           <p>© 2023 Delorecare</p>
           <div className="flex items-center justify-between mb-2 sm:mb-0 gap-x-10 md:gap-20">
             <a
-              href="/terms-conditions"
+              href="/terms-and-conditions"
               className="hover:text-red cursor-pointer transition-all"
             >
               Terms & conditions

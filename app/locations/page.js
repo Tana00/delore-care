@@ -10,8 +10,6 @@ const Locations = () => {
   const location = searchParams.get("location");
   const [activeLocation, setActiveLocation] = useState(locationList[0]);
 
-  console.log("location", location);
-
   useEffect(() => {
     if (location) {
       const selectedLocation = locationList.find(
@@ -63,16 +61,27 @@ const Locations = () => {
             ))}
           </div>
           <div className="col-span-12 md:col-span-7 flex items-center justify-center flex-col">
-            <Map />
-            <div className="bg-blue p-8 flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-5">
-              <div className="w-full text-white flex items-start flex-col gap-y-4 text-sm">
-                <p className="font-medium text-base text-red">
-                  Book An Appointment
-                </p>
-                <p className="font-semibold">Mon. Fri.</p>
-                <p>5: 30am - 10:00pm</p>
-                <p className="font-semibold">Sat. - Sun.</p>
-                <p>7:00am - 10:00pm</p>
+            <iframe
+              src={activeLocation?.iframe}
+              // width="550"
+              height="500"
+              style={{ border: 0, width: "100%" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div className="w-full bg-blue p-8 flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-5">
+              <div className="w-full text-white flex items-start justify-between flex-col gap-y-4 text-sm">
+                <div className="flex items-start justify-between flex-col gap-y-4">
+                  <p className="font-medium text-base text-red">
+                    Book An Appointment
+                  </p>
+                  <p className="font-semibold">Mon. Fri.</p>
+                  <p>5: 30am - 10:00pm</p>
+                  <p className="font-semibold">Sat. - Sun.</p>
+                  <p>7:00am - 10:00pm</p>
+                </div>
+
                 <button className="lg:mt-8 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                   Book an Appointment
                 </button>

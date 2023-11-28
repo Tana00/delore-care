@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import CTAComponent from "@/components/cta";
 import BookAppointment from "@/components/home/book-appointment";
 import { teamList, valueList } from "@/utils";
@@ -21,9 +22,11 @@ const Company = () => {
                 contribution. We do not have many lines of hierarchy.
               </p>
               <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
-                <button className="bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-                  Contact Us
-                </button>
+                <Link href="/contact-us">
+                  <button className="bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                    Contact Us
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col-span-6 w-full h-full">
@@ -110,11 +113,13 @@ const Company = () => {
           <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:mb-8 text-center">
             Our Values
           </p>
-          <div className="grid items-start justify-evenly grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {valueList?.map((value) => (
+          <div className="grid items-start justify-evenly grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {valueList?.map((value, index) => (
               <div
                 key={value.id}
-                className="text-center flex items-center justify-center flex-col md:h-[364px]"
+                className={`${
+                  index === valueList.length - 1 ? "lg:col-start-2" : ""
+                } text-center flex items-center justify-center flex-col md:h-[364px]`}
               >
                 <div className="bg-white p-3 rounded-full w-14 h-14">
                   <img
