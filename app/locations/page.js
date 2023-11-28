@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { locationList } from "@/utils";
-import Map from "@/components/Map";
 import CTA from "@/components/home/cta";
 
 const Locations = () => {
@@ -81,10 +81,11 @@ const Locations = () => {
                   <p className="font-semibold">Sat. - Sun.</p>
                   <p>7:00am - 10:00pm</p>
                 </div>
-
-                <button className="lg:mt-8 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-                  Book an Appointment
-                </button>
+                <Link href="/contact-us">
+                  <button className="lg:mt-8 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                    Book an Appointment
+                  </button>
+                </Link>
               </div>
               <div className="w-full text-white flex items-start flex-col gap-y-4 text-sm">
                 <p className="font-semibold text-base text-red">

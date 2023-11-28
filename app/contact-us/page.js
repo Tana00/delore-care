@@ -238,9 +238,11 @@ const ContactUs = () => {
                   <p>5: 30am - 10:00pm</p>
                   <p className="font-semibold">Sat. - Sun.</p>
                   <p>7:00am - 10:00pm</p>
-                  <button className="mt-8 bg-red text-white w-full md:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
-                    Book an Appointment
-                  </button>
+                  <Link href="/contact-us">
+                    <button className="mt-8 bg-red text-white w-full md:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                      Book an Appointment
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
