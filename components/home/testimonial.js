@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 
 const testimonialList = [
@@ -7,25 +7,25 @@ const testimonialList = [
     id: 0,
     name: "Sarah K.",
     avatar: "/assets/images/testimonial1.svg",
-    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery. Delorecare isn't just a healthcare provider; they're a partner in your well-being.",
+    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
   },
   {
     id: 1,
     name: "Emily R.",
     avatar: "/assets/images/testimonial2.svg",
-    desc: "The care I received at Delorecare was beyond my expectations. Dr. Smith is a true professional who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. I can't recommend Delorecare enough for top-notch healthcare.",
+    desc: "The care I received at Delorecare was beyond my expectations. Dr. Smith is a true professional who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. ",
   },
   {
     id: 2,
     name: "John M.",
     avatar: "/assets/images/testimonial3.svg",
-    desc: "When it comes to healthcare, trust matters most, and Delorecare has earned my trust. From the front desk staff to the specialists, everyone at Delorecare is dedicated to patient well-being. I've never felt more comfortable and cared for in a healthcare setting. I'm grateful to have Delorecare as my healthcare partner.",
+    desc: "When it comes to healthcare, trust matters most, and Delorecare has earned my trust. From the front desk staff to the specialists, everyone at Delorecare is dedicated to patient well-being. I've never felt more comfortable and cared for in a healthcare setting.",
   },
   {
     id: 3,
     name: "Sarah K.",
     avatar: "/assets/images/testimonial1.svg",
-    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery. Delorecare isn't just a healthcare provider; they're a partner in your well-being.",
+    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
   },
 ];
 
@@ -48,7 +48,6 @@ const Testimonials = () => {
 
   const scrollLeft = () => {
     if (containerRef.current) {
-      console.log("scrollDistance-left", scrollDistance);
       containerRef.current.scrollBy({
         left: -scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",
@@ -58,7 +57,6 @@ const Testimonials = () => {
 
   const scrollRight = () => {
     if (containerRef.current) {
-      console.log("scrollDistance-right", scrollDistance);
       containerRef.current.scrollBy({
         left: scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",

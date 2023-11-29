@@ -10,7 +10,7 @@ const BookAppointment = () => {
         <div className="flex items-center justify-center 2xl:justify-start flex-col xl:flex-row gap-4 py-4 w-full max-w-7xl mx-auto 2xl:mr-auto 2xl:ml-0 font-medium">
           <div className="flex items-center justify-between flex-col md:flex-row w-full gap-4">
             <div className="bg-white rounded-lg px-4 py-3.5 w-full">
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center justify-center gap-3">
                   <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
                     <svg
@@ -144,7 +144,7 @@ const BookAppointment = () => {
             </div>
           </div>
           <Link href="/contact-us" className="w-full md:w-auto">
-            <button className="bg-blue text-white w-full sm:w-64 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
+            <button className="bg-blue text-white w-full sm:w-60 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
               Book an Appointment
             </button>
           </Link>
