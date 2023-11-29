@@ -31,11 +31,11 @@ const Services = () => {
       {/* Hero section */}
       <section className="z-0 relative">
         <div
-          className="bg-no-repeat bg-top lg:h-[730px]"
+          className="bg-no-repeat bg-cover md:bg-top lg:h-[730px]"
           style={{
             backgroundImage:
               'linear-gradient(89.5deg, #FFFFFF 19.46%, rgba(255, 255, 255, 0.668713) 42.72%, rgba(255, 255, 255, 0) 59.61%), url("/assets/images/services-hero.svg")',
-            backgroundSize: "cover",
+            // backgroundSize: "cover",
             width: "100%",
           }}
         >
@@ -50,7 +50,7 @@ const Services = () => {
                 medical needs are met under one roof.
               </p>
               <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
-                <Link href="/contact-us">
+                <Link href="/contact-us" className="w-full md:w-auto">
                   <button className="bg-blue text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                     Book an Appointment
                   </button>

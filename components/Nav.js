@@ -288,12 +288,14 @@ const Nav = () => {
                 );
               }
             })}
-            <button
-              onClick={() => router.push("/contact-us")}
-              className="bg-blue text-white rounded-lg w-40 py-2.5 text-base"
-            >
-              Contact Us
-            </button>
+            <Link href="/contact-us">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="bg-blue text-white rounded-lg w-40 py-2.5 text-base"
+              >
+                Contact Us
+              </button>
+            </Link>
           </ul>
         </div>
       )}

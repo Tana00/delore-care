@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import CustomRadioButton from "@/components/form/CustomRadioButton";
 import CustomInput from "@/components/form/CustomInput";
 import CustomUploadButton from "@/components/form/CustomUploadButton";
@@ -42,6 +42,7 @@ const defaultState = {
 
 const JobApplication = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const jobType = pathname?.split("/")[2]?.replace("%20", " ");
 
   const { showToast, setShowToast, setToastMessage } = useContext(ToastContext);
@@ -124,7 +125,7 @@ const JobApplication = () => {
           Location: data.location?.toUpperCase(),
           "Street Address": data.address,
           City: data.city,
-          "Zip/Postal Code": data.zip,
+          "Postal Code": data.zip,
           "Email Address": data.email,
           Mobile: data.mobile,
           "Home Telephone Number": data.tel,
@@ -193,7 +194,10 @@ const JobApplication = () => {
       {/* Hero section */}
       <section className="bg-blue-light z-0 relative py-8 md:py-10 lg:py-28">
         <div className="relative flex flex-col md:flex-row items-start justify-start px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-          <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center cursor-pointer hover:scale-110 transition">
+          <div
+            onClick={() => router.back()}
+            className="w-16 h-16 rounded-full bg-white flex items-center justify-center cursor-pointer hover:scale-110 transition"
+          >
             <svg
               width="32"
               height="23"
@@ -326,7 +330,7 @@ const JobApplication = () => {
                 value={data.zip}
                 onChange={(e) => handleDataChange(e.target.value, "zip")}
                 name="zip"
-                label="Zip/Postal Code"
+                label="Postal Code"
               />
             </div>
           </div>

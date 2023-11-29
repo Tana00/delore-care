@@ -143,7 +143,7 @@ const BookAppointment = () => {
               </div>
             </div>
           </div>
-          <Link href="/contact-us">
+          <Link href="/contact-us" className="w-full md:w-auto">
             <button className="bg-blue text-white w-full sm:w-64 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
               Book an Appointment
             </button>

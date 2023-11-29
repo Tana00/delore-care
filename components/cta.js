@@ -51,8 +51,8 @@ const CTAComponent = () => {
               </p>
               <br />
               <br />
-              <Link href="/contact-us" className="lg:w-full w-auto">
-                <button className="w-full bg-red text-white sm:w-10/12 min-[400px]:w-3/4 min-[500px]:w-3/5 md:w-64 h-14 text-base font-medium rounded-lg hover:scale-105 transition-all">
+              <Link href="/contact-us" className="lg:w-full w-full md:w-auto">
+                <button className="w-full bg-red text-white sm:w-10/12 min-[500px]:w-3/5 md:w-64 h-14 text-base font-medium rounded-lg hover:scale-105 transition-all">
                   Book an Appointment
                 </button>
               </Link>

@@ -18,11 +18,13 @@ const ContactUs = () => {
   const [isActive, setIsActive] = useState(false);
   const [buttonText, setButtonText] = useState("Send");
   const [missingFields, setMissingFields] = useState([]);
+  const [isValidEmail, setIsValidEmail] = useState(false);
 
   const { setShowToast, setToastMessage } = useContext(ToastContext);
 
   const resetMissingFields = () => {
     setMissingFields([]);
+    setIsValidEmail(false);
   };
 
   const handleDataChange = (value, name) => {
@@ -40,6 +42,11 @@ const ContactUs = () => {
 
     setMissingFields(filteredFields);
 
+    // Use regex for basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    console.log("test", missingFields, isValidEmail);
+
     if (filteredFields.length > 0) {
       setToastMessage(
         "Validation Error, please fill all required missing fields"
@@ -47,6 +54,14 @@ const ContactUs = () => {
       setShowToast("error");
       return false;
     }
+
+    if (!emailRegex.test(data?.email)) {
+      setToastMessage("Validation Error, email is invalid");
+      setShowToast("error");
+      setIsValidEmail(true);
+      return false;
+    }
+
     return true;
   };
 
@@ -91,7 +106,7 @@ const ContactUs = () => {
         }
       }
     } catch (err) {
-      setToastMessage("Message not sent catch. Please try again");
+      setToastMessage("Message not sent. Please try again");
       setShowToast("error");
       return setButtonText("Send");
     }
@@ -181,19 +196,24 @@ const ContactUs = () => {
                 <div className="w-4/5 grid grid-cols-1 gap-y-4 md:gap-y-6">
                   <CustomInput
                     value={data.fullName}
-                    onChange={(e) =>
-                      handleDataChange(e.target.value, "fullName")
-                    }
+                    onChange={(e) => {
+                      const regex = /^[^0-9]+$/;
+
+                      if (regex.test(e.target.value)) {
+                        handleDataChange(e.target.value, "fullName");
+                      }
+                    }}
                     name="full_name"
                     label="Full Name"
                     error={missingFields?.includes("fullName")}
                   />
                   <CustomInput
                     value={data.email}
+                    type="email"
                     onChange={(e) => handleDataChange(e.target.value, "email")}
                     name="email"
                     label="Email Address"
-                    error={missingFields?.includes("email")}
+                    error={missingFields?.includes("email") || isValidEmail}
                   />
                   <div className="w-full flex items-start justify-start flex-col">
                     <label
@@ -238,7 +258,7 @@ const ContactUs = () => {
                   <p>5: 30am - 10:00pm</p>
                   <p className="font-semibold">Sat. - Sun.</p>
                   <p>7:00am - 10:00pm</p>
-                  <Link href="/contact-us">
+                  <Link href="/contact-us" className="w-full md:w-auto">
                     <button className="mt-8 bg-red text-white w-full md:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                       Book an Appointment
                     </button>

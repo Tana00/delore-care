@@ -1,4 +1,11 @@
-const CustomInput = ({ value, onChange, name, label, error }) => {
+const CustomInput = ({
+  value,
+  onChange,
+  name,
+  label,
+  error,
+  type = "text",
+}) => {
   return (
     <div className="font-gilmer flex flex-col items-start justify-start">
       <label htmlFor={name} className="text-gray text-sm font-medium mb-2">
@@ -9,7 +16,7 @@ const CustomInput = ({ value, onChange, name, label, error }) => {
       </label>
       <input
         name={name}
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         className={`bg-white border ${

@@ -42,13 +42,13 @@ const Hero = () => {
             priority.
           </p>
           <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4">
-            <Link href="/contact-us">
+            <Link href="/contact-us" className="w-full md:w-auto">
               <button className="bg-blue text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                 Contact Us
               </button>
             </Link>
-            <Link href="/locations">
-              <button className="bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+            <Link href="/locations" className="w-full md:w-auto">
+              <button className="mx-auto bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
                 <div className="mr-4 flex items-center">
                   <Image
                     src="/assets/icons/location.svg"
