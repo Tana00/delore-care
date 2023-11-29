@@ -101,12 +101,12 @@ const Testimonials = () => {
         </div>
         <div
           ref={containerRef}
-          className="flex flex-nowrap overflow-x-scroll gap-8 w-full services mt-12"
+          className="flex flex-nowrap overflow-x-scroll gap-8 w-full services mt-12 snap-x"
         >
           {testimonialList?.map((item) => (
             <div
               key={item.id}
-              className={`bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] xl:w-[31%] 2xl:w-[32%]`}
+              className={`snap-start bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] xl:w-[31%] 2xl:w-[32%]`}
             >
               <p className="leading-8">"{item.desc}"</p>
               <div className="flex items-center mt-3 gap-2">

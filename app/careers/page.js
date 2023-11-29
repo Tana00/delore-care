@@ -15,7 +15,7 @@ const Career = () => {
             <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[2500px]:text-8xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
               Our Careers
             </h2>
-            <p className="w-full md:w-4/5 lg:w-3/4 min-[2500px]:w-11/12 mx-auto text-white font-normal text-base md:text-lg lg:!leading-9 min-[2500px]:text-[1.8rem] min-[2500px]:!leading-[70px] sm:!leading-8 my-2 md:my-4 2xl:my-8">
+            <p className="w-full md:w-4/5 lg:w-3/4 min-[2500px]:w-11/12 mx-auto text-white font-normal text-[15px] sm:text-base md:text-lg lg:!leading-9 min-[2500px]:text-[1.8rem] min-[2500px]:!leading-[70px] sm:!leading-8 my-2 md:my-4 2xl:my-8">
               We have a collection of highly literate and trained staff who
               provide care on a daily basis. We prioritise kindness as a mantra,
               and this is a strong factor in our recruitment. All checks are
