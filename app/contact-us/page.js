@@ -197,10 +197,13 @@ const ContactUs = () => {
                   <CustomInput
                     value={data.fullName}
                     onChange={(e) => {
-                      const regex = /^[^0-9]+$/;
+                      const regex = /^[A-Za-z]*$/; // Allow an empty string or alphabets
 
                       if (regex.test(e.target.value)) {
                         handleDataChange(e.target.value, "fullName");
+                      } else if (e.target.value === "") {
+                        // Handle the case where the input is empty
+                        handleDataChange("", "fullName");
                       }
                     }}
                     name="full_name"
@@ -279,7 +282,7 @@ const ContactUs = () => {
             {locationList.map((location) => (
               <div
                 key={location.id}
-                className="bg-white flex flex-col items-start lg:items-center justify-between rounded-lg py-8 px-6 lg:mb-10 cursor-pointer col-span-3 h-[260px] md:h-[300px] lg:h-[320px]"
+                className="bg-white flex flex-col items-start lg:items-center justify-between rounded-lg py-8 px-6 lg:mb-10 cursor-pointer col-span-3 lg:col-span-4 h-[260px] md:h-[300px] lg:h-[300px]"
               >
                 <div>
                   <p className="font-medium text-sm text-red">
@@ -288,12 +291,15 @@ const ContactUs = () => {
                   <h2 className="text-blue font-semibold text-xl leading-9 my-4">
                     {location.name}
                   </h2>
-                  <p className="w-full md:w-1/2 text-sm font-medium text-gray">
+                  <p className="w-full md:w-2/3 text-sm font-medium text-gray">
                     {location.address}
                   </p>
                 </div>
-                <Link href={`/locations?location=${location.href}`}>
-                  <span className="bg-white text-blue w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 lg:w-48 xl:w- h-12 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
+                <Link
+                  href={`/locations?location=${location.href}`}
+                  className="w-11/12 mr-auto md:ml-auto"
+                >
+                  <span className="bg-white text-blue w-full min-[500px]:w-3/5 sm:w-56 lg:w-48 xl:w- h-12 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue hover:scale-105 transition-all">
                     <div className="mr-4 flex items-center">
                       <span>View Location</span>
                     </div>

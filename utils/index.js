@@ -404,38 +404,29 @@ export const locationList = [
   {
     id: 0,
     type: "Head Office",
-    name: "Paramount House",
-    address: "1 Delta Way Egham TW20 8RX.",
-    href: "paramount-house",
+    name: "Surrey",
+    address: "1 Delta Way, Paramount House, Egham. TW20 8XF.",
+    href: "surrey",
     iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.2745483761046!2d-0.5340452235186892!3d51.41638311734861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487670ca813fffff%3A0x6d587bba2ca93b0e!2sBizSpace%20Egham!5e0!3m2!1sen!2sng!4v1701322657267!5m2!1sen!2sng",
   },
   {
     id: 1,
     type: "Working Branch",
-    name: "Knowle West Media Centre",
-    address: "Leinster Ave, Bristol BS4 1NL",
-    href: "knowle-west-media-centre",
+    name: "East Sussex",
+    address: "Caburn House, 2 Brooks Road, Lewes, East Sussex. BN7 2BY.",
+    href: "east-sussex",
     iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.778247919891!2d-2.5953060235181837!3d51.42550001668338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e9fc48501a7%3A0xb4f45ea4150dd3d2!2sLeinster%20Ave%2C%20Bristol%20BS4%201NL%2C%20UK!5e0!3m2!1sen!2sng!4v1701191657561!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5038249876375!2d0.014761276451267284!3d50.87738485653231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df628dfd047163%3A0xb08c34401541e9ae!2s2%20Brooks%20Rd%2C%20Lewes%20BN7%202BY%2C%20UK!5e0!3m2!1sen!2sng!4v1701322794328!5m2!1sen!2sng",
   },
   {
     id: 2,
     type: "Working Branch",
-    name: "Paramount House",
-    address: "1 Delta Way Egham TW20 8RX.",
-    href: "paramount-house",
+    name: "Bristol",
+    address: "Knowle West Media Centre, Leinster Avenue, Bristol, BS4 1NL.",
+    href: "bristol",
     iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
-  },
-  {
-    id: 3,
-    type: "Working Branch",
-    name: "Paramount House",
-    address: "1 Delta Way Egham TW20 8RX.",
-    href: "paramount-house",
-    iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.273780857216!2d-0.533938623518703!3d51.4163972173475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876777eaa9e1a7d%3A0x8f3ff889bf4e0897!2s1%20Delta%20Way%2C%20Egham%20TW20%208RX%2C%20UK!5e0!3m2!1sen!2sng!4v1701191454358!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.7854504401425!2d-2.595894523518171!3d51.425367716692975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718c2077473f8b%3A0xfed767addc1d7053!2sKnowle%20West%20Media%20Centre!5e0!3m2!1sen!2sng!4v1701322897768!5m2!1sen!2sng",
   },
 ];
 

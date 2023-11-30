@@ -111,11 +111,11 @@ const TermsAndConditions = () => {
             <p>
               <strong>Website</strong> refers to Delore Care, accessible from{" "}
               <a
-                href="https://delore-care.vercel.app/"
+                href="https://delorecare.com/"
                 rel="external nofollow noopener"
                 target="_blank"
               >
-                https://delore-care.vercel.app/
+                https://delorecare.com/
               </a>
             </p>
           </li>
@@ -513,11 +513,11 @@ const TermsAndConditions = () => {
             <p>
               By visiting this page on our website:{" "}
               <a
-                href="https://delore-care.vercel.app/contact-us"
+                href="https://delorecare.com/contact-us"
                 rel="external nofollow noopener"
                 target="_blank"
               >
-                https://delore-care.vercel.app/contact-us
+                https://delorecare.com/contact-us
               </a>
             </p>
           </li>

@@ -8,6 +8,7 @@ import { servicesList } from "@/utils";
 const Services = () => {
   const searchParams = useSearchParams();
   const [activeService, setActiveService] = useState(servicesList[0]);
+  const [isMobile, setIsMobile] = useState(false);
   const service = searchParams.get("service");
 
   useEffect(() => {
@@ -26,15 +27,31 @@ const Services = () => {
     }
   }, [service]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if the screen width is below a certain threshold (e.g., 767px)
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
       <section className="z-0 relative">
         <div
-          className="bg-no-repeat bg-cover md:bg-top lg:h-[730px]"
+          className="bg-no-repeat bg-right bg-cover md:bg-top lg:h-[730px] service_hero"
           style={{
-            backgroundImage:
-              'linear-gradient(89.5deg, #FFFFFF 19.46%, rgba(255, 255, 255, 0.668713) 42.72%, rgba(255, 255, 255, 0) 59.61%), url("/assets/images/services-hero.svg")',
             // backgroundSize: "cover",
             width: "100%",
           }}
@@ -61,7 +78,7 @@ const Services = () => {
         </div>
       </section>
       {/* Services list */}
-      <section id="services" className="relative my-20">
+      <section id={isMobile ? "" : "services"} className="relative my-20">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-12 gap-6 2xl:gap-16 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="bg-blue-light p-8 col-span-12 md:col-span-5 rounded-2xl md:h-[800px] 2xl:h-auto overflow-y-scroll">
             <p className="text-[15px] font-normal leading-7">
@@ -88,7 +105,10 @@ const Services = () => {
               ))}
             </div>
           </div>
-          <div className="col-span-12 md:col-span-7">
+          <div
+            id={!isMobile ? "" : "services"}
+            className="col-span-12 md:col-span-7"
+          >
             <div
               className={`rounded-lg h-[300px] md:h-[350px] 2xl:h-[600px] w-full bg-contain relative bg-no-repeat`}
               style={{

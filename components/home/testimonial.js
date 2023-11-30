@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const testimonialList = [
@@ -31,6 +31,8 @@ const testimonialList = [
 
 const Testimonials = () => {
   const containerRef = useRef(null);
+  const [isAtBeginning, setIsAtBeginning] = useState(false);
+  const [isAtEnd, setIsAtEnd] = useState(false);
 
   const deviceWidth = typeof window !== "undefined" && window.innerWidth;
   const isMobile = deviceWidth < 640;
@@ -52,6 +54,10 @@ const Testimonials = () => {
         left: -scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",
       });
+
+      // Disable button if scrolled to the beginning
+      const isAtBeginning = containerRef.current.scrollLeft === 0;
+      setIsAtBeginning(isAtBeginning);
     }
   };
 
@@ -61,6 +67,10 @@ const Testimonials = () => {
         left: scrollDistance, // Adjust the scroll distance as needed
         behavior: "smooth",
       });
+      const isAtEnd =
+        containerRef.current.scrollLeft + containerRef.current.clientWidth ===
+        containerRef.current.scrollWidth;
+      setIsAtEnd(isAtEnd);
     }
   };
   return (
@@ -78,6 +88,7 @@ const Testimonials = () => {
             <button
               onClick={scrollLeft}
               className="my-6 w-10 h-10 relative hover:scale-105 transition-all"
+              disabled={isAtBeginning}
             >
               <Image
                 src="/assets/icons/arrow-left.svg"
@@ -89,6 +100,7 @@ const Testimonials = () => {
             <button
               onClick={scrollRight}
               className="my-6 w-10 h-10 relative hover:scale-105 transition-all"
+              disabled={isAtEnd}
             >
               <Image
                 src="/assets/icons/arrow-right.svg"

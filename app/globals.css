@@ -32,6 +32,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.service_hero {
+  background-image: linear-gradient(
+      89.5deg,
+      #ffffff 19.46%,
+      rgba(255, 255, 255, 0.668713) 42.72%,
+      rgba(255, 255, 255, 0) 59.61%
+    ),
+    url("/assets/images/services-hero.svg");
+}
+@media only screen and (max-width: 1028px) {
+  .service_hero {
+    background-image: linear-gradient(
+        89.5deg,
+        #ffffff 10.46%,
+        rgba(245, 242, 242, 0.493) 100%
+      ),
+      url("/assets/images/services-hero.svg");
+  }
+}
+
 .services {
   scrollbar-width: none;
 }
