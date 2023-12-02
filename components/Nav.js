@@ -252,7 +252,10 @@ const Nav = () => {
                               className=""
                             >
                               <li
-                                onClick={() => setIsOpen(false)}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setOpenDropdown(null);
+                                }}
                                 className="text-gray text-lg py-2 px-4"
                               >
                                 {submenu.title}
@@ -274,7 +277,10 @@ const Nav = () => {
                               className=""
                             >
                               <li
-                                onClick={() => setIsOpen(false)}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setOpenDropdown(null);
+                                }}
                                 className="text-gray text-lg py-2 px-4"
                               >
                                 {submenu.title}

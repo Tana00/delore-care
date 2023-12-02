@@ -159,7 +159,7 @@ const WhyUs = () => {
                 <img
                   src="/assets/images/excellence.png"
                   alt="customer centric"
-                  className="rounded-2xl w-full h-full object-cover md:object-top lg:object-center"
+                  className="rounded-2xl w-full h-full object-cover object-top"
                 />
               </div>
             </div>

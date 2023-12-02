@@ -94,7 +94,7 @@ const ServicesComponent = () => {
                     <p className="text-white font-normal md:font-light text-base xl:text-lg leading-6 xl:leading-9">
                       {service.desc}
                     </p>
-                    <Link
+                    <a
                       href={`/services?service=${service.title
                         ?.toLowerCase()
                         .replace(/&/g, "and")
@@ -109,7 +109,7 @@ const ServicesComponent = () => {
                           height={20}
                         />
                       </button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
