@@ -94,15 +94,22 @@ const ServicesComponent = () => {
                     <p className="text-white font-normal md:font-light text-base xl:text-lg leading-6 xl:leading-9">
                       {service.desc}
                     </p>
-                    <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue">
-                      <span>Learn more</span>
-                      <Image
-                        src="/assets/icons/up-arrow-red.svg"
-                        alt="up-arrow"
-                        width={20}
-                        height={20}
-                      />
-                    </button>
+                    <Link
+                      href={`/services?service=${service.title
+                        ?.toLowerCase()
+                        .replace(/&/g, "and")
+                        .replace(/ /g, "-")}#services`}
+                    >
+                      <button className="my-6 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 font-medium rounded-full text-base flex items-center justify-between px-4 border border-blue">
+                        <span>Learn more</span>
+                        <Image
+                          src="/assets/icons/up-arrow-red.svg"
+                          alt="up-arrow"
+                          width={20}
+                          height={20}
+                        />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
