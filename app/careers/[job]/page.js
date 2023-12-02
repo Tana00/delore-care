@@ -7,7 +7,6 @@ import CustomInput from "@/components/form/CustomInput";
 import CustomUploadButton from "@/components/form/CustomUploadButton";
 import { toBase64 } from "@/utils";
 import { ToastContext } from "@/utils/ToastContext";
-import UkPhoneInput from "@/components/form/UKPhoneNumberInput";
 
 const shifts = [
   { id: 0, label: "Days", value: "days" },
