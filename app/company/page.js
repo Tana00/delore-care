@@ -69,9 +69,9 @@ const Company = () => {
               Our Mission
             </p>
             <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
-              Our mission is to always deliver exceptional care for our clients
-              by maintaining consistency of purpose and continually adopting
-              best practices.
+              Our mission is to support people to live fulfilling lives by
+              delivering exceptional care for our service users. We maintain
+              continuity, consistency, and dedication to continuous improvement.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Company = () => {
             <div className="bg-blue-light md:p-3 rounded-full w-16 h-16 lg:w-20 lg:h-20 2xl:w-32 2xl:h-32">
               <img
                 src="/assets/icons/vision.svg"
-                alt="our mission"
+                alt="our vision"
                 className=""
               />
             </div>
@@ -92,14 +92,14 @@ const Company = () => {
             </p>
             <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
               We recognise that commonly accepted levels of service satisfaction
-              are no longer enough, hence we set out to continuously improve our
+              are not enough, hence we set out to continually improve our
               service delivery and approach to care.
             </p>
           </div>
           <div className="relative order-1 md:order-2">
             <Image
               src="/assets/images/vision.png"
-              alt="our mission"
+              alt="our vision"
               width={566}
               height={469}
               className="w-full"
@@ -140,7 +140,7 @@ const Company = () => {
         </div>
       </section>
       {/* Team */}
-      <section id="team" className="my-10 md:my-24">
+      {/* <section id="team" className="my-10 md:my-24">
         <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:mb-8 text-center">
             Meet The Team
@@ -171,7 +171,7 @@ const Company = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       {/* CTA */}
       <CTAComponent />
     </main>

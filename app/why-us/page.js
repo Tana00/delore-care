@@ -73,9 +73,10 @@ const WhyUs = () => {
           </div>
           <div className="col-span-6 w-full h-full text-center lg:text-left">
             <p className="text-gray font-normal text-base md:text-lg 2xl:text-3xl 2xl:leading-[50px] leading-8 my-2 md:my-4 2xl:my-8">
-              At Delore Care, every team member is valued and appreciated. Our
-              operational strategy places an inestimable value on every
-              contribution. We do not have many lines of hierarchy.
+              We are passionate about providing exceptional person-centred care.
+              We have the required expertise and work with you to achieve your
+              desired outcomes. We are always willing to go the extra mile to
+              put a touch of excellence in our service.
             </p>
             <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
               <Link href="/contact-us">

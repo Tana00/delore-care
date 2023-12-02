@@ -1,11 +1,13 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import validator from "validator";
 import CustomRadioButton from "@/components/form/CustomRadioButton";
 import CustomInput from "@/components/form/CustomInput";
 import CustomUploadButton from "@/components/form/CustomUploadButton";
 import { toBase64 } from "@/utils";
 import { ToastContext } from "@/utils/ToastContext";
+import UkPhoneInput from "@/components/form/UKPhoneNumberInput";
 
 const shifts = [
   { id: 0, label: "Days", value: "days" },
@@ -45,6 +47,8 @@ const JobApplication = () => {
   const router = useRouter();
   const jobType = pathname?.split("/")[2]?.replace("%20", " ");
 
+  const regex = /^[A-Za-z]*$/; // Allow an empty string or alphabets
+
   const { showToast, setShowToast, setToastMessage } = useContext(ToastContext);
 
   const [data, setData] = useState(defaultState);
@@ -52,9 +56,17 @@ const JobApplication = () => {
   const [isActive, setIsActive] = useState(false);
   const [buttonText, setButtonText] = useState("Submit Application");
   const [missingFields, setMissingFields] = useState([]);
+  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [isValidMobile, setIsValidMobile] = useState(false);
+  const [isValidTel, setIsValidTel] = useState(false);
+  const [isValidPostalCode, setIsValidPostalCode] = useState(false);
 
   const resetMissingFields = () => {
     setMissingFields([]);
+    setIsValidEmail(false);
+    setIsValidMobile(false);
+    setIsValidTel(false);
+    setIsValidPostalCode(false);
   };
 
   const handleDataChange = (value, name) => {
@@ -109,6 +121,54 @@ const JobApplication = () => {
       setShowToast("error");
       return false;
     }
+
+    const validateEmail = () => {
+      const isValidEmail = validator.isEmail(data?.email);
+      return isValidEmail;
+    };
+
+    const validatePhoneNumber = (number) => {
+      const isValidPhoneNumber = validator.isMobilePhone(number);
+      return isValidPhoneNumber;
+    };
+
+    const validatePostalCode = () => {
+      const isValidPostalCode = validator.isPostalCode(data?.zip, "any");
+      return isValidPostalCode;
+    };
+
+    if (!validateEmail()) {
+      setToastMessage("Validation Error, email is invalid");
+      setShowToast("error");
+      setIsValidEmail(true);
+      return false;
+    }
+
+    if (!validatePhoneNumber(data?.mobile)) {
+      setToastMessage("Validation Error, mobile number is invalid");
+      setShowToast("error");
+      setIsValidMobile(true);
+      return false;
+    }
+
+    if (data?.tel) {
+      if (!validatePhoneNumber(data?.tel)) {
+        setToastMessage("Validation Error, home telephone number is invalid");
+        setShowToast("error");
+        setIsValidTel(true);
+        return false;
+      }
+    }
+
+    if (data?.zip) {
+      if (!validatePostalCode()) {
+        setToastMessage("Validation Error, postal code is invalid");
+        setShowToast("error");
+        setIsValidPostalCode(true);
+        return false;
+      }
+    }
+
     return true;
   };
 
@@ -148,9 +208,7 @@ const JobApplication = () => {
           },
           method: "POST",
         });
-
         const result = await res.json();
-
         if (result.status === 202) {
           setToastMessage({
             title: "Application Submitted",
@@ -266,21 +324,39 @@ const JobApplication = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-6 my-4">
             <CustomInput
               value={data.fName}
-              onChange={(e) => handleDataChange(e.target.value, "fName")}
+              onChange={(e) => {
+                if (regex.test(e.target.value)) {
+                  handleDataChange(e.target.value, "fName");
+                } else if (e.target.value === "") {
+                  handleDataChange("", "fName");
+                }
+              }}
               name="first_name"
               label="First Name"
               error={missingFields?.includes("fName")}
             />
             <CustomInput
               value={data.lName}
-              onChange={(e) => handleDataChange(e.target.value, "lName")}
+              onChange={(e) => {
+                if (regex.test(e.target.value)) {
+                  handleDataChange(e.target.value, "lName");
+                } else if (e.target.value === "") {
+                  handleDataChange("", "lName");
+                }
+              }}
               name="last_name"
               label="Last Name"
               error={missingFields?.includes("lName")}
             />
             <CustomInput
               value={data.oName}
-              onChange={(e) => handleDataChange(e.target.value, "oName")}
+              onChange={(e) => {
+                if (regex.test(e.target.value)) {
+                  handleDataChange(e.target.value, "oName");
+                } else if (e.target.value === "") {
+                  handleDataChange("", "oName");
+                }
+              }}
               name="other_name"
               label="Other Names"
             />
@@ -331,6 +407,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "zip")}
                 name="zip"
                 label="Postal Code"
+                error={isValidPostalCode}
               />
             </div>
           </div>
@@ -346,7 +423,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "email")}
                 name="email"
                 label="Your Email Address"
-                error={missingFields?.includes("email")}
+                error={missingFields?.includes("email") || isValidEmail}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -355,7 +432,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "mobile")}
                 name="mobile"
                 label="Your Mobile Number"
-                error={missingFields?.includes("mobile")}
+                error={missingFields?.includes("mobile") || isValidMobile}
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -364,6 +441,7 @@ const JobApplication = () => {
                 onChange={(e) => handleDataChange(e.target.value, "tel")}
                 name="tel"
                 label="Your Home Telephone Number"
+                error={isValidTel}
               />
             </div>
           </div>

@@ -1,6 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const testimonialList = [
   {
@@ -13,7 +15,7 @@ const testimonialList = [
     id: 1,
     name: "Emily R.",
     avatar: "/assets/images/testimonial2.svg",
-    desc: "The care I received at Delorecare was beyond my expectations. Dr. Smith is a true professional who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. ",
+    desc: "The care I received at Delorecare was beyond my expectations. They are true professionals who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. ",
   },
   {
     id: 2,
@@ -30,49 +32,23 @@ const testimonialList = [
 ];
 
 const Testimonials = () => {
-  const containerRef = useRef(null);
-  const [isAtBeginning, setIsAtBeginning] = useState(false);
-  const [isAtEnd, setIsAtEnd] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slides: {
+      perView: "auto",
+      spacing: 30,
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+      console.log(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
 
-  const deviceWidth = typeof window !== "undefined" && window.innerWidth;
-  const isMobile = deviceWidth < 640;
-  const isTablet = deviceWidth >= 640 && deviceWidth < 768;
-
-  let scrollDistance = 0;
-
-  if (isMobile) {
-    scrollDistance = 2 * (0.45 * deviceWidth) + 32;
-  } else if (isTablet) {
-    scrollDistance = 2 * (0.5 * deviceWidth) + 32;
-  } else {
-    scrollDistance = 2 * (0.31 * deviceWidth) + 32;
-  }
-
-  const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: -scrollDistance, // Adjust the scroll distance as needed
-        behavior: "smooth",
-      });
-
-      // Disable button if scrolled to the beginning
-      const isAtBeginning = containerRef.current.scrollLeft === 0;
-      setIsAtBeginning(isAtBeginning);
-    }
-  };
-
-  const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: scrollDistance, // Adjust the scroll distance as needed
-        behavior: "smooth",
-      });
-      const isAtEnd =
-        containerRef.current.scrollLeft + containerRef.current.clientWidth ===
-        containerRef.current.scrollWidth;
-      setIsAtEnd(isAtEnd);
-    }
-  };
   return (
     <section className="bg-blue-light py-16">
       <div className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
@@ -84,41 +60,48 @@ const Testimonials = () => {
               <br className="" /> Are Saying
             </p>
           </div>
-          <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center md:gap-8 gap-12">
-            <button
-              onClick={scrollLeft}
-              className="my-6 w-10 h-10 relative hover:scale-105 transition-all"
-              disabled={isAtBeginning}
-            >
-              <Image
-                src="/assets/icons/arrow-left.svg"
-                alt="up-arrow"
-                fill
-                objectFit="cover"
-              />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="my-6 w-10 h-10 relative hover:scale-105 transition-all"
-              disabled={isAtEnd}
-            >
-              <Image
-                src="/assets/icons/arrow-right.svg"
-                alt="up-arrow"
-                fill
-                objectFit="cover"
-              />
-            </button>
-          </div>
+          {loaded && instanceRef.current && (
+            <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center md:gap-8 gap-12">
+              <button
+                className="my-6 w-10 h-10 relative hover:scale-105 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              >
+                <Image
+                  src="/assets/icons/arrow-left.svg"
+                  alt="up-arrow"
+                  fill
+                  objectFit="cover"
+                />
+              </button>
+              <button
+                className="my-6 w-10 h-10 relative hover:scale-105 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                onClick={(e) => {
+                  e.stopPropagation() || instanceRef.current?.next();
+                  console.log(
+                    currentSlide
+                    // instanceRef.current.track.details.slides.length - 1
+                  );
+                }}
+                disabled={currentSlide === testimonialList.length - 1}
+              >
+                <Image
+                  src="/assets/icons/arrow-right.svg"
+                  alt="up-arrow"
+                  fill
+                  objectFit="cover"
+                />
+              </button>
+            </div>
+          )}
         </div>
-        <div
-          ref={containerRef}
-          className="flex flex-nowrap overflow-x-scroll gap-8 w-full services mt-12 snap-x"
-        >
-          {testimonialList?.map((item) => (
+        <div ref={sliderRef} className="keen-slider">
+          {testimonialList?.map((item, index) => (
             <div
               key={item.id}
-              className={`snap-start bg-white p-6 rounded-2xl flex-none w-full sm:w-[45%] md:w-[48%] xl:w-[31%] 2xl:w-[32%]`}
+              className={`keen-slider__slide number-slide${index} !h-[350px] snap-start bg-white p-6 rounded-2xl flex-none w-full sm:!w-[45%] md:!w-[48%] xl:!w-[31%] 2xl:!w-[32%]`}
             >
               <p className="leading-8">"{item.desc}"</p>
               <div className="flex items-center mt-3 gap-2">

@@ -45,8 +45,6 @@ const ContactUs = () => {
     // Use regex for basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    console.log("test", missingFields, isValidEmail);
-
     if (filteredFields.length > 0) {
       setToastMessage(
         "Validation Error, please fill all required missing fields"
