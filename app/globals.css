@@ -45,8 +45,8 @@ body {
   .service_hero {
     background-image: linear-gradient(
         89.5deg,
-        #ffffff 10.46%,
-        rgba(245, 242, 242, 0.493) 100%
+        #ffffffcd 19.46%,
+        rgba(245, 242, 242, 0.599) 100%
       ),
       url("/assets/images/services-hero.svg");
   }
