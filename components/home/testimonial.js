@@ -103,12 +103,12 @@ const Testimonials = () => {
               key={item.id}
               className={`keen-slider__slide number-slide${index} !h-[350px] snap-start bg-white p-6 rounded-2xl flex-none w-full sm:!w-[45%] md:!w-[48%] xl:!w-[31%] 2xl:!w-[32%]`}
             >
-              <p className="leading-8">"{item.desc}"</p>
+              <p className="leading-7 text-[15px]">"{item.desc}"</p>
               <div className="flex items-center mt-3 gap-2">
                 <div className="rounded-full p-1.5">
                   <img src={item.avatar} alt={item.name} />
                 </div>
-                <p>{item.name}</p>
+                <p className="leading-7 text-[15px]">{item.name}</p>
               </div>
             </div>
           ))}
