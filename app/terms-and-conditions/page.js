@@ -20,9 +20,7 @@ const TermsAndConditions = () => {
         <p>
           These terms and conditions outline the rules and regulations for the
           use of Delore Care's Website, located at{" "}
-          <a href="https://delore-care.vercel.app">
-            https://delore-care.vercel.app/
-          </a>
+          <a href="https://delorecare.com">https://delorecare.com/</a>
         </p>
 
         <p>

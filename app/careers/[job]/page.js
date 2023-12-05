@@ -527,12 +527,11 @@ const JobApplication = () => {
             onChange={() => handleDataChange(!data.confirm, "confirm")}
           />
           <span className="checkmark"></span>I agree to the
-          <a href="/" className="text-red mx-1.5 hover:underline">
-            terms
-          </a>
-          and
-          <a href="/" className="text-red mx-1.5 hover:underline">
-            conditions
+          <a
+            href="/terms-and-conditions"
+            className="text-red mx-1.5 hover:underline"
+          >
+            terms & conditions
           </a>
           of the company
           <span
