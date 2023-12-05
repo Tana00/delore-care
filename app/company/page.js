@@ -174,7 +174,7 @@ const Company = () => {
       </section> */}
       {/* CTA */}
       {/* Our Carers */}
-      <section id="our-mission" className="md:mb-20 md:mt-28 2xl:mb-28">
+      <section id="our-carers" className="md:mb-20 md:mt-28 2xl:mb-28">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="relative">
             <Image
@@ -201,7 +201,7 @@ const Company = () => {
         </div>
       </section>
       {/* Our Management Team */}
-      <section id="our-vision" className="my-16 md:my-28 lg:my-32">
+      <section id="our-management-team" className="my-16 md:my-28 lg:my-32">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="order-2 md:order-1">
             <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:mb-2 lg:mb-4 2xl:mb-8">
