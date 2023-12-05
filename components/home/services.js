@@ -53,7 +53,7 @@ const ServicesComponent = () => {
               />
               <div className="hidden sm:block">
                 <p className="text-white font-bold text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px]">
-                  {service.title}
+                  {service?.shortTitle ? service?.shortTitle : service.title}
                 </p>
                 <p className="text-white font-light text-base xl:text-lg leading-7 xl:leading-9">
                   {service.desc}

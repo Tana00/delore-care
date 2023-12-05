@@ -30,7 +30,7 @@ export const menuList = [
       {
         title:
           "Domestic Support like Laundry, shopping and light house cleaning",
-        href: "?service=domestic-support-like-laundry-shopping-and-light-house-cleaning#services",
+        href: "?service=domestic-support-like-laundry,-shopping-and-light-house-cleaning#services",
       },
     ],
   },
@@ -185,6 +185,7 @@ export const servicesList = [
     id: 11,
     src: "/assets/images/services/service12.svg",
     png: "/assets/images/services/domestic-support.png",
+    shortTitle: "Domestic Support",
     title: "Domestic Support like Laundry, shopping and light house cleaning",
     desc: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life.",
     content: {
