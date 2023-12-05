@@ -173,6 +173,58 @@ const Company = () => {
         </div>
       </section> */}
       {/* CTA */}
+      {/* Our Carers */}
+      <section id="our-mission" className="md:mb-20 md:mt-28 2xl:mb-28">
+        <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
+          <div className="relative">
+            <Image
+              src="/assets/images/carers.png"
+              alt="our mission"
+              width={566}
+              height={469}
+              className="w-full"
+            />
+          </div>
+          <div className="">
+            <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:mb-2 lg:mb-4 2xl:mb-8">
+              Our Carers
+            </p>
+            <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
+              We have a collection of highly literate, trained and competent
+              staff who provide care on a daily basis. We prioritise kindness as
+              a mantra, and this is a strong factor in our recruitment. All
+              checks are completed before anyone is engaged in providing care
+              for our clients. Our team is proud of the contribution that we
+              make in our local communities and the wider society.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Our Management Team */}
+      <section id="our-vision" className="my-16 md:my-28 lg:my-32">
+        <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
+          <div className="order-2 md:order-1">
+            <p className="text-blue font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] 2xl:text-6xl !leading-[50px] lg:!leading-[64px] md:mb-2 lg:mb-4 2xl:mb-8">
+              Our Management Team
+            </p>
+            <p className="text-gray !leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:!leading-[40px] 2xl:text-3xl 2xl:!leading-[50px] font-normal">
+              Our team of managers and senior managers are involved in the
+              day-to-day running of the operations- we are always within reach.
+              We ensure that you and your loved ones are known to us
+              individually and you get the person-centred care that is required.
+            </p>
+          </div>
+          <div className="relative order-1 md:order-2">
+            <Image
+              src="/assets/images/management-team.png"
+              alt="our vision"
+              width={566}
+              height={469}
+              className="w-full"
+            />
+          </div>
+        </div>
+      </section>
       <CTAComponent />
     </main>
   );
