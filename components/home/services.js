@@ -33,7 +33,7 @@ const ServicesComponent = () => {
         </div>
       </div>
       <div className="services bg-blue h-[600px] w-full flex flex-nowrap overflow-x-scroll overflow-y-hidden my-10 gap-6 md:gap-0">
-        {servicesList?.slice(0, 4)?.map((service) => (
+        {servicesList?.map((service) => (
           <div
             key={service.id}
             className="md:ml-32 w-full md:w-[900px] flex-none"

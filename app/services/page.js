@@ -117,10 +117,10 @@ const Services = () => {
             className="col-span-12 md:col-span-7"
           >
             <div
-              className={`rounded-lg h-[300px] md:h-[350px] 2xl:h-[600px] w-full bg-contain relative bg-no-repeat`}
+              className={`rounded-lg h-[300px] md:h-[350px] 2xl:h-[600px] w-full bg-cover relative bg-no-repeat`}
               style={{
                 backgroundImage: `url(${activeService?.png})`,
-                backgroundSize: "100% 100%",
+                // backgroundSize: "100% 100%",
               }}
             ></div>
             <div className="text-gray text-[15px] leading-8">
