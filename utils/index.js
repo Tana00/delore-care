@@ -28,8 +28,7 @@ export const menuList = [
         href: "?service=support-for-persons-with-learning-disability/autism#services",
       },
       {
-        title:
-          "Domestic Support like Laundry, shopping and light house cleaning",
+        title: "Domestic Support",
         href: "?service=domestic-support-like-laundry,-shopping-and-light-house-cleaning#services",
       },
     ],
@@ -186,7 +185,7 @@ export const servicesList = [
     src: "/assets/images/services/service12.svg",
     png: "/assets/images/services/domestic-support.png",
     shortTitle: "Domestic Support",
-    title: "Domestic Support like Laundry, shopping and light house cleaning",
+    title: "Domestic Support",
     desc: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life.",
     content: {
       text: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life. Our support cuts across helping with your grocery shopping, doing your laundry and light cleaning. We also work with other professionals to ensure you get deep cleaning if necessary.",
