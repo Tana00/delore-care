@@ -296,7 +296,7 @@ export const locationList = [
   },
   {
     id: 1,
-    type: "Working Branch",
+    type: "Sussex Branch",
     name: "East Sussex",
     address: "Caburn House, 2 Brooks Road, Lewes, East Sussex. BN7 2BY.",
     href: "east-sussex",
@@ -305,7 +305,7 @@ export const locationList = [
   },
   {
     id: 2,
-    type: "Working Branch",
+    type: "Bristol Branch",
     name: "Bristol",
     address: "Knowle West Media Centre, Leinster Avenue, Bristol, BS4 1NL.",
     href: "bristol",
