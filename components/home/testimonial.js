@@ -9,25 +9,25 @@ const testimonialList = [
     id: 0,
     name: "Sarah K.",
     avatar: "/assets/images/testimonial1.svg",
-    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
+    desc: "I can't thank the Delore Care team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
   },
   {
     id: 1,
     name: "Emily R.",
     avatar: "/assets/images/testimonial2.svg",
-    desc: "The care I received at Delorecare was beyond my expectations. They are true professionals who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. ",
+    desc: "The care I received at Delore Care was beyond my expectations. They are true professionals who takes the time to listen and explain things in a way that's easy to understand. The entire experience, from making an appointment to post-visit follow-ups, was seamless. ",
   },
   {
     id: 2,
     name: "John M.",
     avatar: "/assets/images/testimonial3.svg",
-    desc: "When it comes to healthcare, trust matters most, and Delorecare has earned my trust. From the front desk staff to the specialists, everyone at Delorecare is dedicated to patient well-being. I've never felt more comfortable and cared for in a healthcare setting.",
+    desc: "When it comes to healthcare, trust matters most, and Delore Care has earned my trust. From the front desk staff to the specialists, everyone at Delore Care is dedicated to patient well-being. I've never felt more comfortable and cared for in a healthcare setting.",
   },
   {
     id: 3,
     name: "Sarah K.",
     avatar: "/assets/images/testimonial1.svg",
-    desc: "I can't thank the Delorecare team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
+    desc: "I can't thank the Delore Care team enough for the exceptional care I received. Their compassionate staff and skilled doctors truly made a difference in my health journey. I felt heard, valued, and, most importantly, on the road to recovery.",
   },
 ];
 

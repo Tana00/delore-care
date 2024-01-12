@@ -9,7 +9,7 @@ const AboutUsComponent = () => {
         <div className="flex items-start justify-between flex-col md:flex-row my-2">
           <div className="w-full md:w-1/3">
             <p className="text-blue font-bold text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px] my-4 md:my-0">
-              Welcome to <br className="" /> Delorecare
+              Welcome to <br className="" /> Delore Care
             </p>
           </div>
           <div className="w-full md:w-[55%] xl:w-1/2">

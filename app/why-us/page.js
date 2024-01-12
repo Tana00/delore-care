@@ -7,7 +7,7 @@ const WhyUs = () => {
       id: 0,
       img: "healthcare.svg",
       title: "Comprehensive Care",
-      desc: "From primary care to specialized treatments, Delorecare offers a wide spectrum of medical services, ensuring that your health needs are met all under one roof.",
+      desc: "From primary care to specialized treatments, Delore Care offers a wide spectrum of medical services, ensuring that your health needs are met all under one roof.",
     },
     {
       id: 1,
@@ -37,7 +37,7 @@ const WhyUs = () => {
       id: 5,
       img: "medical.svg",
       title: "Cutting-Edge Technology",
-      desc: "Delorecare is at the forefront of medical advancements. We embrace the latest technology and innovative treatments to ensure you receive the best care possible.",
+      desc: "Delore Care is at the forefront of medical advancements. We embrace the latest technology and innovative treatments to ensure you receive the best care possible.",
     },
   ];
 
@@ -46,7 +46,7 @@ const WhyUs = () => {
       id: 0,
       img: "team-leader.svg",
       title: "Leadership You Can Trust",
-      desc: "Delorecare is led by a team of healthcare professionals with a wealth of experience and a deep understanding of the industry. Our leadership is focused on making strategic decisions that enhance the quality of care we provide.",
+      desc: "Delore Care is led by a team of healthcare professionals with a wealth of experience and a deep understanding of the industry. Our leadership is focused on making strategic decisions that enhance the quality of care we provide.",
     },
     {
       id: 1,
@@ -58,7 +58,7 @@ const WhyUs = () => {
       id: 2,
       img: "quality.svg",
       title: "Ongoing Quality Improvement",
-      desc: "We have a continuous commitment to improving the quality of our services. Delorecare regularly assesses its performance, implements best practices, and invests in staff training to ensure the highest standards of care.",
+      desc: "We have a continuous commitment to improving the quality of our services. Delore Care regularly assesses its performance, implements best practices, and invests in staff training to ensure the highest standards of care.",
     },
   ];
   return (

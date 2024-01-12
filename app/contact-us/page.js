@@ -255,6 +255,8 @@ const ContactUs = () => {
                   <p className="font-medium text-base text-red">
                     Book An Appointment
                   </p>
+                  <p className="font-semibold">We can be contacted on</p>
+                  <p>info@delorecare.com</p>
                   <p className="font-semibold">Mon. Fri.</p>
                   <p>5: 30am - 10:00pm</p>
                   <p className="font-semibold">Sat. - Sun.</p>

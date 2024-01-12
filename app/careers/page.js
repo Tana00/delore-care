@@ -32,7 +32,7 @@ const Career = () => {
             Our Commitment to Excellence
           </h2>
           <p className="text-gray leading-8 text-base xl:text-[17px] 2xl:text-[1.2rem] xl:leading-9 2xl:leading-[50px] font-normal">
-            Delorecare is more than just a healthcare provider; we are a
+            Delore Care is more than just a healthcare provider; we are a
             community dedicated to delivering the highest standard of care. Our
             commitment to excellence is evident in everything we do, from
             patient care to staff development. We believe that our team members
@@ -94,8 +94,8 @@ const Career = () => {
                     style={{ boxShadow: "0px 20px 57px 0px #000001A" }}
                   >
                     <p>
-                      As a token of our appreciation for choosing Delorecare, we
-                      are pleased to offer a joining bonus to our new team
+                      As a token of our appreciation for choosing Delore Care,
+                      we are pleased to offer a joining bonus to our new team
                       members. This bonus is our way of saying "thank you" for
                       your commitment to making a positive impact on healthcare.
                     </p>
@@ -108,7 +108,7 @@ const Career = () => {
                         </li>
                         <li>
                           Additional benefits and rewards designed to make your
-                          transition to Delorecare smooth and financially
+                          transition to Delore Care smooth and financially
                           rewarding.
                         </li>
                         <li>
@@ -159,7 +159,7 @@ const Career = () => {
           </h2>
           <p className="text-gray leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:leading-[40px] 2xl:text-3xl 2xl:leading-[50px] font-normal">
             Explore our current career opportunities and discover how you can
-            contribute your skills and expertise to Delorecare's mission of
+            contribute your skills and expertise to Delore Care's mission of
             empowering health and enhancing lives. We offer positions in various
             areas, including:
           </p>

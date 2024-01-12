@@ -37,7 +37,7 @@ const Hero = () => {
             Your Pathway to Health and Wellness
           </h2>
           <p className="text-gray font-normal text-base md:text-lg 2xl:text-3xl 2xl:leading-[50px] leading-6 md:leading-8 my-4 2xl:my-8 mx-4 md:mx-20 lg:mx-0">
-            At Delorecare, we put your health and well-being first. Welcome to
+            At Delore Care, we put your health and well-being first. Welcome to
             our trusted healthcare community where your care is our top
             priority.
           </p>

@@ -54,8 +54,11 @@ const Locations = () => {
                 <h2 className="text-blue font-semibold text-xl leading-10">
                   {location.name}
                 </h2>
-                <p className="w-1/2 text-sm font-medium text-gray">
+                <p className="w-1/2 text-sm font-medium text-gray my-1">
                   {location.address}
+                </p>
+                <p className="w-1/2 text-sm font-medium text-gray">
+                  {location.tel}
                 </p>
               </div>
             ))}

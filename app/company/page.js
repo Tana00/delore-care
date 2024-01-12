@@ -146,7 +146,7 @@ const Company = () => {
             Meet The Team
           </p>
           <p className="text-gray text-sm leading-8 mt-5 text-center w-full md:w-2/3 mx-auto">
-            At Delorecare, our exceptional healthcare services are made possible
+            At Delore Care, our exceptional healthcare services are made possible
             by the dedication and expertise of our remarkable team. Get to know
             the individuals who are committed to delivering compassionate and
             personalized care to you and your loved ones:

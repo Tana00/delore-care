@@ -38,7 +38,7 @@ const gilmer = localFont({
 });
 
 const metadata = {
-  title: "Delorecare | Professional service, Personal touch.",
+  title: "Delore Care | Professional service, Personal touch.",
   description:
     "We provide care and support to people who live in their own homes in England. We care for a wide range of needs.",
   keywords: "",
