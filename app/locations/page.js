@@ -99,9 +99,9 @@ const Locations = () => {
                 <p className="font-semibold">Manager’s Telephone Number</p>
                 <p>44 (0) 2039357118</p>
                 <p className="font-semibold">Call</p>
-                <p>44 (0) 2039357118, 44 (0) 2080549264</p>
+                <p>44 (0) 2039357118, 44 (0) 1172422491</p>
                 <p className="font-semibold">Email</p>
-                <p>bristol@delorecare.com</p>
+                <p>info@delorecare.com</p>
               </div>
             </div>
           </div>

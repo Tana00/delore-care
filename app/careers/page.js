@@ -4,6 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import CTAComponent from "@/components/home/cta";
 
+const provisions = [
+  {
+    title: "Joining Bonus",
+    desc: "At Delore Care, we just don't bring your onboard, we help you settle into the job. We offer you a wide range of support towards your accommodation, transportation and even pay you to shadow on the job.",
+  },
+  {
+    title: "Company Car",
+    desc: "We believe when you are well set up on the job, you do the job more effectively. We sometimes offer company car for you to do the job, pending when you are able to buy yours.",
+  },
+  {
+    title: "Personal Development and Training",
+    desc: "As part of our commitment to providing excellent services, we ensure our staff are trained. We have a comprehensive induction training, we undertake upskilling meetings regularly and also enrol our staff for specialist trainings as required.",
+  },
+  {
+    title: "Competitive Pay",
+    desc: "We are very much aware a good reward system motivates employees. At Delore Care, we do not just offer a competitive wage rate, we also add other bonuses such as mileage, gift vouchers , birthday bonus, just to mention a few.",
+  },
+  {
+    title: "Flexibility and Time off",
+    desc: "We prioritise work-life balance, we work with our staff to ensure they have the flexibility and time off they require as at when due. We also offer different work contracts just to ensure each staff is able to work effectively and cover their home front",
+  },
+];
+
 const Career = () => {
   const [showPopup, setShowPopup] = useState(null);
   return (
@@ -20,7 +43,7 @@ const Career = () => {
               provide care on a daily basis. We prioritise kindness as a mantra,
               and this is a strong factor in our recruitment. All checks are
               completed before anyone is engaged in providing care for our
-              clients. Our team is proud of thecontribution that we make to the
+              clients. Our team is proud of the contribution that we make to the
               wider society.
             </p>
           </div>
@@ -44,13 +67,7 @@ const Career = () => {
         <div className="">
           <p className="font-medium text-xl mb-6"> We provide to our staffs:</p>
           <ul>
-            {[
-              "Joining Bonus",
-              "Company Car",
-              "Personal Development and Training",
-              "Competitive Pay",
-              "Flexibility and Time Off",
-            ]?.map((item, i) => (
+            {provisions?.map((item, i) => (
               <li key={i} className="relative">
                 <div className="py-4 border-b border-blue-200 flex items-center justify-between w-full">
                   <div className="flex items-center">
@@ -68,7 +85,7 @@ const Career = () => {
                         />
                       </svg>
                     </div>
-                    <p className="ml-6 text-sm sm:text-base">{item}</p>
+                    <p className="ml-6 text-sm sm:text-base">{item?.title}</p>
                   </div>
                   <svg
                     width="30"
@@ -90,35 +107,10 @@ const Career = () => {
                 </div>
                 {showPopup === i && (
                   <div
-                    className="z-30 absolute mt-2 w-full h-auto rounded-2xl bg-white border border-blue-200 text-[13px] px-5 py-3.5 leading-6"
-                    style={{ boxShadow: "0px 20px 57px 0px #000001A" }}
+                    className="z-30 absolute mt-2 w-full h-auto rounded-2xl bg-white border border-blue-200 text-[13px] px-5 py-3.5 leading-6 shadow-[0_20px_57px_0_#000003d]"
+                    style={{ boxShadow: "0px 20px 57px 0px #000003D" }}
                   >
-                    <p>
-                      As a token of our appreciation for choosing Delore Care,
-                      we are pleased to offer a joining bonus to our new team
-                      members. This bonus is our way of saying "thank you" for
-                      your commitment to making a positive impact on healthcare.
-                    </p>
-                    <p className="mt-2.5">
-                      Your joining bonus package includes:
-                      <ul className="list-disc ml-3">
-                        <li>
-                          A competitive monetary bonus upon successful
-                          onboarding and completion of your initial training.
-                        </li>
-                        <li>
-                          Additional benefits and rewards designed to make your
-                          transition to Delore Care smooth and financially
-                          rewarding.
-                        </li>
-                        <li>
-                          Support and resources to help you settle into your new
-                          role, including mentorship and guidance from
-                          experienced colleagues.
-                        </li>
-                      </ul>
-                    </p>
-                    <ul></ul>
+                    <p className="text-sm leading-7">{item?.desc}</p>
                   </div>
                 )}
               </li>
@@ -167,10 +159,12 @@ const Career = () => {
         <div className="">
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-x-6">
             {[
-              "Registered Nurses",
-              "Specialist Nurses",
-              "Healthcare Support",
-              "Support Workers",
+              "Registered Nurse",
+              "Health Care Assistant",
+              "Live-In Carer",
+              "Care Coordinator",
+              "Field Supervisor",
+              "Care Manager",
             ]?.map((item) => (
               <li className="px-4 lg:px-10 py-6 sm:py-0 mb-5 border border-blue-light bg-blue-light flex flex-row items-center justify-between w-full h-[165px]">
                 <div className="flex flex-col items-center lg:items-start">
