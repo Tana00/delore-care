@@ -29,6 +29,7 @@ const provisions = [
 
 const Career = () => {
   const [showPopup, setShowPopup] = useState(null);
+  const [showAll, setShowAll] = useState(false);
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
@@ -145,16 +146,18 @@ const Career = () => {
         />
       </section>
       <section className="grid items-start justify-between grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 p-5 sm:p-10 lg:px-20 xl:px-40 xl:pt-32 max-w-[1920px] mx-auto w-full">
-        <div className="">
-          <h2 className="text-blue font-bold text-[28px] lg:text-[36px] mb-4">
-            Join Us
-          </h2>
-          <p className="text-gray leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:leading-[40px] 2xl:text-3xl 2xl:leading-[50px] font-normal">
-            Explore our current career opportunities and discover how you can
-            contribute your skills and expertise to Delore Care's mission of
-            empowering health and enhancing lives. We offer positions in various
-            areas, including:
-          </p>
+        <div>
+          <div className="">
+            <h2 className="text-blue font-bold text-[28px] lg:text-[36px] mb-4">
+              Join Us
+            </h2>
+            <p className="text-gray leading-8 text-base md:text-lg 2xl:text-[1.5rem] xl:leading-[40px] 2xl:text-3xl 2xl:leading-[50px] font-normal">
+              Explore our current career opportunities and discover how you can
+              contribute your skills and expertise to Delore Care's mission of
+              empowering health and enhancing lives. We offer positions in
+              various areas, including:
+            </p>
+          </div>
         </div>
         <div className="">
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-x-6">
@@ -165,41 +168,49 @@ const Career = () => {
               "Care Coordinator",
               "Field Supervisor",
               "Care Manager",
-            ]?.map((item) => (
-              <li className="px-4 lg:px-10 py-6 sm:py-0 mb-5 border border-blue-light bg-blue-light flex flex-row items-center justify-between w-full h-[165px]">
-                <div className="flex flex-col items-center lg:items-start">
-                  {/* <div className="w-6 h-6"> */}
-                  <svg
-                    width="80"
-                    height="80"
-                    viewBox="0 0 80 80"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="80" height="80" rx="40" fill="white" />
-                    <path
-                      d="M33.695 25L33.5 26.0163L32.25 33.0475V37.5H32.3675C32.5406 38.7082 32.9634 39.8671 33.6091 40.9029C34.2547 41.9388 35.109 42.8288 36.1175 43.5163C31.6588 45.4287 28.5 49.8538 28.5 55H31C30.998 53.4997 31.3341 52.0183 31.9833 50.6657C32.6325 49.3132 33.5782 48.1243 34.75 47.1875V48.0075L35.1013 48.3988L40.1012 53.3988L41 54.2575L41.8988 53.3988L46.8988 48.3988L47.25 48.0075V47.1875C48.4218 48.1243 49.3675 49.3132 50.0167 50.6657C50.6659 52.0183 51.002 53.4997 51 55H53.5C53.5 49.8538 50.3412 45.43 45.8825 43.515C46.8909 42.8276 47.7451 41.9378 48.3907 40.9023C49.0363 39.8667 49.4592 38.708 49.6325 37.5H49.75V33.0463L48.5 26.0163L48.305 25H33.695ZM35.805 27.5H46.195L47.25 33.4762V35H34.75V33.4762L35.805 27.5ZM39.75 28.75V30H38.5V32.5H39.75V33.75H42.25V32.5H43.5V30H42.25V28.75H39.75ZM34.8675 37.5H47.1325C46.8439 38.9129 46.0756 40.1825 44.958 41.0937C43.8404 42.005 42.442 42.5018 41 42.5C39.558 42.5018 38.1596 42.005 37.042 41.0937C35.9244 40.1825 35.1561 38.9129 34.8675 37.5ZM41 45C42.2834 44.9933 43.5563 45.2322 44.75 45.7038V46.9538L41 50.7038L37.25 46.9538V45.7038C38.4437 45.2322 39.7166 44.9933 41 45Z"
-                      fill="#12355B"
-                    />
-                  </svg>
-                  {/* </div> */}
-                  <p className="text-[15px] sm:text-base font-medium mt-4">
-                    {item}
-                  </p>
-                </div>
-                <Link
-                  href={`/careers/${item.toLowerCase()}`}
-                  className="w-auto"
-                >
-                  <div className="">
-                    <button className="bg-blue text-white border border-blue rounded-lg w-32 py-3 text-base hover:bg-white hover:text-blue transition-all">
-                      Apply
-                    </button>
+            ]
+              ?.splice(0, showAll ? 6 : 4)
+              ?.map((item) => (
+                <li className="px-4 lg:px-10 py-6 sm:py-0 mb-5 border border-blue-light bg-blue-light flex flex-row items-center justify-between w-full h-[165px]">
+                  <div className="flex flex-col items-center lg:items-start">
+                    {/* <div className="w-6 h-6"> */}
+                    <svg
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="80" height="80" rx="40" fill="white" />
+                      <path
+                        d="M33.695 25L33.5 26.0163L32.25 33.0475V37.5H32.3675C32.5406 38.7082 32.9634 39.8671 33.6091 40.9029C34.2547 41.9388 35.109 42.8288 36.1175 43.5163C31.6588 45.4287 28.5 49.8538 28.5 55H31C30.998 53.4997 31.3341 52.0183 31.9833 50.6657C32.6325 49.3132 33.5782 48.1243 34.75 47.1875V48.0075L35.1013 48.3988L40.1012 53.3988L41 54.2575L41.8988 53.3988L46.8988 48.3988L47.25 48.0075V47.1875C48.4218 48.1243 49.3675 49.3132 50.0167 50.6657C50.6659 52.0183 51.002 53.4997 51 55H53.5C53.5 49.8538 50.3412 45.43 45.8825 43.515C46.8909 42.8276 47.7451 41.9378 48.3907 40.9023C49.0363 39.8667 49.4592 38.708 49.6325 37.5H49.75V33.0463L48.5 26.0163L48.305 25H33.695ZM35.805 27.5H46.195L47.25 33.4762V35H34.75V33.4762L35.805 27.5ZM39.75 28.75V30H38.5V32.5H39.75V33.75H42.25V32.5H43.5V30H42.25V28.75H39.75ZM34.8675 37.5H47.1325C46.8439 38.9129 46.0756 40.1825 44.958 41.0937C43.8404 42.005 42.442 42.5018 41 42.5C39.558 42.5018 38.1596 42.005 37.042 41.0937C35.9244 40.1825 35.1561 38.9129 34.8675 37.5ZM41 45C42.2834 44.9933 43.5563 45.2322 44.75 45.7038V46.9538L41 50.7038L37.25 46.9538V45.7038C38.4437 45.2322 39.7166 44.9933 41 45Z"
+                        fill="#12355B"
+                      />
+                    </svg>
+                    {/* </div> */}
+                    <p className="text-[15px] sm:text-base font-medium mt-4">
+                      {item}
+                    </p>
                   </div>
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    href={`/careers/${item.toLowerCase()}`}
+                    className="w-auto"
+                  >
+                    <div className="">
+                      <button className="bg-blue text-white border border-blue rounded-lg w-32 py-3 text-base hover:bg-white hover:text-blue transition-all">
+                        Apply
+                      </button>
+                    </div>
+                  </Link>
+                </li>
+              ))}
           </ul>
+          <p
+            onClick={() => setShowAll(!showAll)}
+            className="w-full flex items-center justify-end cursor-pointer text-blue font-medium"
+          >
+            See {showAll ? "Less" : "More"} Jobs
+          </p>
         </div>
       </section>
       <CTAComponent />
