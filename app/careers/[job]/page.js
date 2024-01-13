@@ -44,11 +44,11 @@ const defaultState = {
 const JobApplication = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const jobType = pathname?.split("/")[2]?.replace("%20", " ");
+  const jobType = pathname?.split("/")[2]?.replace(/-/g, " ");
 
   const regex = /^[A-Za-z]*$/; // Allow an empty string or alphabets
 
-  const { showToast, setShowToast, setToastMessage } = useContext(ToastContext);
+  const { setShowToast, setToastMessage } = useContext(ToastContext);
 
   const [data, setData] = useState(defaultState);
   const [attachment, setAttachment] = useState([]);
