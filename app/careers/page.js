@@ -134,7 +134,6 @@ const Career = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     className="self-end cursor-pointer hover:scale-110"
                     onClick={() => {
-                      console.log(i, showPopup);
                       setShowPopup((prev) => (prev === i ? null : i));
                     }}
                   >

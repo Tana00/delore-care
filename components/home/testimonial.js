@@ -42,7 +42,6 @@ const Testimonials = () => {
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
-      console.log(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
@@ -80,10 +79,6 @@ const Testimonials = () => {
                 className="my-6 w-10 h-10 relative hover:scale-105 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
                 onClick={(e) => {
                   e.stopPropagation() || instanceRef.current?.next();
-                  console.log(
-                    currentSlide
-                    // instanceRef.current.track.details.slides.length - 1
-                  );
                 }}
                 disabled={currentSlide === testimonialList.length - 1}
               >
