@@ -95,7 +95,15 @@ const Locations = () => {
                     Book An Appointment
                   </p>
                   <p className="font-semibold">Mon. Fri.</p>
-                  <p>5: 30am - 10:00pm</p>
+                  <p>
+                    <span className="font-medium">Out of Office Hours</span>{" "}
+                    <br className="my-2" /> 6:00am - 9:00am <br /> 5:30pm -
+                    10:00pm
+                  </p>
+                  <p>
+                    <span className="font-medium">Office Hours</span> <br />{" "}
+                    9:00am - 5:30pm
+                  </p>
                   <p className="font-semibold">Sat. - Sun.</p>
                   <p>7:00am - 10:00pm</p>
                 </div>
