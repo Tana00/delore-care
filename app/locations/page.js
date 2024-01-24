@@ -107,8 +107,8 @@ const Locations = () => {
                   <p className="font-semibold">Sat. - Sun.</p>
                   <p>7:00am - 10:00pm</p>
                 </div>
-                <Link href="/contact-us">
-                  <button className="lg:mt-8 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 lg:w-64 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
+                <Link href="/contact-us" className="w-full">
+                  <button className="lg:mt-8 bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                     Book an Appointment
                   </button>
                 </Link>
