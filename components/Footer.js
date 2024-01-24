@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="">
             <a href="/">
               <Image
-                src="/assets/images/logo.svg"
+                src="/assets/images/logo.png"
                 alt="logo"
                 width={150}
                 height={150}
