@@ -303,6 +303,20 @@ const ContactUs = () => {
                     {location.address}
                   </p>
                 </div>
+                {location?.id === 0 && (
+                  <a
+                    href="https://www.cqc.org.uk/location/1-5295049928"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/assets/images/cqc.jpg"
+                      alt="cqc logo"
+                      width={120}
+                      height={120}
+                      className="mt-2"
+                    />
+                  </a>
+                )}
                 <Link
                   href={`/locations?location=${location.href}`}
                   className="w-11/12 mr-auto md:ml-auto"
