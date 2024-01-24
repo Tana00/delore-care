@@ -307,13 +307,14 @@ const ContactUs = () => {
                   <a
                     href="https://www.cqc.org.uk/location/1-5295049928"
                     target="_blank"
+                    className="w-full"
                   >
                     <Image
                       src="/assets/images/cqc.jpg"
                       alt="cqc logo"
                       width={80}
                       height={80}
-                      className="mt-2"
+                      className="my-3"
                     />
                   </a>
                 )}
