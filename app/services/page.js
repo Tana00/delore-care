@@ -65,8 +65,9 @@ const Services = () => {
               </h2>
               <p className="text-gray font-medium lg:font-normal text-base md:text-lg 2xl:text-3xl 2xl:!leading-[50px] !leading-7 md:!leading-8 my-4 2xl:my-8 sm:mx-4 md:mx-20 lg:mx-0">
                 At Delore Care, we take pride in offering a wide range of
-                comprehensive healthcare services, ensuring that all your
-                medical needs are met under one roof.
+                comprehensive healthcare services, working with other
+                professionals to ensure that all your medical needs are met
+                under one roof.
               </p>
               <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
                 <Link href="/contact-us" className="w-full md:w-auto">

@@ -257,10 +257,18 @@ const ContactUs = () => {
                   </p>
                   <p className="font-semibold">We can be contacted on</p>
                   <p>info@delorecare.com</p>
-                  <p className="font-semibold">Mon. Fri.</p>
-                  <p>5: 30am - 10:00pm</p>
+                  <p className="font-semibold mt-2">Mon. Fri.</p>
+                  <p>
+                    <span className="font-medium">Out of Office Hours</span>{" "}
+                    <br className="my-2" /> 6:00am - 9:00am <br /> 5:30pm -
+                    10:00pm
+                  </p>
+                  <p>
+                    <span className="font-medium">Office Hours</span> <br />{" "}
+                    9:00am - 5:30pm
+                  </p>
                   <p className="font-semibold">Sat. - Sun.</p>
-                  <p>7:00am - 10:00pm</p>
+                  <p>6:00am - 10:00pm</p>
                   <Link href="/contact-us" className="w-full md:w-auto">
                     <button className="mt-8 bg-red text-white w-full md:w-56 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                       Book an Appointment

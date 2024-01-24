@@ -34,6 +34,7 @@ const jobTitles = [
   "Care Coordinator",
   "Field Supervisor",
   "Care Manager",
+  "Registered Manager",
 ];
 
 const Career = () => {

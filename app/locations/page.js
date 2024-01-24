@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { locationList } from "@/utils";
@@ -60,6 +61,20 @@ const Locations = () => {
                 <p className="w-1/2 text-sm font-medium text-gray">
                   {location.tel}
                 </p>
+                {location?.id === 0 && (
+                  <a
+                    href="https://www.cqc.org.uk/location/1-5295049928"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/assets/images/cqc.jpg"
+                      alt="cqc logo"
+                      width={120}
+                      height={120}
+                      className="mt-2"
+                    />
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -94,8 +109,7 @@ const Locations = () => {
                 <p className="font-semibold text-base text-red">
                   Contact Details
                 </p>
-                <p className="font-semibold">Manager</p>
-                <p>Kate Tyler</p>
+                <p className="font-semibold">Contact the Team</p>
                 <p className="font-semibold">Manager’s Telephone Number</p>
                 <p>44 (0) 2039357118</p>
                 <p className="font-semibold">Call</p>

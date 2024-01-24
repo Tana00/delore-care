@@ -19,9 +19,16 @@ const ownTransport = [
   { id: 1, label: "Part Time", value: "part" },
 ];
 
+const preferredLocation = [
+  { id: 0, label: "Surrey", value: "Surrey" },
+  { id: 1, label: "East Sussex", value: "East_Sussex" },
+  { id: 2, label: "Bristol", value: "Bristol" },
+];
+
 const defaultState = {
   shift: shifts[0].value,
   transport: ownTransport[0].value,
+  preferredLocation: preferredLocation[0]?.value,
   fName: "",
   lName: "",
   oName: "",
@@ -191,6 +198,7 @@ const JobApplication = () => {
           "Has Own Transport": data.hasOwnTransport,
           "Has Driver's Licence": data.hasDriversLicence,
           "Preferred Shifts": data.shift,
+          "Preferred Location": data?.preferredLocation,
           "Own Transport":
             data.transport === "full" ? "Full Time" : "Part Time",
         };
@@ -279,12 +287,12 @@ const JobApplication = () => {
         </div>
       </section>
       <section className="p-5 sm:p-10 lg:p-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-        <div className="py-8 w-full xl:w-10/12">
+        <div className="py-8 w-full">
           <p className="text-blue font-bold leading-10 text-xl md:text-2xl">
             Job Type
           </p>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:mt-4 font-medium">
-            <div className="text-blue-black col-span-5 text-base sm:text-lg">
+            <div className="text-blue-black col-span-12 sm:col-span-5 lg:col-span-4 text-base sm:text-lg">
               <p className="leading-10">Own Transport?</p>
               <div className="flex items-center gap-10 text-[15px] md:my-4">
                 {ownTransport.map((transport) => (
@@ -300,7 +308,7 @@ const JobApplication = () => {
                 ))}
               </div>
             </div>
-            <div className="text-blue-black w-full col-span-7 text-base sm:text-lg">
+            <div className="text-blue-black w-full col-span-12 sm:col-span-8 md:col-span-7 lg:col-span-6 text-base sm:text-lg">
               <p className="leading-10">Preferred Shifts</p>
               <div className="flex items-center gap-10 text-[15px] md:my-4">
                 {shifts.map((shift) => (
@@ -310,6 +318,22 @@ const JobApplication = () => {
                     checked={data.shift === shift.value}
                     onChange={() => handleDataChange(shift.value, "shift")}
                     value={shift.value}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="text-blue-black w-full col-span-12 md:col-span-8 xl:col-span-5 text-base sm:text-lg">
+              <p className="leading-10">Preferred Location</p>
+              <div className="flex items-center gap-10 text-[15px] md:my-4">
+                {preferredLocation.map((location) => (
+                  <CustomRadioButton
+                    key={location.id}
+                    label={location.label}
+                    checked={data.preferredLocation === location.value}
+                    onChange={() =>
+                      handleDataChange(location.value, "preferredLocation")
+                    }
+                    value={location.value}
                   />
                 ))}
               </div>

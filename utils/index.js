@@ -64,9 +64,9 @@ export const servicesList = [
     src: "/assets/images/services/service1.svg",
     png: "/assets/images/services/mobility-support.png",
     title: "Mobility Support",
-    desc: "We support with the use of various mobility equipment; our support is usually person-centred and individualistic.",
+    desc: "We support with the use of various mobility equipment and we provide person-centred care",
     content: {
-      text: "We support with the use of various mobility equipment; our support is usually person-centred and individualistic. If circumstances leave you without mobility or with reduced mobility, we can adequately support with errands and shopping, assessing the community and looking after your equipment alongside other professionals.",
+      text: "We support with the use of various mobility equipment and we provide person-centred care. If circumstances leave you without mobility or with reduced mobility, we can adequately support with errands and shopping, assessing the community and looking after your equipment alongside other professionals.",
       lists: [],
     },
   },
@@ -77,7 +77,7 @@ export const servicesList = [
     title: "Feeding",
     desc: "We believe in supporting our service users with a varied, balanced diet and nutritious meals of their choice.",
     content: {
-      text: "We believe in supporting our service users with a varied, balanced diet and nutritious meals of their choice. We work with family to ensure you have the right stock at home or even with other organizations who support with cooked meals.",
+      text: "We believe in supporting our service users with a varied, balanced diet and nutritious meals of their choice. We work with family to ensure you have the right stock at home. We support with cooking light meals.",
       lists: [],
     },
   },
@@ -130,9 +130,9 @@ export const servicesList = [
     src: "/assets/images/services/service7.svg",
     png: "/assets/images/services/sleeping-nights.png",
     title: "Sleeping Nights",
-    desc: "We support you to rest whilst keeping your loved ones with sleeping night care.",
+    desc: "We support you to rest whilst the sleeping night carer look after your loved ones.",
     content: {
-      text: "We support you to rest whilst keeping your loved ones with sleeping night care.",
+      text: "We support you to rest whilst the sleeping night carer look after your loved ones.",
       lists: [],
     },
   },
@@ -205,7 +205,7 @@ export const valueList = [
     id: 1,
     img: "excellence.svg",
     title: "Excellence",
-    desc: "We strive to surpass your expectations in everything we do; Communication, planning, and working with other professionals in the Health ans Social Care sector to achieve your objectives and give a holistic support",
+    desc: "We strive to surpass your expectations in everything we do; Communication, planning, and working with other professionals in the Health and Social Care sector to achieve your objectives and give a holistic support.",
   },
   {
     id: 2,
@@ -300,7 +300,7 @@ export const locationList = [
     type: "Sussex Branch",
     name: "East Sussex",
     address: "Caburn House, 2 Brooks Road, Lewes, East Sussex. BN7 2BY.",
-    tel: "01172422491",
+    tel: "01273980891",
     href: "east-sussex",
     iframe:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5038249876375!2d0.014761276451267284!3d50.87738485653231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df628dfd047163%3A0xb08c34401541e9ae!2s2%20Brooks%20Rd%2C%20Lewes%20BN7%202BY%2C%20UK!5e0!3m2!1sen!2sng!4v1701322794328!5m2!1sen!2sng",
