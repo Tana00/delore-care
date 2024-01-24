@@ -311,8 +311,8 @@ const ContactUs = () => {
                     <Image
                       src="/assets/images/cqc.jpg"
                       alt="cqc logo"
-                      width={120}
-                      height={120}
+                      width={80}
+                      height={80}
                       className="mt-2"
                     />
                   </a>
