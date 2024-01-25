@@ -3,13 +3,12 @@ import Link from "next/link";
 const BookAppointment = () => {
   return (
     <section className="py-6 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full my-10">
-      <div className="bg-blue-light border border-blue-200 px-5 sm:px-10 rounded-2xl py-6">
+      <div className="bg-blue-light border border-blue-200 px-5 xl:px-10 2xl:px-20 rounded-2xl py-6">
         <p className="text-blue font-bold text-base leading-8">
           Book an appointment with us
         </p>
-        <div className="flex items-start justify-start xl:items-center flex-wrap 2xl:justify-start flex-col xl:flex-row gap-4 2xl:gap-6 py-4 w-full mx-auto font-medium">
-          {/* <div className="flex items-center justify-between flex-wrap flex-col md:flex-row w-full gap-4"> */}
-          <div className="bg-white rounded-lg px-4 py-3.5 w-full lg:w-fit 2xl:w-[49%]">
+        <div className="flex items-start justify-start xl:items-center flex-wrap 2xl:justify-start flex-col lg:flex-row gap-4 2xl:gap-6 py-4 w-full mx-auto font-medium">
+          <div className="bg-white rounded-lg px-4 py-3.5 w-full lg:w-fit 2xl:w-[49%] flex-grow">
             <div className="flex items-center justify-between gap-3 flex-wrap">
               <div className="flex items-center justify-center gap-3">
                 <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
@@ -38,7 +37,7 @@ const BookAppointment = () => {
                     </defs>
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
                   Mon. - Fri. ( Office Hours )
                 </p>
               </div>
@@ -74,11 +73,13 @@ const BookAppointment = () => {
                     />
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">9:00am - 5:30pm</p>
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
+                  9:00am - 5:30pm
+                </p>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg px-6 py-3.5 w-full lg:w-fit xl:w-[46%] 2xl:w-[49%]">
+          <div className="bg-white rounded-lg px-6 py-3.5 w-full lg:w-fit xl:w-[46%] 2xl:w-[49%] flex-grow">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <div className="flex items-center justify-center gap-3 2xl:gap-6">
                 <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
@@ -107,7 +108,9 @@ const BookAppointment = () => {
                     </defs>
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">Sat. - Sun.</p>
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
+                  Sat. - Sun.
+                </p>
               </div>
               <svg
                 width="2"
@@ -142,14 +145,15 @@ const BookAppointment = () => {
                     />
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">6:00am - 10:00pm</p>
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
+                  6:00am - 10:00pm
+                </p>
               </div>
             </div>
           </div>
-
-          <div className="bg-white rounded-lg px-4 py-3.5 w-full lg:w-fit 2xl:w-3/4">
+          <div className="bg-white rounded-lg px-4 lg py-3.5 w-full lg:w-fit 2xl:w-3/4 flex-grow min-[1024px]:flex-grow-0 min-[1030px]:flex-grow">
             <div className="flex items-center justify-between gap-3 flex-wrap">
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center justify-center gap-3 lg:gap-1 xl:gap-3">
                 <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
                   <svg
                     width="15"
@@ -176,7 +180,7 @@ const BookAppointment = () => {
                     </defs>
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
                   Mon. - Fri. ( Out Of Office Hours )
                 </p>
               </div>
@@ -197,7 +201,7 @@ const BookAppointment = () => {
                   fill="#12355B"
                 />
               </svg>
-              <div className="flex items-center justify-center gap-3 2xl:gap-6">
+              <div className="flex items-center justify-center gap-3 lg:gap-1 xl:gap-3 2xl:gap-6">
                 <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
                   <svg
                     width="17"
@@ -212,9 +216,11 @@ const BookAppointment = () => {
                     />
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">6:00am - 9:00am</p>
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
+                  6:00am - 9:00am
+                </p>
               </div>
-              <div className="flex items-center justify-center gap-3 2xl:gap-6">
+              <div className="flex items-center justify-center gap-3 lg:gap-1 xl:gap-3 2xl:gap-6">
                 <div className="bg-blue-light p-2 flex items-center justify-center rounded-full">
                   <svg
                     width="17"
@@ -229,14 +235,17 @@ const BookAppointment = () => {
                     />
                   </svg>
                 </div>
-                <p className="text-base 2xl:text-lg">5:30pm - 10:00pm</p>
+                <p className="text-base lg:text-sm min-[1318px]:text-base 2xl:text-lg">
+                  5:30pm - 10:00pm
+                </p>
               </div>
             </div>
           </div>
-
-          {/* </div> */}
-          <Link href="/contact-us" className="w-full md:w-auto">
-            <button className="bg-blue text-white w-full sm:w-52 h-14 text-base font-medium rounded-lg mr-0 sm:mr-auto hover:scale-105 transition-all">
+          <Link
+            href="/contact-us"
+            className="w-full md:w-auto flex items-center justify-center"
+          >
+            <button className="bg-blue text-white w-full sm:w-52 lg:w-fit lg:px-3 2xl:w-52 h-14 text-base min-[1024px]:text-[13px] min-[1030px]:text-sm 2xl:text-base font-medium rounded-lg mr-0 sm:mr-auto flex-grow hover:scale-105 transition-all">
               Book an Appointment
             </button>
           </Link>

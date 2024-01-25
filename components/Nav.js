@@ -51,7 +51,7 @@ const Nav = () => {
         <div>
           <a href="/">
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/images/logo.svg"
               alt="logo"
               width={200}
               height={200}
