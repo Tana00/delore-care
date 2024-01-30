@@ -55,7 +55,7 @@ const Locations = () => {
                 <h2 className="text-blue font-semibold text-xl leading-10">
                   {location.name}
                 </h2>
-                <div className="w-full flex items-center justify-between">
+                <div className="w-full flex items-center justify-between gap-4">
                   <div className="w-1/2 text-sm font-medium text-gray ">
                     <p className="my-1">{location.address}</p>
                     <p className="">{location.tel}</p>
@@ -65,14 +65,15 @@ const Locations = () => {
                     <a
                       href="https://www.cqc.org.uk/location/1-5295049928"
                       target="_blank"
-                      className=""
+                      className="relative w-1/2"
                     >
                       <Image
                         src="/assets/images/cqc.jpg"
                         alt="cqc logo"
                         width={150}
                         height={120}
-                        className="mt-2"
+                        layout="responsive"
+                        className="mt-2 object-cover"
                       />
                     </a>
                   )}
