@@ -55,26 +55,28 @@ const Locations = () => {
                 <h2 className="text-blue font-semibold text-xl leading-10">
                   {location.name}
                 </h2>
-                <p className="w-1/2 text-sm font-medium text-gray my-1">
-                  {location.address}
-                </p>
-                <p className="w-1/2 text-sm font-medium text-gray">
-                  {location.tel}
-                </p>
-                {location?.id === 0 && (
-                  <a
-                    href="https://www.cqc.org.uk/location/1-5295049928"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/assets/images/cqc.jpg"
-                      alt="cqc logo"
-                      width={120}
-                      height={120}
-                      className="mt-2"
-                    />
-                  </a>
-                )}
+                <div className="w-full flex items-center justify-between">
+                  <div className="w-1/2 text-sm font-medium text-gray ">
+                    <p className="my-1">{location.address}</p>
+                    <p className="">{location.tel}</p>
+                  </div>
+
+                  {location?.id === 0 && (
+                    <a
+                      href="https://www.cqc.org.uk/location/1-5295049928"
+                      target="_blank"
+                      className=""
+                    >
+                      <Image
+                        src="/assets/images/cqc.jpg"
+                        alt="cqc logo"
+                        width={150}
+                        height={120}
+                        className="mt-2"
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
