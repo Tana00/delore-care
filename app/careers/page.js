@@ -72,7 +72,7 @@ const Career = () => {
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
-      <section className="bg-[url('/assets/images/career-hero.png')] bg-cover bg-top bg-no-repeat z-0 relative py-8 md:py-10 lg:py-28 h-auto 2xl:h-screen 2xl:flex items-end justify-center">
+      <section className="bg-[url('/assets/images/new/our-careers.jpg')] bg-cover bg-top bg-no-repeat z-0 relative py-8 md:py-10 lg:py-28 h-auto 2xl:h-screen 2xl:flex items-end justify-center">
         <div className="grid items-start justify-between grid-cols-1 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="text-center my-2 pt-[10rem] sm:pt-[15rem] lg:my-0">
             <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[2500px]:text-8xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
