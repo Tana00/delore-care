@@ -29,13 +29,13 @@ const Company = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-6 w-full h-full">
+            <div className="col-span-6 w-full h-full flex justify-center items-center">
               <div className="w-full relative">
                 <Image
-                  src="/assets/images/about-hero.svg"
+                  src="/assets/images/new/about-us.jpg"
                   alt="carers"
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                   className="w-full h-full"
                   layout="responsive"
                 />
@@ -50,11 +50,11 @@ const Company = () => {
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="relative">
             <Image
-              src="/assets/images/mission.png"
+              src="/assets/images/new/our-mission.jpg"
               alt="our mission"
               width={566}
               height={469}
-              className="w-full"
+              className="w-full rounded-md"
             />
           </div>
           <div className="">
@@ -98,11 +98,11 @@ const Company = () => {
           </div>
           <div className="relative order-1 md:order-2">
             <Image
-              src="/assets/images/vision.png"
+              src="/assets/images/new/our-vision.jpg"
               alt="our vision"
               width={566}
               height={469}
-              className="w-full"
+              className="w-full rounded-md"
             />
           </div>
         </div>

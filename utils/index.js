@@ -61,8 +61,8 @@ export const menuList = [
 export const servicesList = [
   {
     id: 0,
-    src: "/assets/images/services/service1.svg",
-    png: "/assets/images/services/mobility-support.png",
+    src: "/assets/images/new/mobility-support2.jpg",
+    png: "/assets/images/new/mobility-support.jpg",
     title: "Mobility Support",
     desc: "We support with the use of various mobility equipment and we provide person-centred care",
     content: {
@@ -72,8 +72,8 @@ export const servicesList = [
   },
   {
     id: 1,
-    src: "/assets/images/services/service2.svg",
-    png: "/assets/images/services/feeding.png",
+    src: "/assets/images/new/feeding2.jpg",
+    png: "/assets/images/new/feeding.jpg",
     title: "Feeding",
     desc: "We believe in supporting our service users with a varied, balanced diet and nutritious meals of their choice.",
     content: {
@@ -83,8 +83,8 @@ export const servicesList = [
   },
   {
     id: 2,
-    src: "/assets/images/services/service3.svg",
-    png: "/assets/images/services/personal-care.png",
+    src: "/assets/images/new/personal-care2.jpg",
+    png: "/assets/images/new/personal-care.jpg",
     title: "Personal Care",
     desc: "We support our service users with showering, incontinence management and a strip wash.",
     content: {
@@ -94,8 +94,8 @@ export const servicesList = [
   },
   {
     id: 3,
-    src: "/assets/images/services/service4.svg",
-    png: "/assets/images/services/live-in-care.png",
+    src: "/assets/images/new/our-cares2.jpg",
+    png: "/assets/images/new/our-cares.jpg",
     title: "Live-in Care",
     desc: "We provide round-the -clock care for your loved one as and when it is needed.",
     content: {
@@ -105,8 +105,8 @@ export const servicesList = [
   },
   {
     id: 4,
-    src: "/assets/images/services/service5.svg",
-    png: "/assets/images/services/escort.png",
+    src: "/assets/images/new/escort-companionship2.jpg",
+    png: "/assets/images/new/escort-companionship.jpg",
     title: "Escort and Companionship",
     desc: "We support our services users with outdoor appointments and also keep them engaged in their homes.",
     content: {
@@ -138,8 +138,8 @@ export const servicesList = [
   },
   {
     id: 7,
-    src: "/assets/images/services/service8.svg",
-    png: "/assets/images/services/medication-support.png",
+    src: "/assets/images/new/medication-support2.jpg",
+    png: "/assets/images/new/medication-support.jpg",
     title: "Medication Support",
     desc: "We support our service users with medication administration, ordering from the pharmacy, stock control and updates.",
     content: {
@@ -182,13 +182,13 @@ export const servicesList = [
   },
   {
     id: 11,
-    src: "/assets/images/services/service12.svg",
-    png: "/assets/images/services/domestic-support.png",
+    src: "/assets/images/new/domestic-support2.jpg",
+    png: "/assets/images/new/domestic-support.jpg",
     shortTitle: "Domestic Support",
     title: "Domestic Support",
     desc: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life.",
     content: {
-      text: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life. Our support cuts across helping with your grocery shopping, doing your laundry and light cleaning. We also work with other professionals to ensure you get deep cleaning if necessary.",
+      text: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life. Our support cuts across helping with your grocery shopping, doing your laundry and light cleaning. We also work with other professionals, to ensure you get deep cleaning if necessary.",
       lists: [],
     },
   },
