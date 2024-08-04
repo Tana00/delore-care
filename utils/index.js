@@ -188,7 +188,7 @@ export const servicesList = [
     title: "Domestic Support",
     desc: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life.",
     content: {
-      text: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life. Our support cuts across helping with your grocery shopping, doing your laundry and light cleaning. We also work with other professionals to ensure you get deep cleaning if necessary.",
+      text: "We ensure we work with you to maintain a healthy environment. We take care you our service users, ensuring they have good quality of life. Our support cuts across helping with your grocery shopping, doing your laundry and light cleaning. We also work with other professionals, to ensure you get deep cleaning if necessary.",
       lists: [],
     },
   },
