@@ -72,8 +72,9 @@ const Career = () => {
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
-      <section className="bg-[url('/assets/images/new/our-careers.jpg')] bg-cover bg-top bg-no-repeat z-0 relative py-8 md:py-10 lg:py-28 h-auto 2xl:h-screen 2xl:flex items-end justify-center">
-        <div className="grid items-start justify-between grid-cols-1 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
+      <section className="relative bg-[url('/assets/images/new/our-careers.jpg')] bg-cover bg-top bg-no-repeat z-0 py-8 md:py-10 lg:py-28 h-auto 2xl:h-screen 2xl:flex items-end justify-center">
+        <div className="absolute inset-0 bg-[linear-gradient(359.98deg,#12355B_0.01%,rgba(19,72,130,0)_67.36%)] z-10"></div>
+        <div className="relative z-20 grid items-start justify-between grid-cols-1 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="text-center my-2 pt-[10rem] sm:pt-[15rem] lg:my-0">
             <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[2500px]:text-8xl leading-[40px] md:leading-[50px] lg:leading-[65px] xl:leading-[80px]">
               Our Careers
@@ -89,6 +90,7 @@ const Career = () => {
           </div>
         </div>
       </section>
+
       <section className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 p-5 sm:p-10 lg:px-20 xl:px-40 xl:pt-28 max-w-[1920px] mx-auto w-full">
         <div className="">
           <h2 className="text-blue font-bold text-[28px] lg:text-[36px] mb-4">

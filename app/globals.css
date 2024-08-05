@@ -39,7 +39,7 @@ body {
       rgba(255, 255, 255, 0.668713) 42.72%,
       rgba(255, 255, 255, 0) 59.61%
     ),
-    url("/assets/images/services-hero.svg");
+    url("/assets/images/new/our-services.jpg");
 }
 @media only screen and (max-width: 1028px) {
   .service_hero {
@@ -48,7 +48,7 @@ body {
         #ffffffcd 19.46%,
         rgba(245, 242, 242, 0.599) 100%
       ),
-      url("/assets/images/services-hero.svg");
+      url("/assets/images/new/our-services.jpg");
   }
 }
 
