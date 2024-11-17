@@ -57,7 +57,7 @@ export const menuList = [
     href: "/careers",
   },
 ];
-
+// git remote add origin https://github.com/Tana00/delore-care.git
 export const servicesList = [
   {
     id: 0,
