@@ -44,7 +44,7 @@ const ServicesComponent = () => {
                 alt={service.title}
                 width={450}
                 height={900}
-                className="hidden md:block h-auto w-full object-contain"
+                className="hidden md:block h-full w-full object-contain"
               />
               <img
                 src={service.src}
