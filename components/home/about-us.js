@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SkeletonAboutUsImage } from "../SkeletonImage";
+import About1 from "../../public/assets/images/about1.png";
+import About2 from "../../public/assets/images/about2.png";
+import About3 from "../../public/assets/images/about3.png";
+import About4 from "../../public/assets/images/about4.png";
 
 const AboutUsComponent = () => {
   return (
@@ -32,30 +37,10 @@ const AboutUsComponent = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6 md:mt-14 mb-4">
-          <Image
-            src="/assets/images/about1.svg"
-            alt="about us"
-            width={500}
-            height={500}
-          />
-          <Image
-            src="/assets/images/about2.svg"
-            alt="about us"
-            width={500}
-            height={500}
-          />
-          <Image
-            src="/assets/images/about3.svg"
-            alt="about us"
-            width={500}
-            height={500}
-          />
-          <Image
-            src="/assets/images/about4.svg"
-            alt="about us"
-            width={500}
-            height={500}
-          />
+          <SkeletonAboutUsImage src={About1} alt="about us" />
+          <SkeletonAboutUsImage src={About2} alt="about us" />
+          <SkeletonAboutUsImage src={About3} alt="about us" />
+          <SkeletonAboutUsImage src={About4} alt="about us" />
         </div>
       </div>
     </section>

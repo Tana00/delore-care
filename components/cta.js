@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import SkeletonImage from "./SkeletonImage";
+import CTA from "../public/assets/images/about-cta2.png";
 
 const CTAComponent = () => {
   return (
@@ -29,10 +31,11 @@ const CTAComponent = () => {
             </div>
           </div>
           <div className="relative w-full sm:h-[600px] lg:h-full sm:order-last order-2 lg:order-2 col-span-2 lg:col-auto">
-            <img
-              src="/assets/images/about-cta.svg"
-              alt="carer"
-              className="w-full h-full"
+            <SkeletonImage
+              src={CTA}
+              alt="cta"
+              className="w-full h-full fade-in"
+              placeholder="blur"
             />
           </div>
           <div className="flex items-center justify-end lg:my-10 order-3 md:order-2 lg:order-3">

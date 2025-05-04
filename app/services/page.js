@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import CTAComponent from "@/components/cta";
-import ScrollToSection from "@/components/ScrollToSection";
 import { servicesList } from "@/utils";
+import { SkeletonHeroImage } from "@/components/SkeletonImage";
 
 const Services = () => {
   const searchParams = useSearchParams();
@@ -117,13 +118,21 @@ const Services = () => {
             id={!isMobile ? "" : "services"}
             className="col-span-12 md:col-span-7"
           >
-            <div
+            {/* <div
               className={`rounded-lg h-[300px] md:h-[350px] 2xl:h-[600px] w-full bg-cover relative bg-no-repeat`}
               style={{
                 backgroundImage: `url(${activeService?.png})`,
                 // backgroundSize: "100% 100%",
               }}
-            ></div>
+            ></div> */}
+            <SkeletonHeroImage
+              src={activeService?.src}
+              alt={activeService?.title}
+              className="rounded-lg h-[300px] md:h-[350px] 2xl:h-[600px] w-full object-cover fade-in"
+              width={1000}
+              height={1000}
+              placeholder="blur"
+            />
             <div className="text-gray text-[15px] leading-8">
               <h2 className="text-blue font-semibold text-2xl md:text-3xl lg:text-[35px] leading-10 md:leading-[50px] mt-4 md:my-3 lg:my-6">
                 {activeService?.title}

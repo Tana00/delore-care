@@ -4,13 +4,20 @@ import Link from "next/link";
 import CTAComponent from "@/components/cta";
 import BookAppointment from "@/components/home/book-appointment";
 import { teamList, valueList } from "@/utils";
+import Carers from "@/public/assets/images/new/about-us.jpg";
+import SkeletonImage, { SkeletonHeroImage } from "@/components/SkeletonImage";
+import ManagementTeam from "@/public/assets/images/management-team.png";
+import OurMission from "@/public/assets/images/new/our-mission.jpg";
+import OurVision from "@/public/assets/images/new/our-vision.jpg";
+import OurCarers from "@/public/assets/images/new/our-cares.jpg";
+// import BookAppointmentImage from "@/public/assets/images/book-appointment.png";
 
 const Company = () => {
   return (
     <main className="bg-white font-gilmer">
       {/* Hero section */}
       <section id="about-us" className="z-0 relative">
-        <div className="bg-[url('/assets/images/about-hero-bg.svg')] bg-cover bg-no-repeat">
+        <div className="bg-[url('/assets/images/about-hero-bg.svg')] bg-cover bg-no-repeat bg-[#12355B]">
           <div className="grid items-center justify-between grid-cols-1 lg:grid-cols-12 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
             <div className="text-center lg:text-left col-span-6 2xl:mr-36 mt-20 lg:mt-0 py-28">
               <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl !leading-[40px] md:!leading-[50px] lg:!leading-[65px] xl:!leading-[80px]">
@@ -22,7 +29,7 @@ const Company = () => {
                 contribution. We do not have many lines of hierarchy.
               </p>
               <div className="flex items-center lg:justify-start justify-center sm:flex-row flex-col gap-4 my-4 md:mt-10">
-                <Link href="/contact-us">
+                <Link href="/contact-us" className="w-full md:w-auto">
                   <button className="bg-red text-white w-full min-[400px]:w-3/4 min-[500px]:w-3/5 sm:w-44 h-14 text-base font-medium rounded-lg sm:mr-4 hover:scale-105 transition-all">
                     Contact Us
                   </button>
@@ -31,13 +38,14 @@ const Company = () => {
             </div>
             <div className="col-span-6 w-full h-full flex justify-center items-center">
               <div className="w-full h-full relative">
-                <img
-                  src="/assets/images/new/about-us.jpg"
+                <Image
+                  src={Carers}
                   alt="carers"
                   width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
-                  layout="responsive"
+                  height={1000}
+                  className="w-full h-full object-cover fade-in"
+                  // layout="responsive"
+                  placeholder="blur"
                 />
               </div>
             </div>
@@ -49,12 +57,13 @@ const Company = () => {
       <section id="our-mission" className="md:mb-20 md:mt-14">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="relative">
-            <Image
-              src="/assets/images/new/our-mission.jpg"
+            <SkeletonHeroImage
+              src={OurMission}
               alt="our mission"
               width={566}
               height={469}
-              className="w-full rounded-md"
+              className="w-full rounded-md fade-in"
+              placeholder="blur"
             />
           </div>
           <div className="">
@@ -97,12 +106,13 @@ const Company = () => {
             </p>
           </div>
           <div className="relative order-1 md:order-2">
-            <Image
-              src="/assets/images/new/our-vision.jpg"
+            <SkeletonHeroImage
+              src={OurVision}
               alt="our vision"
               width={566}
               height={469}
-              className="w-full rounded-md"
+              className="w-full rounded-md fade-in"
+              placeholder="blur"
             />
           </div>
         </div>
@@ -177,12 +187,13 @@ const Company = () => {
       <section id="our-carers" className="md:mb-20 md:mt-28 2xl:mb-28">
         <div className="grid items-start justify-between grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-24 px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full">
           <div className="relative">
-            <Image
-              src="/assets/images/new/our-cares.jpg"
-              alt="our mission"
+            <SkeletonHeroImage
+              src={OurCarers}
+              alt="our carers"
               width={566}
               height={469}
-              className="w-full rounded-2xl"
+              className="w-full rounded-2xl fade-in"
+              placeholder="blur"
             />
           </div>
           <div className="">
@@ -215,12 +226,13 @@ const Company = () => {
             </p>
           </div>
           <div className="relative order-1 md:order-2">
-            <Image
-              src="/assets/images/management-team.png"
-              alt="our vision"
+            <SkeletonHeroImage
+              src={ManagementTeam}
+              alt="management team"
               width={566}
               height={469}
-              className="w-full"
+              className="w-full fade-in"
+              placeholder="blur"
             />
           </div>
         </div>

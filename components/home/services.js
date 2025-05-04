@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { servicesList } from "@/utils";
+import SkeletonImage from "../SkeletonImage";
 
 const ServicesComponent = () => {
   return (
@@ -15,7 +16,7 @@ const ServicesComponent = () => {
           <div className="w-full md:w-[55%] xl:w-1/2">
             <p className="text-base xl:text-lg leading-7 xl:leading-9">
               We provide care and support to people who live in their own homes
-              in England.We care for a wide range of needs. Some of these
+              in England. We care for a wide range of needs. Some of these
               include:
             </p>
             <Link href="/services">
@@ -38,18 +39,23 @@ const ServicesComponent = () => {
             key={service.id}
             className="md:ml-32 w-full md:w-[900px] flex-none"
           >
-            <div className="flex items-center justify-evenly gap-8 md:gap-16 relative h-full w-full">
-              <Image
+            <div className="relative flex items-center justify-evenly gap-8 md:gap-16 h-full w-full">
+              <SkeletonImage
                 src={service.src}
                 alt={service.title}
-                width={450}
-                height={900}
-                className="hidden md:block h-full w-full object-contain"
+                // width={450}
+                // height={900}
+                className="h-full w-full object-cover"
+                placeholder="blur"
+                hide={`hidden md:block`}
               />
-              <img
+
+              <SkeletonImage
                 src={service.src}
                 alt=""
-                className="relative hidden sm:block md:hidden"
+                className="relative"
+                placeholder="blur"
+                hide={`hidden sm:block md:hidden`}
               />
               <div className="hidden sm:block">
                 <p className="text-white font-bold text-4xl xl:text-[40px] leading-[50px] xl:leading-[64px]">
@@ -76,10 +82,11 @@ const ServicesComponent = () => {
                 </Link>
               </div>
               <div className="sm:hidden block relative">
-                <img
+                <SkeletonImage
                   src={service.src}
                   alt=""
                   className="h-[600px] w-full object-cover"
+                  placeholder="blur"
                 />
                 <div className="absolute bottom-0 left-0 text-white w-full">
                   <div

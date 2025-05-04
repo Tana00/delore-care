@@ -1,8 +1,12 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import CTAComponent from "@/components/home/cta";
+import { SkeletonAboutUsImage } from "@/components/SkeletonImage";
+import About1 from "../../public/assets/images/about1.png";
+import About2 from "../../public/assets/images/about2.png";
+import About3 from "../../public/assets/images/about3.png";
+import About4 from "../../public/assets/images/about4.png";
 
 const provisions = [
   {
@@ -160,30 +164,10 @@ const Career = () => {
         </div>
       </section>
       <section className="px-5 sm:px-10 lg:px-20 xl:px-40 max-w-[1920px] mx-auto w-full grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6 md:mt-14">
-        <Image
-          src="/assets/images/about1.svg"
-          alt="about us"
-          width={500}
-          height={500}
-        />
-        <Image
-          src="/assets/images/about2.svg"
-          alt="about us"
-          width={500}
-          height={500}
-        />
-        <Image
-          src="/assets/images/about3.svg"
-          alt="about us"
-          width={500}
-          height={500}
-        />
-        <Image
-          src="/assets/images/about4.svg"
-          alt="about us"
-          width={500}
-          height={500}
-        />
+        <SkeletonAboutUsImage src={About1} alt="about us" />
+        <SkeletonAboutUsImage src={About2} alt="about us" />
+        <SkeletonAboutUsImage src={About3} alt="about us" />
+        <SkeletonAboutUsImage src={About4} alt="about us" />
       </section>
       <section className="grid items-start justify-between grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 p-5 sm:p-10 lg:px-20 xl:px-40 xl:pt-32 max-w-[1920px] mx-auto w-full">
         <div>

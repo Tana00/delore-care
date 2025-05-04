@@ -1,5 +1,8 @@
 import Link from "next/link";
 import CTAComponent from "@/components/cta";
+import { SkeletonHeroImage } from "@/components/SkeletonImage";
+import Excellence from "@/public/assets/images/excellence.png";
+import CustomerCentric from "@/public/assets/images/customer-centric.png";
 
 const WhyUs = () => {
   const customerCentricList = [
@@ -117,10 +120,11 @@ const WhyUs = () => {
               ))}
             </div>
             <div className="rounded-2xl relative sm:order-last order-2 lg:order-2 sm:col-span-12 lg:col-span-4 w-full h-[500px] sm:h-[600px]">
-              <img
-                src="/assets/images/customer-centric.png"
+              <SkeletonHeroImage
+                src={CustomerCentric}
                 alt="customer centric"
-                className="rounded-2xl object-cover w-full h-full"
+                className="rounded-2xl object-cover w-full h-full fade-in"
+                placeholder="blur"
               />
             </div>
             <div className="order-3 md:order-2 lg:order-3 sm:col-span-6 lg:col-span-4 text-right">
@@ -156,10 +160,11 @@ const WhyUs = () => {
                 Management Excellence
               </h2>
               <div className="rounded-2xl relative w-full h-[600px] mt-16">
-                <img
-                  src="/assets/images/excellence.png"
-                  alt="customer centric"
-                  className="rounded-2xl w-full h-full object-cover object-top"
+                <SkeletonHeroImage
+                  src={Excellence}
+                  alt="excellence"
+                  className="rounded-2xl w-full h-full object-cover object-top fade-in"
+                  placeholder="blur"
                 />
               </div>
             </div>

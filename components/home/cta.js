@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import AboutCta from "../../public/assets/images/about-cta.png";
+import SkeletonImage from "../SkeletonImage";
 
 const CTA = () => {
   return (
@@ -24,15 +26,16 @@ const CTA = () => {
           </div>
         </div>
         <div className="relative w-full h-full col-span-12 md:col-span-5 2xl:col-span-6">
-          <Image
-            src="/assets/images/hero5.svg"
+          <SkeletonImage
+            src={AboutCta}
             alt="carer"
             fill
             objectFit="fill"
-            className="hidden lg:block object-cover xl:object-contain"
+            className="hidden lg:block object-cover xl:object-contain fade-in"
+            placeholder="blur"
           />
           <img
-            src="/assets/images/hero5.svg"
+            src="/assets/images/about-cta.png"
             alt="carer"
             className="lg:hidden block w-full h-full object-cover"
           />

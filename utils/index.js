@@ -1,3 +1,16 @@
+import MobilitySupport from "../public/assets/images/new/mobility-support2.jpg";
+import Feeding from "../public/assets/images/new/feeding2.jpg";
+import PersonalCare from "../public/assets/images/new/personal-care2.jpg";
+import LiveInCare from "../public/assets/images/new/our-cares2.jpg";
+import EscortCompanionship from "../public/assets/images/new/escort-companionship2.jpg";
+import MedicationSupport from "../public/assets/images/new/medication-support2.jpg";
+import DomesticSupport from "../public/assets/images/new/domestic-support2.jpg";
+import WakingNights from "../public/assets/images/services/waking-nights.png";
+import SleepingNights from "../public/assets/images/services/sleeping-nights.png";
+import PegFeeding from "../public/assets/images/services/peg-feeding.png";
+import EndOfLifeCare from "../public/assets/images/services/end-of-life-care.png";
+import SupportForPersonsWithDisability from "../public/assets/images/services/support-for-persons-with-disability.png";
+
 export const menuList = [
   {
     title: "Services",
@@ -61,7 +74,7 @@ export const menuList = [
 export const servicesList = [
   {
     id: 0,
-    src: "/assets/images/new/mobility-support2.jpg",
+    src: MobilitySupport,
     png: "/assets/images/new/mobility-support.jpg",
     title: "Mobility Support",
     desc: "We support with the use of various mobility equipment and we provide person-centred care",
@@ -72,7 +85,8 @@ export const servicesList = [
   },
   {
     id: 1,
-    src: "/assets/images/new/feeding2.jpg",
+    src: Feeding,
+    // src: "/assets/images/new/feeding2.jpg",
     png: "/assets/images/new/feeding.jpg",
     title: "Feeding",
     desc: "We believe in supporting our service users with a varied, balanced diet and nutritious meals of their choice.",
@@ -83,7 +97,8 @@ export const servicesList = [
   },
   {
     id: 2,
-    src: "/assets/images/new/personal-care2.jpg",
+    src: PersonalCare,
+    // src: "/assets/images/new/personal-care2.jpg",
     png: "/assets/images/new/personal-care.jpg",
     title: "Personal Care",
     desc: "We support our service users with showering, incontinence management and a strip wash.",
@@ -94,7 +109,8 @@ export const servicesList = [
   },
   {
     id: 3,
-    src: "/assets/images/new/our-cares2.jpg",
+    src: LiveInCare,
+    // src: "/assets/images/new/our-cares2.jpg",
     png: "/assets/images/new/our-cares.jpg",
     title: "Live-in Care",
     desc: "We provide round-the -clock care for your loved one as and when it is needed.",
@@ -105,7 +121,8 @@ export const servicesList = [
   },
   {
     id: 4,
-    src: "/assets/images/new/escort-companionship2.jpg",
+    src: EscortCompanionship,
+    // src: "/assets/images/new/escort-companionship2.jpg",
     png: "/assets/images/new/escort-companionship.jpg",
     title: "Escort and Companionship",
     desc: "We support our services users with outdoor appointments and also keep them engaged in their homes.",
@@ -116,7 +133,8 @@ export const servicesList = [
   },
   {
     id: 5,
-    src: "/assets/images/services/service6.svg",
+    src: WakingNights,
+    // src: "/assets/images/services/service6.svg",
     png: "/assets/images/services/waking-nights.png",
     title: "Waking Nights",
     desc: "We support our service users during the night to manage continence, provide companionship, support with repositioning and...",
@@ -127,7 +145,8 @@ export const servicesList = [
   },
   {
     id: 6,
-    src: "/assets/images/services/service7.svg",
+    src: SleepingNights,
+    // src: "/assets/images/services/service7.svg",
     png: "/assets/images/services/sleeping-nights.png",
     title: "Sleeping Nights",
     desc: "We support you to rest whilst the sleeping night carer look after your loved ones.",
@@ -138,7 +157,8 @@ export const servicesList = [
   },
   {
     id: 7,
-    src: "/assets/images/new/medication-support2.jpg",
+    src: MedicationSupport,
+    // src: "/assets/images/new/medication-support2.jpg",
     png: "/assets/images/new/medication-support.jpg",
     title: "Medication Support",
     desc: "We support our service users with medication administration, ordering from the pharmacy, stock control and updates.",
@@ -149,7 +169,8 @@ export const servicesList = [
   },
   {
     id: 8,
-    src: "/assets/images/services/service9.svg",
+    src: PegFeeding,
+    // src: "/assets/images/services/service9.svg",
     png: "/assets/images/services/peg-feeding.png",
     title: "Peg Feeding",
     desc: "Our Carers are trained to provide PEG feeding in an hygienic way.",
@@ -160,7 +181,8 @@ export const servicesList = [
   },
   {
     id: 9,
-    src: "/assets/images/services/service10.svg",
+    src: EndOfLifeCare,
+    // src: "/assets/images/services/service10.svg",
     png: "/assets/images/services/end-of-life-care.png",
     title: "End of life care",
     desc: "We support you/your loved ones to remain in a place you feel most comfortable in a critical moment.",
@@ -171,7 +193,8 @@ export const servicesList = [
   },
   {
     id: 10,
-    src: "/assets/images/services/service11.svg",
+    src: SupportForPersonsWithDisability,
+    // src: "/assets/images/services/service11.svg",
     png: "/assets/images/services/support-for-persons-with-disability.png",
     title: "Support for persons with Learning Disability/Autism",
     desc: "We support your loved ones to live as independent and positively engaged as possible.",
@@ -182,7 +205,8 @@ export const servicesList = [
   },
   {
     id: 11,
-    src: "/assets/images/new/domestic-support2.jpg",
+    src: DomesticSupport,
+    // src: "/assets/images/new/domestic-support2.jpg",
     png: "/assets/images/new/domestic-support.jpg",
     shortTitle: "Domestic Support",
     title: "Domestic Support",
