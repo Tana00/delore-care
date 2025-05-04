@@ -1,12 +1,14 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import hero1 from "../../public/assets/images/hero1.svg";
-import hero2 from "../../public/assets/images/hero2.svg";
-import hero4 from "../../public/assets/images/hero4.svg";
-import hero5 from "../../public/assets/images/hero5.svg";
+import hero1 from "../../public/assets/images/hero1.webp";
+import hero2 from "../../public/assets/images/hero2.webp";
+import hero4 from "../../public/assets/images/hero4.webp";
+import hero5 from "../../public/assets/images/hero5.webp";
 import BookAppointment from "./book-appointment";
+import { SkeletonHeroImage } from "../SkeletonImage";
 
 const Hero = () => {
   const images = [hero1, hero2, hero4, hero5];
@@ -71,50 +73,56 @@ const Hero = () => {
         </div>
         <div className="col-span-5 2xl:col-span-5 w-full grid grid-cols-2 gap-2 md:gap-y-4 md:gap-x-10">
           <div className="w-full lg:w-[220px] 2xl:w-full 2xl:h-[350px] h-[290px] rounded-2xl relative">
-            <Image
+            <SkeletonHeroImage
               src={images[imageIndices[0]]}
               alt="carer"
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl fade-in"
               layout="fill"
               objectFit="cover"
+              priority
+              placeholder="blur"
             />
           </div>
           <div
             className={`hidden lg:block w-full lg:w-[220px] 2xl:w-full 2xl:h-[350px] h-[290px] rounded-2xl mt-0 lg:-mt-64 relative`}
           >
-            <Image
+            <SkeletonHeroImage
               src={images[imageIndices[1]]}
               alt="carer"
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl fade-in"
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
             />
           </div>
           <div className="w-full lg:w-[220px] 2xl:w-full 2xl:h-[350px] h-[290px] rounded-2xl relative">
-            <Image
+            <SkeletonHeroImage
               src={images[imageIndices[1]]}
               alt="carer"
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl fade-in"
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
             />
           </div>
           <div className="w-full lg:w-[220px] 2xl:w-full 2xl:h-[350px] h-[290px] rounded-2xl mt-0 lg:-mt-64 relative">
-            <Image
+            <SkeletonHeroImage
               src={images[imageIndices[2]]}
               alt="carer"
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl fade-in"
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
             />
           </div>
           <div className="w-full lg:w-[220px] 2xl:w-full 2xl:h-[350px] h-[290px] rounded-2xl col-start-2 mt-0 lg:-mt-64 relative">
-            <Image
+            <SkeletonHeroImage
               src={images[imageIndices[3]]}
               alt="carer"
-              className="w-full h-full rounded-2xl"
+              className="w-full h-full rounded-2xl fade-in"
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
             />
           </div>
         </div>

@@ -47,7 +47,7 @@ const Nav = () => {
         isOpen ? "fixed w-full h-screen" : "relative"
       }`}
     >
-      <div className="max-w-[1920px] mx-auto flex items-center justify-between py-4 px-5 sm:px-10 lg:px-20 xl:px-40 w-full">
+      <div className="max-w-[1920px] mx-auto flex items-center justify-between py-4 px-5 sm:px-10 lg:px-20 xl:px-40 w-full h-[80px]">
         <div>
           <a href="/">
             <Image

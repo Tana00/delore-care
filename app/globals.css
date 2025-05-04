@@ -40,6 +40,7 @@ body {
       rgba(255, 255, 255, 0) 59.61%
     ),
     url("/assets/images/new/our-services.jpg");
+  background-color: #f2f2f4;
 }
 @media only screen and (max-width: 1028px) {
   .service_hero {
@@ -229,4 +230,50 @@ input[type="checkbox"]:checked + .checkmark::after {
   color: #f25764;
   text-decoration: underline;
   font-weight: 500;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmerLight {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #12355b 0%,
+    #2f557c 25%,
+    #3d6c97 50%,
+    #2f557c 75%,
+    #12355b 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 6s infinite linear;
 }
