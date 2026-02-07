@@ -14,7 +14,7 @@ const Locations = () => {
   useEffect(() => {
     if (location) {
       const selectedLocation = locationList.find(
-        (locationItem) => locationItem.href === location
+        (locationItem) => locationItem.href === location,
       );
 
       selectedLocation
@@ -39,7 +39,7 @@ const Locations = () => {
         </div>
       </section>
       <section className="p-5 sm:p-10 lg:p-20 xl:px-40 max-w-[1920px] mx-auto w-full">
-        <div className="grid items-start justify-between grid-cols-1 md:grid-cols-12 gap-6 2xl:gap-16 max-w-[1920px] mx-auto w-full">
+        <div className="grid items-start justify-between grid-cols-1 lg:grid-cols-12 gap-6 2xl:gap-16 max-w-[1920px] mx-auto w-full">
           <div className="col-span-12 md:col-span-5">
             {locationList.map((location) => (
               <div
@@ -61,19 +61,19 @@ const Locations = () => {
                     <p className="">{location.tel}</p>
                   </div>
 
-                  {location?.id === 0 && (
+                  {location?.id !== 2 && (
                     <a
                       href="https://www.cqc.org.uk/location/1-5295049928"
                       target="_blank"
-                      className="relative w-1/2"
+                      className="relative w-1/2 flex justify-end"
                     >
                       <Image
-                        src="/assets/images/cqc.jpg"
+                        src="/assets/images/CQC-Good.webp"
                         alt="cqc logo"
                         width={150}
                         height={120}
-                        layout="responsive"
-                        className="mt-2 object-cover"
+                        // layout="responsive"
+                        className="mt-2 object-contain lg:object-cover w-28 h-28 lg:h-[120px] lg:w-full"
                       />
                     </a>
                   )}
