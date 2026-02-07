@@ -87,9 +87,9 @@ const Locations = () => {
               // width="550"
               height="500"
               style={{ border: 0, width: "100%" }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             <div className="w-full bg-blue p-8 flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-5">
               <div className="w-full text-white flex items-start justify-between flex-col gap-y-4 text-sm">
