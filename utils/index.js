@@ -289,21 +289,22 @@ export const locationList = [
     id: 0,
     type: "Head Office",
     name: "Surrey",
-    address: "1 Delta Way, Paramount House, Egham. TW20 8XF.",
+    address: "Alexandra House, 1 Delta Way, Egham TW20 8RX (XF).",
     tel: "02039357118",
     href: "surrey",
     iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.2745483761046!2d-0.5340452235186892!3d51.41638311734861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487670ca813fffff%3A0x6d587bba2ca93b0e!2sBizSpace%20Egham!5e0!3m2!1sen!2sng!4v1701322657267!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.274730487962!2d-0.534045223348359!3d51.41637977179276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876773b1ac88049%3A0x91b825c1edcaf871!2sDelore%20Care!5e0!3m2!1sen!2suk!4v1770498460410!5m2!1sen!2suk",
   },
   {
     id: 1,
     type: "Sussex Branch",
     name: "East Sussex",
-    address: "Caburn House, 2 Brooks Road, Lewes, East Sussex. BN7 2BY.",
+    address:
+      "Unit 15, First Floor, Pacific House, Sovereign Harbour Innovation Park, 1 Easter Island Place, Eastbourne. BN23 6FA.",
     tel: "01273980891",
     href: "east-sussex",
     iframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5038249876375!2d0.014761276451267284!3d50.87738485653231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df628dfd047163%3A0xb08c34401541e9ae!2s2%20Brooks%20Rd%2C%20Lewes%20BN7%202BY%2C%20UK!5e0!3m2!1sen!2sng!4v1701322794328!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.7571873260827!2d0.3243516766153682!3d50.79860837166079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df7303f96eb2c5%3A0x94c837796ca6fb0c!2sPacific%20House!5e0!3m2!1sen!2suk!4v1770498646475!5m2!1sen!2suk",
   },
   {
     id: 2,

@@ -61,8 +61,8 @@ const Footer = () => {
                         link.title === "Quick Links"
                           ? `${submenu.href}`
                           : submenu?.title === "Location"
-                          ? `${submenu.href}`
-                          : `/${link.title?.toLowerCase()}/${submenu.href}`
+                            ? `${submenu.href}`
+                            : `/${link.title?.toLowerCase()}/${submenu.href}`
                       }
                       className=""
                     >
@@ -130,7 +130,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="w-full flex flex-col-reverse sm:flex-row items-center lg:justify-center justify-start gap-x-10 md:gap-20 text-blue font-medium py-4 md:pt-10 md:pb-0 lg:pt-16">
-          <p>© 2024 Delore Care</p>
+          <p>© 2026 Delore Care</p>
           <div className="flex items-center justify-between mb-2 sm:mb-0 gap-x-10 md:gap-20">
             <a
               href="/terms-and-conditions"
