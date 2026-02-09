@@ -63,7 +63,7 @@ const Locations = () => {
 
                   {location?.id !== 2 && (
                     <a
-                      href="https://www.cqc.org.uk/location/1-5295049928"
+                      href={location?.cqcLink}
                       target="_blank"
                       className="relative w-1/2 flex justify-end"
                     >

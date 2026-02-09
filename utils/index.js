@@ -289,11 +289,12 @@ export const locationList = [
     id: 0,
     type: "Head Office",
     name: "Surrey",
-    address: "Alexandra House, 1 Delta Way, Egham TW20 8RX (XF).",
+    address: "Alexandra House, 1 Delta Way, Egham TW20 8RX.",
     tel: "02039357118",
     href: "surrey",
     iframe:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.274730487962!2d-0.534045223348359!3d51.41637977179276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876773b1ac88049%3A0x91b825c1edcaf871!2sDelore%20Care!5e0!3m2!1sen!2suk!4v1770498460410!5m2!1sen!2suk",
+    cqcLink: "https://www.cqc.org.uk/location/1-5295049928",
   },
   {
     id: 1,
@@ -305,6 +306,7 @@ export const locationList = [
     href: "east-sussex",
     iframe:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.7571873260827!2d0.3243516766153682!3d50.79860837166079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df7303f96eb2c5%3A0x94c837796ca6fb0c!2sPacific%20House!5e0!3m2!1sen!2suk!4v1770498646475!5m2!1sen!2suk",
+    cqcLink: "https://www.cqc.org.uk/location/1-16406766542",
   },
   {
     id: 2,
